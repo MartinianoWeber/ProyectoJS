@@ -1,17 +1,3 @@
-let procesadorValor
-let procesadorNombre
-let motherValor
-let motherNombre
-let memoriasRamValor
-let memoriasRamNombre
-let graficasValor
-let graficasNombre
-let almacenamientoValor
-let almacenamientoNombreGen
-let gabinetesValor
-let gabinetesNombre
-let fuentesValor
-let fuentesNombre
 let valor
 let precioFinal
 let resultadoTotalObjeto
@@ -20,6 +6,11 @@ let arrayNombreDuplicados = []
 let arrayNombresFinal = []
 let vecesCompradas = 1
 let cantidadComprada = []
+let pcCarritoValor = []
+let pcCaritoNombre = []
+let suma
+
+
 
 class productos {
     constructor(nombre, precio, cantidad) {
@@ -27,6 +18,16 @@ class productos {
         this.precio = precio
         this.cantidad = cantidad
         this.precioTOTAL
+    }
+    armadopc(){
+        let resultadototalPC = this.precio
+        pcCarritoValor.push(resultadototalPC) 
+        let totalPC = pcCarritoValor.reduce((a, b) => a + b, 0);
+        suma = totalPC
+        sumapr()
+        let nombres = this.nombre
+        pcCaritoNombre.push(nombres) 
+
     }
     stock(){
         alert(`${this.nombre} Tiene un precio de ${this.precio}`)
@@ -50,6 +51,10 @@ class productos {
         alert("La cantidad que desea llevar no esta disponible ")
     }
 }
+}
+
+function sumapr(){
+    suma
 }
 
 // Mouses

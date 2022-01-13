@@ -396,8 +396,7 @@ function procesadoramd(){
         switch(pcProcesadoramd){
             case "1":
                 entrada = "1"
-                procesadorValor = procesadorAMD.precio
-                procesadorNombre = procesadorAMD.nombre
+                procesadorAMD.armadopc()
                 alert(`${procesadorAMD.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
@@ -405,16 +404,14 @@ function procesadoramd(){
                 break;
             case "2":
                 entrada = "2"
-                procesadorValor = procesadorAMD2.precio
-                procesadorNombre = procesadorAMD2.nombre
+                procesadorAMD2.armadopc()
                 alert(`${procesadorAMD2.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
                 break;
             case "3":
                 entrada = "3"
-                procesadorValor = procesadorAMD3.precio
-                procesadorNombre = procesadorAMD3.nombre
+                procesadorAMD3.armadopc()
                 alert(`${procesadorAMD3.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
@@ -434,23 +431,19 @@ function motheramd(){
         switch(pcmotheramd){
             case "1":
                 entrada = "1"
-                motherValor = motherAMD.precio
-                motherNombre = motherAMD.nombre
+                motherAMD.armadopc()
                 alert(`${motherAMD.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "2":
                 entrada = "2"
-                motherValor = motherAMD2.precio
-                motherNombre = motherAMD2.nombre
-                motherAMD2.nombre
+                motherAMD2.armadopc()
                 alert(`${motherAMD2.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "3":
                 entrada = "3"
-                motherValor = motherAMD3.precio
-                motherNombre = motherAMD3.nombre
+                motherAMD3.armadopc()
                 motherAMD3.nombre
                 alert(`${motherAMD3.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
@@ -475,8 +468,7 @@ function procesadorintel(){
         switch(pcProcesadorintel){
             case "1":
                 entrada = "1"
-                procesadorValor = procesadorIntel.precio
-                procesadorNombre = procesadorIntel.nombre 
+                procesadorIntel.armadopc()
                 alert(`${procesadorIntel.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
@@ -484,16 +476,14 @@ function procesadorintel(){
                 break;
             case "2":
                 entrada = "2"
-                procesadorValor = procesadorIntel2.precio
-                procesadorNombre = procesadorIntel2.nombre 
+                procesadorIntel2.armadopc()
                 alert(`${procesadorIntel2.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
                 break;
             case "3":
                 entrada = "3"
-                procesadorValor = procesadorIntel3.precio
-                procesadorNombre = procesadorIntel3.nombre 
+                procesadorIntel3.armadopc()
                 alert(`${procesadorIntel3.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
@@ -514,24 +504,21 @@ function motherintel(){
             case "1":
                 entrada = "1"
                 motherIntel.nombre
-                motherValor = motherIntel.precio
-                motherNombre = motherIntel.nombre
+                motherIntel.armadopc()
                 alert(`${motherIntel.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                memoriasRamGen()
                 break;
             case "2":
                 entrada = "2"
                 motherIntel2.nombre
-                motherValor = motherIntel2.precio
-                motherNombre = motherIntel2.nombre
+                motherIntel2.armadopc()
                 alert(`${motherIntel2.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "3":
                 entrada = "3"
                 motherIntel3.nombre
-                motherValor = motherIntel3.precio
-                motherNombre = motherIntel3.nombre
+                motherIntel3.armadopc()
                 alert(`${motherIntel3.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                memoriasRamGen()
                 break;
@@ -552,22 +539,19 @@ function memoriasRamGen(){
         switch(memoriasRamGen){
             case "1":
                 entrada = "1"
-                memoriasRamNombre = memoriasRam.nombre
-                memoriasRamValor = memoriasRam.precio
+                memoriasRam.armadopc()
                 alert(`${memoriasRam.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
             case "2":
                 entrada = "2"
-                memoriasRamNombre = memoriasRam2.nombre
-                memoriasRamValor = memoriasRam2.precio
+                memoriasRam2.armadopc()
                 alert(`${memoriasRam2.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
             case "3":
                 entrada = "3"
-                memoriasRamNombre = memoriasRam3.nombre
-                memoriasRamValor = memoriasRam3.precio
+                memoriasRam3.armadopc()
                 alert(`${memoriasRam3.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
@@ -585,22 +569,19 @@ function graficasintel(){
         switch(palcasdevideo){
             case "1":
                 entrada = "1"
-                graficasNombre = graficas.nombre
-                graficasValor = graficas.precio
+                graficas.armadopc()
                 alert(`${graficas.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                 almacenamientointel()
                 break;
             case "2":
                 entrada = "2"
-                graficasNombre = graficas2.nombre
-                graficasValor = graficas2.precio
+                graficas2.armadopc()
                 alert(`${graficas2.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                  almacenamientointel()
                 break;
             case "3":
                 entrada = "3"
-                graficasNombre = graficas3.nombre
-                graficasValor = graficas3.precio
+                graficas3.armadopc()
                 alert(`${graficas3.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                  almacenamientointel()
                 break;
@@ -618,22 +599,19 @@ function almacenamientointel(){
         switch(discosrigidos){
             case "1":
                 entrada = "1"
-                almacenamientoNombreGen = almacenamiento.nombre
-                almacenamientoValor = almacenamiento.precio
+                almacenamiento.armadopc()
                 alert(`${almacenamiento.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
             case "2":
                 entrada = "2"
-                almacenamientoNombreGen = almacenamiento2.nombre
-                almacenamientoValor = almacenamiento2.precio
+                almacenamiento2.armadopc()
                 alert(`${almacenamiento2.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
             case "3":
                 entrada = "3"
-                almacenamientoNombreGen = almacenamiento3.nombre
-                almacenamientoNombreGen = almacenamiento3.nombre
+                almacenamiento3.armadopc()
                 alert(`${almacenamiento3.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
@@ -651,22 +629,19 @@ function gabinetesintel(){
         switch(gabinetesintel){
             case "1":
                 entrada = "1"
-                gabinetesNombre = gabinetes.nombre
-                gabinetesValor = gabinetes.precio
+                gabinetes.armadopc()
                 alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
             case "2":
                 entrada = "2"
-                gabinetesNombre = gabinetes2.nombre
-                gabinetesValor = gabinetes2.precio
+                gabinetes2.armadopc()
                 alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
             case "3":
                 entrada = "3"
-                gabinetesNombre = gabinetes3.nombre
-                gabinetesValor = gabinetes3.precio
+                gabinetes3.armadopc()
                 alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
@@ -684,20 +659,17 @@ function fuentesintel(){
         switch(fuentesintel){
             case "1":
                 entrada = "1"
-                fuentesNombre = fuentes.nombre
-                fuentesValor = fuentes.precio
+                fuentes.armadopc()
                 alert(`${fuentes.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
             case "2":
                 entrada = "2"
-                fuentesNombre = fuentes2.nombre
-                fuentesValor = fuentes2.precio
+                fuentes2.armadopc()
                 alert(`${fuentes2.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
             case "3":
                 entrada = "3"
-                fuentesNombre = fuentes3.nombre
-                fuentesValor = fuentes3.precio
+                fuentes3.armadopc()
                 alert(`${fuentes3.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
                 default: alert("Elegi una opcion valida");
@@ -709,9 +681,8 @@ function fuentesintel(){
     }
 }
 function sumadeproductos(){
-    suma = procesadorValor + motherValor + memoriasRamValor + graficasValor + almacenamientoValor + gabinetesValor + fuentesValor
+    sumapr()
     cuotasEfectivo()
-    console.log(suma)
 }
 function cuotasEfectivo(){
     trueofalse = true
@@ -724,13 +695,8 @@ function cuotasEfectivo(){
                 entrada = "EFECTIVO"
                 alert(`Muy bien vamos a efectuar el pago`)
                 document.getElementById('EFECTIVO').innerHTML = `GeekInformatica.SA <br>CUIT: 4239205884 <br> ING.BR: 1017936-4 <br> Formosa 127 <br> Ticket generado: 2041290 <br> Fecha: 22/03/2021 Hora: 16.40 <br> paga ${suma-resultado}`;
-                document.getElementById('EFECTIVO2').innerHTML = `Bien su computadora esta compuesta por lo siguientes componentes: <br> ${procesadorNombre} $${procesadorValor} 
-                <br> ${motherNombre} $${motherValor}
-                <br> ${memoriasRamNombre} $${memoriasRamValor}
-                <br> ${graficasNombre} $${graficasValor}
-                <br> ${almacenamientoNombreGen} $${almacenamientoValor}
-                <br> ${gabinetesNombre} $${gabinetesValor}
-                <br> ${fuentesNombre} $${fuentesValor}`;
+                document.getElementById('EFECTIVO2').innerHTML = `Bien su computadora esta compuesta por lo siguientes componentes: <br>
+                ${pcCaritoNombre.toString()}`;
                 
             break;
             case "CUOTAS":
@@ -829,7 +795,7 @@ function contrato(){
     listaPC()
 }
 function listaPC(){
-    document.getElementById('PCLIST').innerHTML = `Bien su computadora va a estar compuesta por lo siguientes componentes: <br> ${procesadorNombre} $${procesadorValor} <br> ${motherNombre} $${motherValor}<br> ${memoriasRamNombre} $${memoriasRamValor}<br> ${graficasNombre} $${graficasValor}<br> ${almacenamientoNombreGen} $${almacenamientoValor}<br> ${gabinetesNombre} $${gabinetesValor}<br> ${fuentesNombre} $${fuentesValor}`;
+    document.getElementById('PCLIST').innerHTML = `Bien su computadora va a estar compuesta por lo siguientes componentes: <br>${pcCaritoNombre.toString()} `;
 }
 function cuotasEfectivonormal(){
     alert("Muy buena eleccion! vamos a proceder al pago")
@@ -936,6 +902,7 @@ function contratonormal(){
     document.getElementById('CUOTAS').innerHTML = `El plan de pago quedaria en un total de ${preciototal} \nLa cuota quedaria en ${resultadototal} <br> Iva ${iva21} <br> Interes de la cuota ${intereses} <br> El pago se realizara todos los dias 7 de cada mes.`;
 }
 comercio()
+
 
 
 
