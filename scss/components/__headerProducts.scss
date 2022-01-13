@@ -1,0 +1,64 @@
+.headerProductos {
+    background-image: url(../imagenes/headerProductos.png);
+    width: auto;
+    height: 350px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.productos__logo{
+    display: flex;
+    width: 250px;
+    height: 250px;
+}
+
+.productos__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top: -8rem;
+        form{
+           span {
+            input {
+                width: 520px;
+                padding: 2rem;
+                border-radius: 5rem;
+                outline: none;
+                border: none;
+                font-size: 1.4rem;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                margin-left: -6rem;
+            }
+           }
+            
+        }
+}
+
+.navbarproductos {
+    background-color: #000000 ;
+    width: auto;
+    height: 7rem;
+}
+
+.navbar__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 6rem;
+    a{
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+        color: $blanco;
+        transition: 1s;
+        &:hover {
+            transition: 1s;
+            color: yellow;
+        }
+    }
+}

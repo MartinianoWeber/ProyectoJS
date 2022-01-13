@@ -1,0 +1,83 @@
+.header {
+    background-image: url(../imagenes/header1.png);
+    width: auto;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .fijo{
+        width: 100%;
+        overflow:hidden;
+        .navegacion {
+            height: 150px;
+            position: fixed;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0);
+            width: 100%;
+            padding: .5rem 1.5rem;
+            
+            font-weight: bold;
+                .text-white {
+                    transition: 1s!important;
+                    &:hover {
+                        color: yellow !important; 
+                        transition: 1s;
+                       
+                    }
+                }            
+        }
+    }
+}
+.prueba {
+    filter: drop-shadow(0px 2px 1px rgb(255, 0, 191));
+}
+.navegacion__color {
+    filter: drop-shadow(0px -2px 1px rgb(0, 0, 0));
+  
+}
+
+.header__h1 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 23rem;
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        width: 70rem;
+        letter-spacing: .2rem;
+        line-height: 6rem;
+    }
+}
+
+.carrousel__modificacion {
+    background-color: #1c8eb498 ;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.moficador__flex {
+    justify-content: space-between;
+}
+
+.flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    filter: drop-shadow(0px -2px 1px rgb(255, 0, 255));
+    
+    
+    
+}
+
+.flecha__imagen {
+    filter: drop-shadow(0px 2px 1px rgb(255, 0, 255));
+    transition: 1s;
+    width: 25rem;
+        &:hover{
+            width: 27rem;
+            transition: 1s;
+        }
+
+}

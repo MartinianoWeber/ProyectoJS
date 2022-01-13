@@ -1,0 +1,57 @@
+.seccion2 {
+    background-image: url(../imagenes/header3.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 1000px;
+    background-attachment: fixed;
+
+}
+.slide__titulo {
+    display: flex;
+    h2 {
+        margin: auto;
+        margin-top: 5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+}
+.slides__grid {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    a {
+        margin: auto;
+    }
+}
+
+.grid__imagenes {
+    width: 300px;
+    border-radius: 2rem;
+    height: 200px;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+}
+.slides__btn {
+    
+    background-color: $violetaBoton;
+    color: $blanco;
+    font-size: 2.5rem;
+    padding: 1rem;
+    width: 500px;
+    border-radius: 4rem;
+    margin-top: 5rem;
+    text-decoration: none;
+    transition: 1s;
+    &:hover {
+        color: yellow;
+        transition: 1s;
+    }
+   
+}
+

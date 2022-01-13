@@ -1,0 +1,479 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Generales */
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Nunito Sans";
+  color: #FFFFFF;
+}
+
+/** Utilidades **/
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.subrayado {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #EB0000;
+}
+
+.header {
+  background-image: url(../imagenes/header1.png);
+  width: auto;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header .fijo {
+  width: 100%;
+  overflow: hidden;
+}
+.header .fijo .navegacion {
+  height: 150px;
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+.header .fijo .navegacion .text-white {
+  transition: 1s !important;
+}
+.header .fijo .navegacion .text-white:hover {
+  color: yellow !important;
+  transition: 1s;
+}
+
+.prueba {
+  filter: drop-shadow(0px 2px 1px #ff00bf);
+}
+
+.navegacion__color {
+  filter: drop-shadow(0px -2px 1px black);
+}
+
+.header__h1 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 23rem;
+}
+.header__h1 h1 {
+  font-size: 4rem;
+  text-align: center;
+  width: 70rem;
+  letter-spacing: 0.2rem;
+  line-height: 6rem;
+}
+
+.carrousel__modificacion {
+  background-color: #1c8eb498;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.moficador__flex {
+  justify-content: space-between;
+}
+
+.flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  filter: drop-shadow(0px -2px 1px fuchsia);
+}
+
+.flecha__imagen {
+  filter: drop-shadow(0px 2px 1px fuchsia);
+  transition: 1s;
+  width: 25rem;
+}
+.flecha__imagen:hover {
+  width: 27rem;
+  transition: 1s;
+}
+
+.seccion1 {
+  background-color: #FFFFFF;
+  height: 1050px;
+}
+
+.seccion1__titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  bottom: -8rem;
+  margin-bottom: -5rem;
+}
+.seccion1__titulo h2 {
+  letter-spacing: 0.2rem;
+  display: flex;
+  color: #FFFFFF;
+  font-size: 3rem;
+  width: 38rem;
+}
+
+.carousel-item--modificacion {
+  margin-top: -4rem;
+  margin-bottom: -6rem;
+}
+
+.seccion1__btncarousel {
+  position: relative;
+  margin: auto;
+  text-decoration: none;
+  background-color: #620871;
+  width: 200px;
+  padding: 1.8rem;
+  text-align: center;
+  top: -8em;
+  border-radius: 10rem;
+  -webkit-box-shadow: 0px 7px 65px 18px #0009b3;
+  -moz-box-shadow: 0px 7px 65px 18px #0009b3;
+  box-shadow: 0px 7px 65px 18px #0009b3;
+  transition: 1s;
+}
+.seccion1__btncarousel:hover {
+  transition: 1s;
+  -webkit-box-shadow: 0px 7px 65px 10px #00b3b3;
+  -moz-box-shadow: 0px 7px 65px 10px #00b3b3;
+  box-shadow: 0px 7px 65px 10px #00b3b3;
+}
+.seccion1__btncarousel a {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 1s;
+}
+.seccion1__btncarousel a:hover {
+  color: yellow;
+  transition: 1s;
+}
+
+.seccion1__cards {
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+}
+
+.seccion1__card1 {
+  background-image: url(../imagenes/auriculares1.jpg);
+}
+
+.seccion1__card2 {
+  background-image: url(../imagenes/netbook1.jpg);
+}
+
+.seccion1__card3 {
+  background-image: url(../imagenes/grafia1.webp);
+}
+
+.cards {
+  margin: auto;
+  border-radius: 2rem;
+  width: 420px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__texto {
+  text-align: center;
+  width: 420px;
+  height: 300px;
+  position: absolute;
+  top: 100%;
+  font-size: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.603);
+  border-radius: 2rem;
+  transition: 1s;
+}
+.card__texto h4 {
+  margin-top: 10rem;
+  font-size: 2.5rem;
+}
+.card__texto .card__btn {
+  background-color: rgba(139, 40, 150, 0.349);
+  width: 150px;
+  margin: auto;
+  border-radius: 1rem;
+}
+.card__texto .card__btn a {
+  padding: 0.4rem;
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  transition: 1s;
+}
+.card__texto .card__btn a:hover {
+  transition: 1s;
+  color: yellow;
+}
+
+.cards:hover .card__texto {
+  top: 0px;
+  transition: 1s;
+}
+
+.seccion2 {
+  background-image: url(../imagenes/header3.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 1000px;
+  background-attachment: fixed;
+}
+
+.slide__titulo {
+  display: flex;
+}
+.slide__titulo h2 {
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.slides__grid {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+}
+.slides__grid a {
+  margin: auto;
+}
+
+.grid__imagenes {
+  width: 300px;
+  border-radius: 2rem;
+  height: 200px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: -4rem;
+}
+
+.slides__btn {
+  background-color: #620871;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  padding: 1rem;
+  width: 500px;
+  border-radius: 4rem;
+  margin-top: 5rem;
+  text-decoration: none;
+  transition: 1s;
+}
+.slides__btn:hover {
+  color: yellow;
+  transition: 1s;
+}
+
+.seccion3 {
+  background: url(../imagenes/Header2.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 380px;
+}
+
+.seccion3__flex {
+  display: flex;
+}
+
+.tarjetadecredito {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -5rem;
+}
+
+.seccion3__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #5b5c696c;
+  width: 1200px;
+  border-radius: 2rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+.seccion3__grid h4 {
+  margin-top: 6rem;
+}
+.seccion3__grid h4, .seccion3__grid p {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 140px;
+}
+
+.redes-sociales {
+  text-align: center;
+  width: 250px;
+}
+
+.footerh4 {
+  display: flex;
+}
+.footerh4 h4 {
+  margin-top: 1rem !important;
+  margin: auto;
+}
+
+.redesicon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.redes-sociales-icons {
+  width: 40px;
+}
+
+.marcapersonal {
+  display: flex;
+  margin-top: 1rem;
+  text-align: center;
+  margin-left: 4.5rem;
+}
+
+.flechafooter {
+  width: 150px;
+  height: auto;
+  transform: rotate(180deg);
+}
+
+.forminput {
+  margin-top: -0.5rem;
+}
+.forminput form input {
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  outline: none;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.cohetefooter {
+  width: 50px;
+  height: 50px;
+}
+
+.flechayform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15rem;
+}
+
+.btn-arrepentimiento {
+  display: flex;
+  margin-top: -4rem;
+  margin-right: 3rem;
+  align-items: center;
+  justify-content: right;
+}
+.btn-arrepentimiento img {
+  margin-right: 0.5rem;
+  width: 35px;
+  height: 35px;
+}
+
+.headerProductos {
+  background-image: url(../imagenes/headerProductos.png);
+  width: auto;
+  height: 350px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.productos__logo {
+  display: flex;
+  width: 250px;
+  height: 250px;
+}
+
+.productos__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -8rem;
+}
+.productos__form form span input {
+  width: 520px;
+  padding: 2rem;
+  border-radius: 5rem;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+.productos__form form span img {
+  width: 40px;
+  height: 40px;
+  margin-left: -6rem;
+}
+
+.navbarproductos {
+  background-color: #000000;
+  width: auto;
+  height: 7rem;
+}
+
+.navbar__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+.navbar__flex a {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  transition: 1s;
+}
+.navbar__flex a:hover {
+  transition: 1s;
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */

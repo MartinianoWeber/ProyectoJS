@@ -1,0 +1,38 @@
+.seccion3 {
+    background: url(../imagenes/Header2.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 380px;
+}
+
+.seccion3__flex {
+    display: flex;
+}
+
+.tarjetadecredito {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -5rem;
+}
+
+.seccion3__grid {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #5b5c696c;
+    width: 1200px;
+    border-radius: 2rem;
+    margin: auto;
+    margin-top: 4rem;
+    h4{
+        margin-top: 6rem;
+    }
+    h4, p{
+        
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
