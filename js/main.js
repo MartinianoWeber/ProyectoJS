@@ -86,19 +86,19 @@ function tipoPeriferico(){
 }
 function mousePeriferico(){
     while(trueofalse){
-        let perifecomouse = prompt(`Tenemos los siguientes mouse \n1. ${mouses.nombre} $${mouses.precio} stock ${mouses.cantidad} \n2. ${mouses2.nombre} $${mouses2.precio} stock ${mouses2.cantidad} \n3. ${mouses3.nombre} $${mouses3.precio} stock ${mouses3.cantidad} \n4. Seguir comprando \n5. Terminar compra   \nIndique su respuesta con el numero que corresponde para cada mouse`).toUpperCase();
+        let perifecomouse = prompt(`Tenemos los siguientes mouse \n1.${mouse[0].nombre} $${mouse[0].precio} y tenemos un stock de ${mouse[0].cantidad} \n2. ${mouse[1].nombre} $${mouse[1].precio} y tenemos un stock de ${mouse[1].cantidad} \n3.  ${mouse[2].nombre} $${mouse[2].precio} y tenemos un stock de ${mouse[2].cantidad}   \n4. Seguir comprando \n5. Terminar compra   \nIndique su respuesta con el numero que corresponde para cada mouse`).toUpperCase();
         switch(perifecomouse){
             case "1":  
-                mouses.stock()
-                valor = mouses.precioTOTAL 
+                mouse[0].stock()
+                // valor = mouses.precioTOTAL 
                 break;
             case "2":
-                mouses2.stock()
-                valor = mouses2.precioTOTAL
+                mouse[1].stock()
+                // valor = mouses2.precioTOTAL
                 break;
             case "3":
-                mouses3.stock()
-                valor = mouses3.precioTOTAL
+                mouse[2].stock()
+                // valor = mouses3.precioTOTAL
                 break;
             case "4":
                 entrada = "4"
@@ -121,19 +121,16 @@ function mousePeriferico(){
 }
 function tecladoPeriferico(){
     while(trueofalse){
-        let perifecteclado = prompt(`Tenemos los siguientes teclados \n1. ${teclado.nombre} $${teclado.precio} stock ${teclado.cantidad} \n2. ${teclado2.nombre} $${teclado2.precio} stock ${teclado2.cantidad}\n3. ${teclado3.nombre} $${teclado3.precio} stock ${teclado3.cantidad}\n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada teclado`).toUpperCase();
+        let perifecteclado = prompt(`Tenemos los siguientes teclados \n1. ${teclados[0].nombre} $${teclados[0].precio} stock ${teclados[0].cantidad} \n2. ${teclados[1].nombre} $${teclados[1].precio} stock ${teclados[1].cantidad}\n3. ${teclados[2].nombre} $${teclados[2].precio} stock ${teclados[2].cantidad}\n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada teclado`).toUpperCase();
         switch(perifecteclado){
             case "1":
-                teclado.stock()
-                valor = teclado.precioTOTAL  
+                teclados[0].stock() 
                 break;
             case "2":
-                teclado2.stock()
-                valor = teclado2.precioTOTAL  
+                teclados[1].stock() 
                 break;
             case "3":
-                teclado3.stock()
-                valor = teclado3.precioTOTAL 
+                teclados[2].stock() 
                 break;
             case "4":
                 entrada = "4"
@@ -155,19 +152,19 @@ function tecladoPeriferico(){
 }
 function auricularesPeriferico(){
     while(trueofalse){
-        let perifecoauricular = prompt(`Tenemos los siguientes auriculares \n1. ${auriculares.nombre} $${auriculares.precio} ${auriculares.cantidad} \n2. ${auriculares2.nombre} $${auriculares2.precio} ${auriculares2.cantidad}\n3. ${auriculares3.nombre} $${auriculares3.precio} ${auriculares3.cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada auricular`).toUpperCase();
+        let perifecoauricular = prompt(`Tenemos los siguientes auriculares \n1. ${auriculares[0].nombre} $${auriculares[0].precio} ${auriculares[0].cantidad} \n2. ${auriculares[1].nombre} $${auriculares[1].precio} ${auriculares[1].cantidad}\n3. ${auriculares[2].nombre} $${auriculares[2].precio} ${auriculares[2].cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada auricular`).toUpperCase();
         switch(perifecoauricular){
             case "1":
-                auriculares.stock()
-                valor = auriculares.precioTOTAL 
+                auriculares[0].stock()
+                // valor = auriculares.precioTOTAL 
                 break;
             case "2":
-                auriculares2.stock()
-                valor = auriculares2.precioTOTAL 
+                auriculares[1].stock()
+                // valor = auriculares2.precioTOTAL 
                 break;
             case "3":
-                auriculares3.stock()
-                valor = auriculares3.precioTOTAL 
+                auriculares[2].stock()
+                // valor = auriculares3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -191,21 +188,21 @@ function auricularesPeriferico(){
 // Netbooks 
 function netbooks10(){
     while(trueofalse){
-        let netbooks10 = prompt(`Tenemos las siguientes netbooks \n1. Netbook HP i510210U, Ram: 8Gb y SSD de 256GB $${netbooks.precio} tiene un stock ${netbooks.cantidad} \n2. Netbook Lenovo i7 10510U Ram: 8Gb y SSD 512GB $${netbooks2.precio} tiene un stock ${netbooks2.cantidad} \n3. Netbook Asus  i7 1065G7 Ram: 8Gb SSD: 512GB HDD: 1TB $${netbooks3.precio} y tiene un stock ${netbooks3.cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada netbook`).toUpperCase();
+        let netbooks10 = prompt(`Tenemos las siguientes netbooks \n1. Netbook HP i510210U, Ram: 8Gb y SSD de 256GB $${netbooks[0].precio} tiene un stock ${netbooks[0].cantidad} \n2. Netbook Lenovo i7 10510U Ram: 8Gb y SSD 512GB $${netbooks[1].precio} tiene un stock ${netbooks[1].cantidad} \n3. Netbook Asus  i7 1065G7 Ram: 8Gb SSD: 512GB HDD: 1TB $${netbooks[2].precio} stock ${netbooks[2].cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada netbook`).toUpperCase();
         switch(netbooks10){
             case "1":
-                netbooks.stock()
-                valor = netbooks.precioTOTAL 
+                netbooks[0].stock()
+                // valor = netbooks.precioTOTAL 
 
                 break;
             case "2":
-                netbooks2.stock()
-                valor = netbooks2.precioTOTAL 
+                netbooks[1].stock()
+                // valor = netbooks2.precioTOTAL 
 
                 break;
             case "3":
-                netbooks3.stock()
-                valor = netbooks3.precioTOTAL 
+                netbooks[2].stock()
+                // valor = netbooks3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -228,19 +225,19 @@ function netbooks10(){
 // Combos PC
 function combospc(){
     while(trueofalse){
-        let combospc = prompt(`Tenemos las siguientes combos \n1. ${combosPc.nombre} $${combosPc.precio} y tiene un stock ${combosPc.cantidad} \n2. ${combosPc2.nombre} $${combosPc2.precio} y tiene un stock ${combosPc2.cantidad}\n3.  ${combosPc3.nombre} $${combosPc3.precio} y tiene un stock ${combosPc3.cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada combo`).toUpperCase();
+        let combospc = prompt(`Tenemos las siguientes combos \n1. ${combopc[0].nombre} $${combopc[0].precio} y tiene un stock ${combopc[0].cantidad} \n2. ${combopc[1].nombre} $${combopc[1].precio} y tiene un stock ${combopc[1].cantidad}\n3.  ${combopc[2].nombre} $${combopc[2].precio} y tiene un stock ${combopc[2].cantidad} \n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada combo`).toUpperCase();
         switch(combospc){
             case "1":
-                combosPc.stock()
-                valor = combosPc.precioTOTAL 
+                combopc[0].stock()
+                // valor = combosPc.precioTOTAL 
                 break;
             case "2":
-                combosPc2.stock()
-                valor = combosPc2.precioTOTAL 
+                combopc[1].stock()
+                // valor = combosPc2.precioTOTAL 
                 break;
             case "3":
-                combosPc3.stock()
-                valor = combosPc3.precioTOTAL 
+                combopc[2].stock()
+                // valor = combosPc3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -263,19 +260,19 @@ function combospc(){
 // Placas video
 function placasVideos(){
     while(trueofalse){
-        let placasVideos = prompt(`Tenemos las siguientes placas de video \n1. GTX 1050TI MSI $${graficas.precio} y tiene un stock ${graficas.cantidad} \n2. MSI VENTUS RTX 2060 SUPER $${graficas2.precio} y tiene un stock ${graficas2.cantidad} \n3. MSI VENTUS RTX 3090 $${graficas3.precio} y tiene un stock ${graficas3.cantidad}\n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada placa`).toUpperCase();
+        let placasVideos = prompt(`Tenemos las siguientes placas de video \n1. GTX 1050TI MSI $${graficas[0].precio} y tiene un stock ${graficas[0].cantidad} \n2. MSI VENTUS RTX 2060 SUPER $${graficas[1].precio} y tiene un stock ${graficas[1].cantidad} \n3. MSI VENTUS RTX 3090 $${graficas[2].precio} y tiene un stock ${graficas[2].cantidad}\n4. Seguir comprando \n5. Terminar compra \nIndique su respuesta con el numero que corresponde para cada placa`).toUpperCase();
         switch(placasVideos){
             case "1":
-                graficas.stock()
-                valor = graficas.precioTOTAL 
+                graficas[0].stock()
+                // valor = graficas.precioTOTAL 
                 break;
             case "2":
-                graficas2.stock()
-                valor = graficas2.precioTOTAL 
+                graficas[1].stock()
+                // valor = graficas2.precioTOTAL 
                 break;
             case "3":
-                graficas3.stock()
-                valor = graficas3.precioTOTAL 
+                graficas[2].stock()
+                // valor = graficas3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -297,19 +294,19 @@ function placasVideos(){
 }
 function memoriasram2(){
     while(trueofalse){
-        let memoriasRampromp = prompt(`Tenemos las siguientes memorias Ram \n1. Memoria RAM Fury DDR4 8GB 2666mhz $${memoriasRam.precio} y stock de ${memoriasRam.cantidad} \n2.  Memoria RAM Fury DDR4 16GB 2133mhz $${memoriasRam2.precio} y stock de ${memoriasRam2.cantidad} \n3. x2 Memoria RAM Fury DDR4 8GB 2133mhz $${memoriasRam3.precio} y stock de ${memoriasRam3.cantidad} \n4. Seguir comprando \n5. Terminar compra  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let memoriasRampromp = prompt(`Tenemos las siguientes memorias Ram \n1. Memoria RAM Fury DDR4 8GB 2666mhz $${memoriasRAM[0].precio} y stock de ${memoriasRAM[0].cantidad} \n2.  Memoria RAM Fury DDR4 16GB 2133mhz $${memoriasRAM[1].precio} y stock de ${memoriasRAM[1].cantidad} \n3. x2 Memoria RAM Fury DDR4 8GB 2133mhz $${memoriasRAM[2].precio} y stock de ${memoriasRAM[2].cantidad} \n4. Seguir comprando \n5. Terminar compra  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(memoriasRampromp){
             case "1":
-                memoriasRam.stock()
-                valor = memoriasRam.precioTOTAL 
+                memoriasRAM[0].stock()
+                // valor = memoriasRam.precioTOTAL 
                 break;
             case "2":
-                memoriasRam2.stock()
-                valor = memoriasRam2.precioTOTAL 
+                memoriasRAM[1].stock()
+                // valor = memoriasRam2.precioTOTAL 
                 break;
             case "3":
-                memoriasRam3.stock()
-                valor = memoriasRam3.precioTOTAL 
+                memoriasRAM[2].stock()
+                // valor = memoriasRam3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -324,26 +321,26 @@ function memoriasram2(){
                 default: alert("Elegi una opcion valida");
                 break;
         }
-        if(entrada == memoriasRam){
+        if(entrada == memoriasRampromp){
             trueofalse = false;
         }
     }
 }
 function consolas10(){
     while(trueofalse){
-        let consolas10 = prompt(`Tenemos las siguientes consolas \n1. Xbox Series X 1TB $${consolas.precio}  y en stock ${consolas.cantidad} \n2. Xbox Series S 512GB $${consolas2.precio}  y en stock ${consolas2.cantidad} \n3. Sony PlayStation 5 825GB $${consolas3.precio} y en stock ${consolas3.cantidad}\n4. Seguir comprando \n5. Terminar compra  \nIndique su respuesta con el numero que corresponde para cada consola`).toUpperCase();
+        let consolas10 = prompt(`Tenemos las siguientes consolas \n1. Xbox Series X 1TB $${consolas[0].precio}  y en stock ${consolas[0].cantidad} \n2. Xbox Series S 512GB $${consolas[1].precio}  y en stock ${consolas[1].cantidad}  \n3. Sony PlayStation 5 825GB $${consolas[2].precio}  y en stock ${consolas[2].cantidad} \n4. Seguir comprando \n5. Terminar compra  \nIndique su respuesta con el numero que corresponde para cada consola`).toUpperCase();
         switch(consolas10){
             case "1":
-                consolas.stock()
-                valor = consolas.precioTOTAL 
+                consolas[0].stock()
+                // valor = consolas.precioTOTAL 
                 break;
             case "2":
-                consolas2.stock()
-                valor = consolas2.precioTOTAL 
+                consolas[1].stock()
+                // valor = consolas2.precioTOTAL 
                 break;
             case "3":
-                consolas3.stock()
-                valor = consolas3.precioTOTAL 
+                consolas[2].stock()
+                // valor = consolas3.precioTOTAL 
                 break;
             case "4":
                 entrada = "4"
@@ -370,12 +367,12 @@ function quieroArmarMipcinicio(){
         switch(pcprincipio){
             case "AMD":
                 entrada = "AMD"
-                alert(`${objeto = "AMD"} procederemos a ir por un procesador`)
+                alert(`AMD procederemos a ir por un procesador`)
                 procesoamd()
                 break;
             case "INTEL":
                 entrada = "INTEL"
-                alert(`${objeto = "INTEL"} procederemos a ir por un procesador`)
+                alert(`INTEL procederemos a ir por un procesador`)
                 procesointel();
                 break;
                 default: alert("Elegi una opcion valida");
@@ -392,27 +389,27 @@ function procesoamd(){
 }
 function procesadoramd(){
     while(trueofalse){
-        let pcProcesadoramd = prompt(`Tenemos los siguientes procesadores \n1. ${procesadorAMD.nombre} $${procesadorAMD.precio} \n2. ${procesadorAMD2.nombre} $${procesadorAMD2.precio} \n3. ${procesadorAMD3.nombre} $${procesadorAMD.precio}\n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let pcProcesadoramd = prompt(`Tenemos los siguientes procesadores \n1. ${procesadoresAmd[0].nombre} $${procesadoresAmd[0].precio} \n2. ${procesadoresAmd[1].nombre} $${procesadoresAmd[1].precio} \n3. ${procesadoresAmd[2].nombre} $${procesadoresAmd[2].precio}\n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(pcProcesadoramd){
             case "1":
                 entrada = "1"
-                procesadorAMD.armadopc()
-                alert(`${procesadorAMD.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresAmd[0].armadopc()
+                alert(`${procesadoresAmd[0].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
                 
                 break;
             case "2":
                 entrada = "2"
-                procesadorAMD2.armadopc()
-                alert(`${procesadorAMD2.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresAmd[1].armadopc()
+                alert(`${procesadoresAmd[1].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
                 break;
             case "3":
                 entrada = "3"
-                procesadorAMD3.armadopc()
-                alert(`${procesadorAMD3.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresAmd[2].armadopc()
+                alert(`${procesadoresAmd[2].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motheramd()
                 sumadeproductos()
                 break;
@@ -427,25 +424,24 @@ function procesadoramd(){
 }
 function motheramd(){
     while(trueofalse){
-        let pcmotheramd = prompt(`Tenemos las siguientes mothers \n1. ${motherAMD.nombre} $${motherAMD.precio} \n2. $${motherAMD2.nombre} ${motherAMD2.precio} \n3. ${motherAMD3.nombre} $${motherAMD3.precio} \n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let pcmotheramd = prompt(`Tenemos las siguientes mothers \n1. ${mothersAmd[0].nombre} $${mothersAmd[0].precio} \n2. $${mothersAmd[1].nombre} ${mothersAmd[1].precio} \n3. ${mothersAmd[2].nombre} $${mothersAmd[2].precio} \n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(pcmotheramd){
             case "1":
                 entrada = "1"
-                motherAMD.armadopc()
-                alert(`${motherAMD.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersAmd[0].armadopc()
+                alert(`${mothersAmd[0].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "2":
                 entrada = "2"
-                motherAMD2.armadopc()
-                alert(`${motherAMD2.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersAmd[1].armadopc()
+                alert(`${mothersAmd[1].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "3":
                 entrada = "3"
-                motherAMD3.armadopc()
-                motherAMD3.nombre
-                alert(`${motherAMD3.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersAmd[2].armadopc()
+                alert(`${mothersAmd[2].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -464,27 +460,27 @@ function procesointel(){
 }
 function procesadorintel(){
     while(trueofalse){
-        let pcProcesadorintel = prompt(`Tenemos los siguientes procesadores \n1. ${procesadorIntel.nombre} $${procesadorIntel.precio} \n2. ${procesadorIntel2.nombre} $${procesadorIntel2.precio} \n3. ${procesadorIntel3.nombre} $${procesadorIntel3.precio}\n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let pcProcesadorintel = prompt(`Tenemos los siguientes procesadores \n1. ${procesadoresIntel[0].nombre} $${procesadoresIntel[0].precio} \n2. ${procesadoresIntel[1].nombre} $${procesadoresIntel[1].precio} \n3. ${procesadoresIntel[2].nombre} $${procesadoresIntel[2].precio}\n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(pcProcesadorintel){
             case "1":
                 entrada = "1"
-                procesadorIntel.armadopc()
-                alert(`${procesadorIntel.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresIntel[0].armadopc()
+                alert(`${procesadoresIntel[0].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
                 
                 break;
             case "2":
                 entrada = "2"
-                procesadorIntel2.armadopc()
-                alert(`${procesadorIntel2.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresIntel[1].armadopc()
+                alert(`${procesadoresIntel[1].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
                 break;
             case "3":
                 entrada = "3"
-                procesadorIntel3.armadopc()
-                alert(`${procesadorIntel3.nombre} Buena eleccion! \n Ahora vamos a por la mother`)
+                procesadoresIntel[2].armadopc()
+                alert(`${procesadoresIntel[2].nombre} Buena eleccion! \n Ahora vamos a por la mother`)
                 motherintel()
                 sumadeproductos()
                 break;
@@ -499,27 +495,24 @@ function procesadorintel(){
 }
 function motherintel(){
     while(trueofalse){
-        let pcmotherintel = prompt(`Tenemos las siguientes mothers \n1. ${motherIntel.nombre} $${motherIntel.precio} \n2.${motherIntel2.nombre} $${motherIntel2.precio} \n3. ${motherIntel3.nombre} $${motherIntel3.precio} \n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let pcmotherintel = prompt(`Tenemos las siguientes mothers \n1. ${mothersIntel[0].nombre} $${mothersIntel[0].precio} \n2.${mothersIntel[1].nombre} $${mothersIntel[1].precio} \n3. ${mothersIntel[2].nombre} $${mothersIntel[2].precio} \n Por favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(pcmotherintel){
             case "1":
                 entrada = "1"
-                motherIntel.nombre
-                motherIntel.armadopc()
-                alert(`${motherIntel.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersIntel[0].armadopc()
+                alert(`${mothersIntel[0].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                memoriasRamGen()
                 break;
             case "2":
                 entrada = "2"
-                motherIntel2.nombre
-                motherIntel2.armadopc()
-                alert(`${motherIntel2.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersIntel[1].armadopc()
+                alert(`${mothersIntel[1].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                 memoriasRamGen()
                 break;
             case "3":
                 entrada = "3"
-                motherIntel3.nombre
-                motherIntel3.armadopc()
-                alert(`${motherIntel3.nombre} Buena eleccion! \n Ahora vamos a por la ram`)
+                mothersIntel[2].armadopc()
+                alert(`${mothersIntel[2].nombre} Buena eleccion! \n Ahora vamos a por la ram`)
                memoriasRamGen()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -535,24 +528,24 @@ function motherintel(){
 // PROCESO GENERALES
 function memoriasRamGen(){
     while(trueofalse){
-        let memoriasRamGen = prompt(`Tenemos las siguientes memorias Ram \n1. ${memoriasRam.nombre} $${memoriasRam.precio} \n2.  ${memoriasRam2.nombre} $${memoriasRam2.precio} \n3. ${memoriasRam.nombre} $${memoriasRam.precio} \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let memoriasRamGen = prompt(`Tenemos las siguientes memorias Ram \n1. ${memoriasRAM[0].nombre} $${memoriasRAM[0].precio} \n2.  ${memoriasRAM[1].nombre} $${memoriasRAM[1].precio} \n3. ${memoriasRAM[2].nombre} $${memoriasRAM[2].precio} \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(memoriasRamGen){
             case "1":
                 entrada = "1"
-                memoriasRam.armadopc()
-                alert(`${memoriasRam.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
+                memoriasRAM[0].armadopc()
+                alert(`${memoriasRAM[0].nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
             case "2":
                 entrada = "2"
-                memoriasRam2.armadopc()
-                alert(`${memoriasRam2.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
+                memoriasRAM[1].armadopc()
+                alert(`${memoriasRAM[1].nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
             case "3":
                 entrada = "3"
-                memoriasRam3.armadopc()
-                alert(`${memoriasRam3.nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
+                memoriasRAM[2].armadopc()
+                alert(`${memoriasRAM[2].nombre} Buena eleccion! \n Ahora vamos a por la grafica`)
                 graficasintel()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -565,24 +558,24 @@ function memoriasRamGen(){
 }
 function graficasintel(){
     while(trueofalse){
-        let palcasdevideo = prompt(`Tenemos las siguientes graficas \n1. ${graficas.nombre} $${graficas.precio} \n2. ${graficas2.nombre} $${graficas2.precio}  \n3. ${graficas3.nombre} $${graficas3.precio}   \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let palcasdevideo = prompt(`Tenemos las siguientes graficas \n1. ${graficas[0].nombre} $${graficas[0].precio} \n2. ${graficas[1].nombre} $${graficas[1].precio}  \n3. ${graficas[2].nombre} $${graficas[2].precio}   \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(palcasdevideo){
             case "1":
                 entrada = "1"
-                graficas.armadopc()
-                alert(`${graficas.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
+                graficas[0].armadopc()
+                alert(`${graficas[0].nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                 almacenamientointel()
                 break;
             case "2":
                 entrada = "2"
-                graficas2.armadopc()
-                alert(`${graficas2.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
+                graficas[1].armadopc()
+                alert(`${graficas[1].nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                  almacenamientointel()
                 break;
             case "3":
                 entrada = "3"
-                graficas3.armadopc()
-                alert(`${graficas3.nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
+                graficas[2].armadopc()
+                alert(`${graficas[2].nombre} Buena eleccion! \n Ahora vamos a por el almacenamiento`)
                  almacenamientointel()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -595,24 +588,24 @@ function graficasintel(){
 }
 function almacenamientointel(){
     while(trueofalse){
-        let discosrigidos = prompt(`Tenemos los siguientes discos rigidos y SSD \n1. ${almacenamiento.nombre} $${almacenamiento.precio} \n2. ${almacenamiento2.nombre} $${almacenamiento2.precio} \n3. ${almacenamiento3.nombre} $${almacenamiento3.precio}  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let discosrigidos = prompt(`Tenemos los siguientes discos rigidos y SSD \n1. ${almacenamiento[0].nombre} $${almacenamiento[0].precio} \n2. ${almacenamiento[1].nombre} $${almacenamiento[1].precio} \n3. ${almacenamiento[2].nombre} $${almacenamiento[2].precio}  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(discosrigidos){
             case "1":
                 entrada = "1"
-                almacenamiento.armadopc()
-                alert(`${almacenamiento.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
+                almacenamiento[0].armadopc()
+                alert(`${almacenamiento[0].nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
             case "2":
                 entrada = "2"
-                almacenamiento2.armadopc()
-                alert(`${almacenamiento2.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
+                almacenamiento[1].armadopc()
+                alert(`${almacenamiento[1].nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
             case "3":
                 entrada = "3"
-                almacenamiento3.armadopc()
-                alert(`${almacenamiento3.nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
+                almacenamiento[2].armadopc()
+                alert(`${almacenamiento[2].nombre} Buena eleccion! \n Ahora vamos a por el gabinete`)
                 gabinetesintel()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -625,24 +618,24 @@ function almacenamientointel(){
 }
 function gabinetesintel(){
     while(trueofalse){
-        let gabinetesintel = prompt(`Tenemos los siguientes gabinetes \n1. ${gabinetes.nombre} $${gabinetes.precio} \n2. ${gabinetes2.nombre} $${gabinetes2.precio} \n3. ${gabinetes3.nombre} $${gabinetes3.precio} \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let gabinetesintel = prompt(`Tenemos los siguientes gabinetes \n1. ${gabinetes[0].nombre} $${gabinetes[0].precio} \n2. ${gabinetes[1].nombre} $${gabinetes[1].precio} \n3. ${gabinetes[2].nombre} $${gabinetes[2].precio} \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(gabinetesintel){
             case "1":
                 entrada = "1"
-                gabinetes.armadopc()
-                alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
+                gabinetes[0].armadopc()
+                alert(`${gabinetes[0].nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
             case "2":
                 entrada = "2"
-                gabinetes2.armadopc()
-                alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
+                gabinetes[1].armadopc()
+                alert(`${gabinetes[1].nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
             case "3":
                 entrada = "3"
-                gabinetes3.armadopc()
-                alert(`${gabinetes.nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
+                gabinetes[2].armadopc()
+                alert(`${gabinetes[2].nombre} Buena eleccion! \n Ahora vamos a por la fuente`)
                 fuentesintel()
                 break;
                 default: alert("Elegi una opcion valida");
@@ -655,22 +648,22 @@ function gabinetesintel(){
 }
 function fuentesintel(){
     while(trueofalse){
-        let fuentesintel = prompt(`Tenemos las siguientes fuentes \n1. ${fuentes.nombre} $${fuentes.precio} \n2. ${fuentes2.nombre} $${fuentes2.precio}  \n3.${fuentes3.nombre} $${fuentes3.precio}  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
+        let fuentesintel = prompt(`Tenemos las siguientes fuentes \n1. ${fuentes[0].nombre} $${fuentes[0].precio} \n2. ${fuentes[1].nombre} $${fuentes[1].precio}  \n3.${fuentes[2].nombre} $${fuentes[2].precio}  \nPor favor haz tu eleccion con los numeros indicados en cada una.`).toUpperCase();
         switch(fuentesintel){
             case "1":
                 entrada = "1"
-                fuentes.armadopc()
-                alert(`${fuentes.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
+                fuentes[0].armadopc()
+                alert(`${fuentes[0].nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
             case "2":
                 entrada = "2"
-                fuentes2.armadopc()
-                alert(`${fuentes2.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
+                fuentes[1].armadopc()
+                alert(`${fuentes[1].nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
             case "3":
                 entrada = "3"
-                fuentes3.armadopc()
-                alert(`${fuentes3.nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
+                fuentes[2].armadopc()
+                alert(`${fuentes[2].nombre} Buena eleccion! \n Muy bien, ahora te pasare el total de la PC`)
                 break;
                 default: alert("Elegi una opcion valida");
                 break;
@@ -798,6 +791,7 @@ function listaPC(){
     document.getElementById('PCLIST').innerHTML = `Bien su computadora va a estar compuesta por lo siguientes componentes: <br>${pcCaritoNombre.toString()} `;
 }
 function cuotasEfectivonormal(){
+    sumapr()
     alert("Muy buena eleccion! vamos a proceder al pago")
     while(trueofalse){
     let cuotasoefectivo = prompt("Ahora que tipo de pago quieres, ¿Cuotas o efectivo?").toUpperCase()
@@ -805,7 +799,7 @@ function cuotasEfectivonormal(){
             case "EFECTIVO":
                 entrada = "EFECTIVO"
                 alert(`Muy bien vamos a proceder al pago`)
-                document.getElementById('EFECTIVO').innerHTML = `GeekInformatica.SA <br>CUIT: 4239205884 <br> ING.BR: 1017936-4 <br> Formosa 127 <br> Ticket generado: 2041290 <br> Fecha: 22/03/2021 Hora: 16.40 <br> Lista de productos: <br> ${arrayNombresFinal.toString()}<br> paga ${valor}`;
+                document.getElementById('EFECTIVO').innerHTML = `GeekInformatica.SA <br>CUIT: 4239205884 <br> ING.BR: 1017936-4 <br> Formosa 127 <br> Ticket generado: 2041290 <br> Fecha: 22/03/2021 Hora: 16.40 <br> Lista de productos: <br> ${arrayNombresFinal.toString()}<br> paga ${suma}`;
                 
             break;
             case "CUOTAS":
@@ -823,16 +817,16 @@ function cuotasEfectivonormal(){
         
 }
 function cuotasnormal(){
-    iva21 = (valor*21)/100;
+    iva21 = (suma*21)/100;
     while(trueofalse){
     
     let cuotas = prompt("Podemos darle los siguientes planes de cuotas: \n3 cuotas \n6 cuotas \n9 cuotas \n12 cuotas")
     switch(cuotas){
         case "3":
         entrada = "3"
-        intereses = (valor*6)/100;
-        resultadototal = (valor+iva21+intereses)/3
-        preciototal = valor+iva21+intereses
+        intereses = (suma*6)/100;
+        resultadototal = (suma+iva21+intereses)/3
+        preciototal = suma+iva21+intereses
         alert(`Aca esta su plan de pago. quedaria en un total de ${preciototal} \nla cuota en ${resultadototal} \nIva ${iva21} \nInteres de la cuota ${intereses} \nEl pago se realizara todos los dias 7 de cada mes.`)
         alert("De igual manera se lo dejaremos de forma escrita para que se lo pueda llevar")
         aceptaononormal()
@@ -840,9 +834,9 @@ function cuotasnormal(){
         
         case "6":
             entrada = "6"
-            intereses = (valor*8)/100;
-            resultadototal = (valor+iva21+intereses)/6
-            preciototal = valor+iva21+intereses
+            intereses = (suma*8)/100;
+            resultadototal = (suma+iva21+intereses)/6
+            preciototal = suma+iva21+intereses
             alert(`Aca esta su plan de pago. quedaria en un total de ${preciototal} \nla cuota en ${resultadototal} \nIva ${iva21} \nInteres de la cuota ${intereses} \nEl pago se realizara todos los dias 7 de cada mes.`)
             alert("De igual manera se lo dejaremos de forma escrita para que se lo pueda llevar")
             aceptaononormal()
@@ -850,9 +844,9 @@ function cuotasnormal(){
         
         case "9":
             entrada = "9"
-            intereses = (valor*11)/100;
-            resultadototal = (valor+iva21+intereses)/9
-            preciototal = valor+iva21+intereses
+            intereses = (suma*11)/100;
+            resultadototal = (suma+iva21+intereses)/9
+            preciototal = suma+iva21+intereses
             alert(`Aca esta su plan de pago. quedaria en un total de ${preciototal} \nla cuota en ${resultadototal} \nIva ${iva21} \nInteres de la cuota ${intereses} \nEl pago se realizara todos los dias 7 de cada mes.`)
             alert("De igual manera se lo dejaremos de forma escrita para que se lo pueda llevar")
             aceptaononormal()
@@ -860,9 +854,9 @@ function cuotasnormal(){
 
         case "12":
             entrada = "12"
-            intereses = (valor*13)/100;
-            resultadototal = (valor+iva21+intereses)/12
-            preciototal = valor+iva21+intereses
+            intereses = (suma*13)/100;
+            resultadototal = (suma+iva21+intereses)/12
+            preciototal = suma+iva21+intereses
             alert(`Aca esta su plan de pago. quedaria en un total de ${preciototal} \nla cuota en ${resultadototal} \nIva ${iva21} \nInteres de la cuota ${intereses} \nEl pago se realizara todos los dias 7 de cada mes.`)
             alert("De igual manera se lo dejaremos de forma escrita para que se lo pueda llevar")
             aceptaononormal()
@@ -898,10 +892,11 @@ function aceptaononormal() {
     }
 }}
 function contratonormal(){
-    document.getElementById('EFECTIVO').innerHTML = `Lista de productos: <br> ${arrayNombresFinal.toString()}<br> valor sin iva ni intereses ${valor}`;
+    document.getElementById('EFECTIVO').innerHTML = `Lista de productos: <br> ${arrayNombresFinal.toString()}<br> valor sin iva ni intereses ${suma}`;
     document.getElementById('CUOTAS').innerHTML = `El plan de pago quedaria en un total de ${preciototal} \nLa cuota quedaria en ${resultadototal} <br> Iva ${iva21} <br> Interes de la cuota ${intereses} <br> El pago se realizara todos los dias 7 de cada mes.`;
 }
 comercio()
+
 
 
 
