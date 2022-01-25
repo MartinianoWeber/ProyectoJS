@@ -49,8 +49,9 @@ class productos {
                 
     }else {
         alert("La cantidad que desea llevar no esta disponible ")
+        }
     }
-}
+
 }
 
 function sumapr(){
@@ -64,20 +65,8 @@ let slice = []
 productosArray.forEach(item => {
     item.stock()
     item.armadopc()
-    
+    item.prueba()
 });
-
-
-
-productosArray.forEach(producto => {
-    const productoHTML = document.createElement('p')
-    productoHTML.innerHTML = `
-    <p> ${producto.nombre} ${producto.precio} dsd </p>
-    `
-    contenedor.appendChild(autoHTML);
-})
-
-
 
 
 // Mouses
@@ -118,27 +107,27 @@ const consolas = productosArray.filter(id => id.id === "consolas")
 
 // AMD
 // procesadores
-productosArray.push (new productos("Ryzen 5600G", 7000, 1, "procesadores1", "Ryzen 5600G", "amd"))
-productosArray.push (new productos("Ryzen 7 5700G", 8000, 2, "procesadores1", "Ryzen 7 5700G", "amd"))
-productosArray.push (new productos("Ryzen 9 5950X", 10000, 5, "procesadores1", "Ryzen 9 5950X", "amd"))
-const procesadoresAmd = productosArray.filter(id => id.id === "procesadores1")
+productosArray.push (new productos("Ryzen 5600G", 7000, 1, "procesadores", "Ryzen 5600G", "amd"))
+productosArray.push (new productos("Ryzen 7 5700G", 8000, 2, "procesadores", "Ryzen 7 5700G", "amd"))
+productosArray.push (new productos("Ryzen 9 5950X", 10000, 5, "procesadores", "Ryzen 9 5950X", "amd"))
+
 // Mother
-productosArray.push (new productos("Gygabyte GA-A320M-H", 5000, 3, "mothers1", "Gygabyte GA-A320M-H", "gigabyte"))
-productosArray.push (new productos("Asus prime B450M-A II", 5500, 2, "mothers1", "Asus prime B450M-A II", "asus"))
-productosArray.push (new productos("Asus TUF B450M-Plus II", 6500, 5, "mothers1", "Asus TUF B450M-Plus II", "asus"))
+productosArray.push (new productos("Gygabyte GA-A320M-H", 5000, 3, "mothers", "Gygabyte GA-A320M-H", "gigabyte"))
+productosArray.push (new productos("Asus prime B450M-A II", 5500, 2, "mothers", "Asus prime B450M-A II", "asus"))
+productosArray.push (new productos("Asus TUF B450M-Plus II", 6500, 5, "mothers", "Asus TUF B450M-Plus II", "asus"))
 const mothersAmd = productosArray.filter(id => id.id === "mothers1")
 
 // INTEL
 // procesadores
-productosArray.push (new productos("Core i3-10100F", 3000, 2, "procesadores2", "Core i3-10100F", "intel"))
-productosArray.push (new productos("Core I5-10400F", 5000, 5, "procesadores2", "Core I5-10400F", "intel"))
-productosArray.push (new productos("Core i9-10900K", 10000, 2, "procesadores2", "Core i9-10900K", "intel"))
-const procesadoresIntel = productosArray.filter(id => id.id === "procesadores2")
+productosArray.push (new productos("Core i3-10100F", 3000, 2, "procesadores", "Core i3-10100F", "intel"))
+productosArray.push (new productos("Core I5-10400F", 5000, 5, "procesadores", "Core I5-10400F", "intel"))
+productosArray.push (new productos("Core i9-10900K", 10000, 2, "procesadores", "Core i9-10900K", "intel"))
+
 
 // Mother
-productosArray.push (new productos("Asus prime B460m-a", 2000, 3, "mothers2", "Asus prime B460m-a", "asus"))
-productosArray.push (new productos("Gigabyte h410m H V3", 4000, 2, "mothers2", "Gigabyte h410m H V3", "gigabyte"))
-productosArray.push (new productos("Asus prime h510 M-e", 6000, 1, "mothers2", "Asus prime h510 M-e", "asus"))
+productosArray.push (new productos("Asus prime B460m-a", 2000, 3, "mothers", "Asus prime B460m-a", "asus"))
+productosArray.push (new productos("Gigabyte h410m H V3", 4000, 2, "mothers", "Gigabyte h410m H V3", "gigabyte"))
+productosArray.push (new productos("Asus prime h510 M-e", 6000, 1, "mothers", "Asus prime h510 M-e", "asus"))
 const mothersIntel = productosArray.filter(id => id.id === "mothers2")
 // GeneralesPC
 
@@ -209,18 +198,21 @@ class netbooksProductos {
                 console.log(total)
                 console.log(arrayNombresFinal);
                 
+        }
     }
-}
+    
 }
 productosArray.push (new netbooksProductos("Netbook HP", 30000, 2, "Procesador: i5-10210U", "Ram: 8GB", "SSD: 256GB", "", "netbooks", "Netbook HP"))
 productosArray.push (new netbooksProductos("Netbook Lenovo", 40000, 5, "Procesador: i7-10510U", "Ram: 8GB", "SSD: 512GB", "", "netbooks", "Netbook Lenovo"))
 productosArray.push (new netbooksProductos("Netbook Asus", 60000, 1, "Procesador: i7-1065G7", "Ram: 8GB",  "SSD: 512GB", "HDD: 1TB", "netbooks", "Netbook Asus"))
 
-const netbooks = productosArray.filter(id => id.id === "netbooks")
+
+
+
 
 // EVENTOS
-function eventosCards(){
-    // Boton de carrito
+function eventos (){
+// Boton de carrito
 const btnCarrito = document.querySelector('.productos__carritolink')
 const backgroundCarrito = document.querySelector('#carrito')
 const btnContinuar = document.querySelector('#btnContinuar')
@@ -236,23 +228,52 @@ btnContinuar.addEventListener('click', (e) => {
       
 //boton mas informacion
 const boton = document.querySelectorAll('a[class = "btnInformacion"]')
+const popup = document.querySelector('#pop-up')
+popup.parentNode
+const productosPadre = document.querySelector('#productos')
+
+
+const h4Title = document.createElement('h4')
+const parrafoPro = document.createElement('p')
+productosPadre.addEventListener('click', (e) => {
+    let path =  e.path[1].children[0].textContent
+    h4Title.innerText =""
+    h4Title.textContent = path 
+    h4Title.classList.add('subrayado')
+    parrafoPro.textContent = "Descricion"
+    popup.prepend(parrafoPro)
+    popup.prepend(h4Title)
+   if(e.path[1].children[0]){
+       return
+   }
+
+
+})
+
+
 
 boton.forEach(btnAbrir => {
     btnAbrir.addEventListener('click', (e) => {
         e.preventDefault()
-        popup.classList.add('pruebapopup-show')
+        popup.parentNode.classList.remove('backgroundpopup-show')
+        console.log(btnAbrir)
+        
     })
 });
 
 const botoncerrar = document.querySelector('.btn-popup')
-const popup = document.querySelector('#pop-up')
 
 
 botoncerrar.addEventListener('click', (e) => {
     e.preventDefault()
-    popup.classList.remove('pruebapopup-show')
-})
+    h4Title.remove()
+    parrafoPro.remove()
+    popup.parentNode.classList.add('backgroundpopup-show')
+    })
+
+
 }
+    
 
 
 // limpiar html
@@ -261,10 +282,14 @@ function limpiarHTML(){
     document.getElementById('productos').innerHTML = ``;
 }
 
-function domProductos(){
-    const contenedor = document.querySelector('#productos');
-    limpiarHTML()
-    slice.forEach(productos => {
+
+// generar DOM de productos
+const updateElements = (productos)=>{
+    const container = document.getElementById('productos');
+    
+    limpiarHTML(container);
+    //Por cada elemento pasado se agrega a container el siguiente codigo HTML
+    productos.forEach(elm =>{ 
         const div1 = document.createElement('div')
         div1.classList.add('productos')
     
@@ -285,13 +310,13 @@ function domProductos(){
         div2.classList.add('texto__producto')
 
         const h41 = document.createElement('h4')
-        h41.textContent = `${productos.nombrecorto}`
+        h41.textContent = `${elm.nombrecorto}`
 
         const div3 = document.createElement('div')
         div3.classList.add('linea')
 
         const p1 = document.createElement('p')
-        p1.textContent = `Valor: $${productos.precio}`
+        p1.textContent = `Valor: $${elm.precio}`
 
         const a1 = document.createElement('a')
         a1.classList.add('btnInformacion')
@@ -306,7 +331,7 @@ function domProductos(){
         a2.textContent = `Añadir al carrito`
 
     
-        contenedor.appendChild(div1 );
+        container.appendChild(div1 );
         div1.appendChild(span1)
         div1.appendChild(span2)
         span2.appendChild(span3)
@@ -318,110 +343,186 @@ function domProductos(){
         div2.appendChild(a1)
         span3.appendChild(span4)
         span4.appendChild(a2)
+        
     })
-    eventosCards()    
+    eventos()
 }
 
-
-    let a = document.querySelectorAll('.btnSig')
-    a.forEach(a =>{
-        a.addEventListener('click', (e) => {
-            e.preventDefault()
-        })
-    })
-    console.log(a)
-    
-    let flechasig = document.querySelector('#img2')
-    let flecharetroceso = document.querySelector('#img1')
-    let posicionactual = document.querySelector('#contador1')
-    let prueba = 1
-    
-    posicionactual.textContent = prueba
-    slice = productosArray.slice(0, 6)
-    domProductos(slice)
-    function sumarFlecha(){
-        flechasig.addEventListener('click', (e) => {
-        
-            switch(posicionactual.textContent = prueba){
-                case 1:
-                    ++prueba 
-                break; 
-                case 2:
-                    slice = productosArray.slice(7, 13)
-                    domProductos(slice)
-                    ++prueba
-                    break; 
-                    case 3:
-                        slice = productosArray.slice(14, 20)
-                        domProductos(slice)
-                        ++prueba
-                        break; 
-                        case 4:
-                            slice = productosArray.slice(20, 26)
-                            domProductos(slice)
-                            ++prueba
-                            break; 
-                            case 5:
-                                slice = productosArray.slice(26, 32)
-                                domProductos(slice)
-                                ++prueba
-                                break; 
-                                case 6:
-                                    slice = productosArray.slice(38, 44)
-                                    domProductos(slice)
-                                    ++prueba
-                                    break; 
-                                    case 7:
-                                        slice = productosArray.slice(42, 47)
-                                        domProductos(slice)
-                                        break; 
-            }
-            e.preventDefault() 
-        })
+    const updatePage = ( elements, page, elementsPerPage)=>
+    {
+        const firstElement = (page * elementsPerPage) - elementsPerPage;
+        const lastElement = page * elementsPerPage;
+        return elements.slice(firstElement, lastElement);
     }
     
-  
+    let focusElements = [...productosArray];
+    const btnsNav = document.querySelector('#barra__cambio').children;
+    let ActualPage = 1;
+    let lastPage = Math.round(focusElements.length/6);
+    updateElements(updatePage(focusElements, 1, 6));
+    btnsNav[1].innerText = `${ActualPage} - ${lastPage}`;
+    btnsNav[0].onclick = ()=>
+    {
+        if(ActualPage > 1)
+        {
+            ActualPage--;
+            updateElements(updatePage(focusElements, ActualPage, 6));
+            btnsNav[1].innerText = `${ActualPage} - ${lastPage}`
+        }
+    }
+    btnsNav[2].onclick = ()=>
+    {
+        if(ActualPage < lastPage)
+        {
+            ActualPage++
+            updateElements(updatePage(focusElements, ActualPage, 6));
+            btnsNav[1].innerText = `${ActualPage} - ${lastPage}`
+        }
+    }
 
 
+//filtrado aside
+// Netbooks
+const netbooksFilter = document.querySelector('#netbooksAside')
+const netbooks = productosArray.filter(id => id.id === "netbooks")
+netbooksFilter.textContent = `Netbooks(${netbooks.length})`
+netbooksFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(netbooks)
+})
+// Procesadores
+const procesadoresFilter = document.querySelector('#procesadoresAside')
+const procesadores = productosArray.filter(id => id.id === "procesadores")
+procesadoresFilter.textContent = `Procesadores(${procesadores.length})`
+procesadoresFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(procesadores)
+})
+// Mothers
+const motherFilter = document.querySelector('#mothersAside')
+const mother = productosArray.filter(id => id.id === "mothers")
+motherFilter.textContent = `Mother(${mother.length})`
+motherFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(mother)
+})
+// Rams
+const ramsFilter = document.querySelector('#ramsAside')
+const rams = productosArray.filter(id => id.id === "memoria")
+ramsFilter.textContent = `Rams(${rams.length})`
+ramsFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(rams)
+})
+// Graficas
+const graficasFilter = document.querySelector('#graficasAside')
+const graficasfil = productosArray.filter(id => id.id === "graficas")
+graficasFilter.textContent = `Graficas(${graficas.length})`
+graficasFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(graficasfil)
+})
+// almacenamiento
+const almacenamientoFilter = document.querySelector('#almacenamientoAside')
+almacenamientoFilter.textContent = `Almacenamiento(${almacenamiento.length})`
+almacenamientoFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(almacenamiento)
+})
+// fuentes
+const fuentesFilter = document.querySelector('#fuentesAside')
+fuentesFilter.textContent = `Fuentes(${fuentes.length})`
+fuentesFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(fuentes)
+})
+// mouse
+const mousesFilter = document.querySelector('#mousesAside')
+mousesFilter.textContent = `Mouses(${mouse.length})`
+mousesFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(mouse)
+})
+// teclados
+const tecladosFilter = document.querySelector('#tecladosAside')
+tecladosFilter.textContent = `Teclados(${teclados.length})`
+tecladosFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(teclados)
+})
+// auriculares
+const auricularesFilter = document.querySelector('#auricularesAside')
+auricularesFilter.textContent = `auriculares(${auriculares.length})`
+auricularesFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(auriculares)
+})
+// sony
+const sonyFilter = document.querySelector('#sonyAside')
+const sony = productosArray.filter(marca => marca.marca === "sony")
+sonyFilter.textContent = `sony(${sony.length})`
+sonyFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(sony)
+})
+// microsoft
+const microsoftFilter = document.querySelector('#microsoftAside')
+const microsoft = productosArray.filter(marca => marca.marca === "microsoft")
+microsoftFilter.textContent = `Microsoft(${microsoft.length})`
+microsoftFilter.addEventListener('click', (e) =>{
+    e.preventDefault()
+    updateElements(microsoft)
+})
+// Filtrado inputs
+
+filtrado = {
+    marca: '',
+    precioMin: '',
+    precioMax: ''
+}
+const marcaFiltro = document.getElementById('marca');
+marcaFiltro.addEventListener('click', (e) => {
+    filtrado.marca = e.target.value 
+    filtradoMarcas()
+})
+const filtrarMin = document.getElementById('minimo');
+filtrarMin.addEventListener('click', (e) => {
+    filtrado.precioMin = Number(e.target.value) 
+    filtradoMarcas()
     
-   
-        flecharetroceso.addEventListener('click', (e) => {
-            
-            switch(posicionactual.textContent = prueba){
-                case 1:
-                   
-                break; 
-                case 2:
-                    slice = productosArray.slice(7, 13)
-                    domProductos(slice)
-                    --prueba
-                    break; 
-                    case 3:
-                        slice = productosArray.slice(14, 20)
-                        domProductos(slice)
-                        --prueba
-                        break; 
-                        case 4:
-                            slice = productosArray.slice(20, 26)
-                            domProductos(slice)
-                            --prueba
-                            break; 
-                            case 5:
-                                slice = productosArray.slice(26, 32)
-                                domProductos(slice)
-                                --prueba
-                                break; 
-                                case 6:
-                                    slice = productosArray.slice(38, 44)
-                                    domProductos(slice)
-                                    --prueba
-                                    break; 
-                                    case 7:
-                                        slice = productosArray.slice(42, 47)
-                                        domProductos(slice)
-                                        --prueba
-                                        break; 
-            }
-            e.preventDefault() 
-        })
-        sumarFlecha()
+})
+const filtrarMax = document.getElementById('maximo');
+filtrarMax.addEventListener('click', (e) => {
+    filtrado.precioMax = Number(e.target.value) 
+    filtradoMarcas()
+    
+})
+
+function filtradoMarcas(){
+    let resultado = productosArray.filter(marca).filter(precioMin).filter(precioMax)
+    updateElements(resultado)
+    
+}
+
+function marca(productos){
+    if(filtrado.marca){
+    return productos.marca === filtrado.marca
+    }else {
+    return productos
+    }
+}
+function precioMin(productos){
+    if(filtrado.precioMin){
+    return productos.precio >= filtrado.precioMin
+    }else {
+        return productos
+    }
+}
+function precioMax(productos){
+    if(filtrado.precioMax){
+    return productos.precio <= filtrado.precioMax
+    }else {
+        return productos
+    }
+}
+

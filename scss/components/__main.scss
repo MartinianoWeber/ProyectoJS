@@ -82,7 +82,7 @@ transform: rotate(90deg);
 }
 
 .producto__imagen {
-    background-image: url(/imagenes/netbooks2.jpg);
+    background-image: url(../imagenes/netbooks2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -93,7 +93,7 @@ transform: rotate(90deg);
 
 
 .producto__background {
-    background-image: url(/imagenes/recuadrotienda.jpg);
+    background-image: url(../imagenes/recuadrotienda.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -227,10 +227,15 @@ box-shadow: 0px 0px 102px 13px rgba(255,76,255,1);
 
 
 
-.pruebapopup {
+.background__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100vw;
+    height: 100vh;
+    
+}
+.backgroundpopup-show {
     display: none;
 }
-.pruebapopup-show {
-    display: inline;
-}
-

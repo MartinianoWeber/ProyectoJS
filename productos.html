@@ -30,38 +30,32 @@
             <a href="">Contacto</a>
         </div>
         <div class="productos__carritos">
-           <a class="productos__carritolink" href=""><img src="/imagenes/carrito-de-compras.png" alt=""></a> 
+           <a class="productos__carritolink" href=""><img src="./imagenes/carrito-de-compras.png" alt=""></a> 
         </div>
     </section>
     <main>
         <section class="seccion__productos">
-
-
             <div class="productos__grid">
                 <aside class="productos__filtroaside">
                     <div class="productos__filtrado">
                         <details>
                             <summary>Netbooks <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Netbooks()</a>
-                        </details>
-                        <details>
-                            <summary>Smartphones<span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Smartphones()</a>
+                            <a id="netbooksAside" class="productos__a" href=""></a>
                         </details>
                         <details>
                             <summary>Componenetes de pc <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Procesadores()</a>
-                            <a class="productos__a" href="">Mothers()</a>
-                            <a class="productos__a" href="">Rams()</a>
-                            <a class="productos__a" href="">Graficas()</a>
-                            <a class="productos__a" href="">Almacenamiento()</a>
-                            <a class="productos__a" href="">Fuentes()</a>
+                            <a id="procesadoresAside" class="productos__a" href="">Procesadores()</a>
+                            <a id="mothersAside" class="productos__a" href="">Mothers()</a>
+                            <a id="ramsAside" class="productos__a" href="">Rams()</a>
+                            <a id="graficasAside" class="productos__a" href="">Graficas()</a>
+                            <a id="almacenamientoAside" class="productos__a" href="">Almacenamiento()</a>
+                            <a id="fuentesAside" class="productos__a" href="">Fuentes()</a>
                         </details>
                         <details>
                             <summary>Perifericos  <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Mouses()</a>
-                            <a class="productos__a" href="">Teclados()</a>
-                            <a class="productos__a" href="">Auriculares()</a>
+                            <a id="mousesAside" class="productos__a" href="">Mouses()</a>
+                            <a id="tecladosAside" class="productos__a" href="">Teclados()</a>
+                            <a id="auricularesAside" class="productos__a" href="">Auriculares()</a>
                         </details>
                         <details>
                             <summary>Pc armadas <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
@@ -69,19 +63,9 @@
                             <a class="productos__a" href="">Amd()</a>
                         </details>
                         <details>
-                            <summary>Audio <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Parlantes()</a>
-                            <a class="productos__a" href="">Parlantes para autos()</a>
-                        </details>
-                        <details>
-                            <summary>Pendrives y MicroSD <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Pendrives()</a>
-                            <a class="productos__a" href="">MicroSd()</a>
-                        </details>
-                        <details>
                             <summary>Consolas <span class="producto__flecha"><img src="/imagenes/flechasumar.png" alt=""></span></summary>
-                            <a class="productos__a" href="">Microsoft()</a>
-                            <a class="productos__a" href="">Sony()</a>
+                            <a id="microsoftAside" class="productos__a" href="">Microsoft()</a>
+                            <a id="sonyAside" class="productos__a" href="">Sony()</a>
                         </details>
                     </div>
             </aside>
@@ -117,9 +101,9 @@
                             <label for="minimo">Precio Min</label>
                             <select class="" id="minimo">
                                     <option value="">Seleccione precio MIN</option>
-                                    <option value="20000">20,000</option>
-                                    <option value="30000">30,000</option>
-                                    <option value="40000">40,000</option>
+                                    <option value="1000">1000</option>
+                                    <option value="10000">10000</option>
+                                    <option value="20000">20000</option>
                                     <option value="50000">50,000</option>
                                     <option value="60000">60,000</option>
                                     <option value="70000">70,000</option>
@@ -177,24 +161,25 @@
 
                    <div class="productos"> <span class="producto__imagen"></span> <span class="producto__background"><span class="productos__contenido"> <img class="productos__backgroundB" src="/imagenes/background.png" alt=""><div class="texto__producto"><h4>Producto1</h4> <div class="linea"></div> <p>Valor: $2000</p> <a class="btnInformacion" href="">Mas informacion</a> </div> <span class="boton__añadir"><a href="">Añadir al carrito</a></span> </span></div> -->
                 </div>
-                <div class="pruebapopup" id="pop-up">
-                    <h4 class="subrayado">el producto 1</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione blanditiis iusto aspernatur, molestias eveniet doloremque necessitatibus totam fugit cup</p>
-                    <a class="btn-popup" href="">salir</a>
+                <div class="background__popup backgroundpopup-show" id="backgroundPopup">
+                    <div class="pruebapopup" id="pop-up">
+                        <a class="btn-popup" href="#">salir</a>
+                    </div>
                 </div>
-                <div class="barra__cambio">
-                  <a class="btnSig" href=""><img class="img-1" id="img1" src="/imagenes/flechapasar.png" alt=""></a><p id="contador1"></p> <a class="btnSig" href=""><img class="img-2" id="img2" src="/imagenes/flechapasar.png" alt=""></a> 
+                
+                <div id="barra__cambio" class="barra__cambio">
+                    <span class="btnSig"><img class="img-1" id="img1" src="./imagenes/flechapasar.png" alt=""></span>
+                    <p id="contador1"></p>
+                    <span class="btnSig"><img class="img-2" id="img2" src="./imagenes/flechapasar.png" alt=""></span> 
                 </div>
             </div>
-                
-                
         </section> 
 
-        <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="EFECTIVO"></span></p>
+        <!-- <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="EFECTIVO"></span></p>
         <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="EFECTIVO2"></span></p>
         <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="CUOTAS2"></span></p>
         <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="PCLIST"></span></p>
-        <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="CUOTAS"></span></p>
+        <p style="text-align: center; font-size: 2rem; letter-spacing: 0.5rem; background-color: yellow; color: black;"><span id="CUOTAS"></span></p> -->
     </main>
      <script src="./js/db.js"></script>
     <script src="./js/main.js"></script> 
