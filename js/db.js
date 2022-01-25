@@ -345,9 +345,8 @@ const updateElements = (productos)=>{
         span4.appendChild(a2)
         
     })
-    eventos()
 }
-
+eventos()
     const updatePage = ( elements, page, elementsPerPage)=>
     {
         const firstElement = (page * elementsPerPage) - elementsPerPage;
