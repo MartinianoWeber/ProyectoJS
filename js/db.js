@@ -303,7 +303,7 @@ const updateElements = (productos)=>{
         span3.classList.add('productos__contenido')
         
         const img1 = document.createElement ('img')
-        img1.src  = '/imagenes/background.png'
+        img1.src  = './imagenes/background.png'
         img1.classList.add('productos__backgroundB')
     
         const div2 = document.createElement ('div')
