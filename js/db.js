@@ -10,7 +10,7 @@ let suma
 
 
 class productos {
-    constructor(nombre, precio, cantidad, id, nombrecorto, marca) {
+    constructor(nombre, precio, cantidad, id, nombrecorto, marca, descripcion, img) {
         this.nombre = nombre
         this.precio = precio
         this.cantidad = cantidad
@@ -18,6 +18,8 @@ class productos {
         this.id = id
         this.nombrecorto = nombrecorto
         this.marca = marca
+        this.descripcion = descripcion
+        this.img = img
     }
     armadopc(){
         let resultadototalPC = this.precio
@@ -65,13 +67,12 @@ let slice = []
 productosArray.forEach(item => {
     item.stock()
     item.armadopc()
-    item.prueba()
 });
 
 
 // Mouses
-productosArray.push (new productos("Mouse Logitech G305", 1400, 4, "mouse", "Mouse Logitech G305", "logitech"))
-productosArray.push (new productos("Mouse Redragon Storm Elite M988", 1100, 2, "mouse", "Mouse Redragon Storm Elite M988", "redragon"))
+productosArray.push (new productos("Mouse Logitech G305", 1400, 4, "mouse", "Mouse Logitech G305", "logitech", " Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos.", ''))
+productosArray.push (new productos("Mouse Redragon Storm Elite M988", 1100, 2, "mouse", "Mouse Redragon Storm Elite M988", "redragon", "DESCRIPCION DE PRUEBA2"))
 productosArray.push (new productos("Mouse Logitech MX Anywhere 3", 1300, 1, "mouse", "Mouse Logitech MX Anywhere 3", "logitech"))
 
 const mouse = productosArray.filter(id => id.id === "mouse")
@@ -212,57 +213,54 @@ productosArray.push (new netbooksProductos("Netbook Asus", 60000, 1, "Procesador
 
 // EVENTOS
 function eventos (){
-// Boton de carrito
+// QUERY SELECTOR
 const btnCarrito = document.querySelector('.productos__carritolink')
 const backgroundCarrito = document.querySelector('#carrito')
 const btnContinuar = document.querySelector('#btnContinuar')
+const popup = document.querySelector('#pop-up')
+popup.parentNode
+const boton = document.querySelectorAll('a[class = "btnInformacion"]')
+const botoncerrar = document.querySelector('.btn-popup')
+const btnAñadir = document.querySelectorAll('#btnAñadir')
+const backgroundCompra = document.querySelector('#backgroundPopupcompra')
+const popUpcompra = document.querySelector('#pop-upDatos')
+const cantidadProductos = document.querySelector('#cantidadProductos')
+const contador = document.querySelector('#spinner')
+const btnCancelarcompra = document.querySelector('#btnCancelar')
+const btnAgregarcompra = document.querySelector('#btnCancelar')
 
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
-    backgroundCarrito.classList.remove('background__no-show')
+    backgroundCarrito.classList.remove('backgroundpopup-show')
 })
 btnContinuar.addEventListener('click', (e) => {
     e.preventDefault()
-    backgroundCarrito.classList.add('background__no-show')
+    backgroundCarrito.classList.add('backgroundpopup-show')
  })
       
 //boton mas informacion
-const boton = document.querySelectorAll('a[class = "btnInformacion"]')
-const popup = document.querySelector('#pop-up')
-popup.parentNode
-const productosPadre = document.querySelector('#productos')
 
-
-const h4Title = document.createElement('h4')
-const parrafoPro = document.createElement('p')
-productosPadre.addEventListener('click', (e) => {
-    let path =  e.path[1].children[0].textContent
-    h4Title.innerText =""
-    h4Title.textContent = path 
-    h4Title.classList.add('subrayado')
-    parrafoPro.textContent = "Descricion"
-    popup.prepend(parrafoPro)
-    popup.prepend(h4Title)
-   if(e.path[1].children[0]){
-       return
-   }
-
-
-})
-
-
-
-boton.forEach(btnAbrir => {
-    btnAbrir.addEventListener('click', (e) => {
-        e.preventDefault()
-        popup.parentNode.classList.remove('backgroundpopup-show')
-        console.log(btnAbrir)
-        
+   
+    const h4Title = document.createElement('h4')
+    const parrafoPro = document.createElement('p')
+    boton.forEach(e => {
+        e.addEventListener('click', (e) => {
+            e.preventDefault()
+            let path = e.path[1].children[0].textContent
+            let pathDescripcion = e.path[4].children[2].textContent
+            console.log(path)
+            h4Title.innerText =""
+            h4Title.textContent = path 
+            h4Title.classList.add('subrayado')
+            parrafoPro.textContent = pathDescripcion
+            popup.prepend(parrafoPro)
+            popup.prepend(h4Title)
+            console.log(e)
+            popup.parentNode.classList.remove('backgroundpopup-show')
+            console.log(e)
+        })
+      
     })
-});
-
-const botoncerrar = document.querySelector('.btn-popup')
-
 
 botoncerrar.addEventListener('click', (e) => {
     e.preventDefault()
@@ -271,10 +269,79 @@ botoncerrar.addEventListener('click', (e) => {
     popup.parentNode.classList.add('backgroundpopup-show')
     })
 
+// Boton añadir al carrito
+btnAñadir.forEach(elm => {
+    elm.addEventListener('click', (e) => {
+        e.preventDefault()
+        console.log(e)
+        backgroundCompra.classList.remove('backgroundpopup-show')
+        let path = e.path[2].children[1].children[0].textContent
+        let pathCantidad = e.path[4].children[4].textContent
+        let pathPrecio = e.path[4].children[3].textContent
+        let nombreProducto = document.createElement('h4')
+        nombreProducto.textContent = `Nombre: ${path}`
+        let precioProducto = document.createElement('p')
+        precioProducto.textContent = `$${pathPrecio}`
+        let cantidadProducto = document.createElement('p')
+        cantidadProducto.textContent = `Cantidad disponible: ${pathCantidad}` 
+        cantidadProductos.appendChild(cantidadProducto)
 
+        popUpcompra.prepend(precioProducto)
+        popUpcompra.prepend(nombreProducto)
+
+        let pathCantidadspinner = e.path[4].children[4].textContent
+        
+        contador.innerHTML = `
+        <div class="container">
+                                <span id="next" class="next"></span>
+                                <span id="prev" class="prev"></span>
+                                <div id="box"></div>
+        `
+        let numbers = document.querySelector('#box');
+        for(i=0;i<=pathCantidadspinner;i++){
+            let span = document.createElement('span');
+            span.textContent = i;
+            numbers.appendChild(span);
+        }
+        let num = numbers.getElementsByTagName('span');
+        let index = 0;
+      
+           const nextSpinner = document.querySelector('#next')
+           const prevSpinner = document.querySelector('#prev')
+           nextSpinner.addEventListener('click', (e) => {
+               e.preventDefault()
+               num[index].style.display = 'none';
+               index=(index + 1) % num.length;
+               num[index].style.display = 'initial';
+           })
+           prevSpinner.addEventListener('click', (e) => {
+               e.preventDefault()
+               num[index].style.display = 'none';
+               index=(index - 1 + num.length) % num.length;
+               num[index].style.display = 'initial';
+           })
+        console.log(e)
+
+        btnCancelarcompra.addEventListener('click', (e) => {
+            e.preventDefault()
+            nombreProducto.remove()
+            precioProducto.remove()
+            box.innerHTML = ""
+            cantidadProducto.remove()
+            
+            backgroundCompra.classList.add('backgroundpopup-show')
+            })
+    
+    })
+     // Boton cancelar 
+
+
+})
+
+
+ 
 }
     
-
 
 // limpiar html
 
@@ -327,13 +394,26 @@ const updateElements = (productos)=>{
         span4.classList.add('boton__añadir')
 
         const a2 = document.createElement('a')
+        a2.id = 'btnAñadir'
         a2.href = "#"
         a2.textContent = `Añadir al carrito`
 
-    
+        const descripcion = document.createElement('p')
+        descripcion.textContent = `${elm.descripcion}`
+        descripcion.classList.add('no-view')
+        const precioItem = document.createElement('p')
+        precioItem.textContent = `${elm.precio}`
+        precioItem.classList.add('no-view')
+        const cantidadItem = document.createElement('p')
+        cantidadItem.textContent = `${elm.cantidad}`
+        cantidadItem.classList.add('no-view')
+
         container.appendChild(div1 );
         div1.appendChild(span1)
         div1.appendChild(span2)
+        div1.append(descripcion)
+        div1.append(precioItem)
+        div1.append(cantidadItem)
         span2.appendChild(span3)
         span3.appendChild(img1)
         span3.appendChild(div2)
@@ -345,8 +425,9 @@ const updateElements = (productos)=>{
         span4.appendChild(a2)
         
     })
+    eventos ()
 }
-eventos()
+
     const updatePage = ( elements, page, elementsPerPage)=>
     {
         const firstElement = (page * elementsPerPage) - elementsPerPage;

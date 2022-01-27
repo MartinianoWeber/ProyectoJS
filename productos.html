@@ -137,12 +137,8 @@
               
                     </div>
                 </form>
-                <div class="carrito background__carrito background__no-show" id="carrito">                     
-                    <div class="listado__productos">
-                        <div><p>Nombre</p></div>
-                        <div><p>Precio</p></div>
-                        <div><p>Cantidad</p></div>
-                    </div>
+                <div class="carrito background__popup backgroundpopup-show " id="carrito">                     
+                    
                     <div class="links__productos">
                         <a  id="btnContinuar" href="">Seguir comprando</a>
                         <a href="">Terminar compra</a>
@@ -166,12 +162,35 @@
                         <a class="btn-popup" href="#">salir</a>
                     </div>
                 </div>
-                
-                <div id="barra__cambio" class="barra__cambio">
-                    <span class="btnSig"><img class="img-1" id="img1" src="./imagenes/flechapasar.png" alt=""></span>
-                    <p id="contador1"></p>
-                    <span class="btnSig"><img class="img-2" id="img2" src="./imagenes/flechapasar.png" alt=""></span> 
+                <div class="background__popup backgroundpopup-show" id="backgroundPopupcompra">
+                    <div class="compra__popup" id="pop-upCompra">
+                        
+                        <div class="datos__popup" id="pop-upDatos"></div>
+                        <div class="cantidad__popup" id="cantidadProductos"></div>
+                        <div id="spinner" class="pr"></div>
+                        <div class="btn__flex">
+                            <button id="btnCancelar" >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span> Cancelar
+                            </button>
+                            <button id="btnFinalizar" >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span> Agregar al carrito
+                            </button>
+                        </div>
+                        
+                    </div>
                 </div>
+
+            </div>
+            <div id="barra__cambio" class="barra__cambio">
+                <span class="btnSig"><img class="img-1" id="img1" src="./imagenes/flechapasar.png" alt=""></span>
+                <p id="contador1"></p>
+                <span class="btnSig"><img class="img-2" id="img2" src="./imagenes/flechapasar.png" alt=""></span> 
             </div>
         </section> 
 
