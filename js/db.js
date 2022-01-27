@@ -25,7 +25,7 @@ class productos {
         pcCarritoValor.push(resultadototalPC) 
         let totalPC = pcCarritoValor.reduce((a, b) => a + b, 0);
         suma = totalPC
-        sumapr()
+      
         let nombres = this.nombre
         pcCaritoNombre.push(nombres) 
     }
@@ -37,33 +37,15 @@ class productos {
             arrayValor.push(multiplicacion)
             let total = arrayValor.reduce((a, b) => a + b, 0)
             suma = total
-            sumapr()
+
         }
     }
   
 }
 
-// CONSTRUCTOR DE CARRITO
-class carritoTotal{
-    constructor(nombre, precio, cantidad){
-        
-        this.carrito = []
-    }
-    agregarCarrito(objeto){
 
-    }
-    removeCarrito(nombre){
-        let borrar = this.carrito.filter(objeto =>{
-            objeto.nombre === nombre
-        })
-        
-        productosArray.push(this.carrito.splice(borrar))
-    }
-}
 
-function sumapr(){
-    suma
-}
+
 
 let productosArray = []
 
@@ -179,24 +161,15 @@ class netbooksProductos {
         this.id = id
         this.nombrecorto = nombrecorto
     }
-    stock(){
-        alert(`${this.nombre}, ${this.procesador}, ${this.ram}, ${this.almacenamiento}Tiene un precio de ${this.precio}`)
-        let stockPrompt = parseInt(prompt("Por favor ingrese la cantidad que desea comprar"))
-        if(stockPrompt <= this.cantidad){
-            alert(`Muy bien te llevaras ${stockPrompt}`)
-            let resultado =  this.cantidad - stockPrompt
-            this.cantidad = resultado
-                let precios = stockPrompt 
-                let resultadototal = precios*this.precio
-                arrayValor.push(resultadototal) 
-                let total = arrayValor.reduce((a, b) => a + b, 0);
-                this.precioTOTAL = total
-                let nombres = this.nombre
-                arrayNombreDuplicados.push(nombres) 
-                arrayNombresFinal = [...new Set(arrayNombreDuplicados)];
-                console.log(total)
-                console.log(arrayNombresFinal);
-                
+    stock(countNumber){
+        if(countNumber <= this.cantidad){
+            this.cantidad = this.cantidad - countNumber
+            let cantidad = countNumber
+            let multiplicacion = cantidad*this.precio
+            arrayValor.push(multiplicacion)
+            let total = arrayValor.reduce((a, b) => a + b, 0)
+            suma = total
+            
         }
     }
     
@@ -369,7 +342,7 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     let prueba = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
     prueba[0].stock(countNumber)
     console.log(prueba)
-    sumapr()
+
     // pruebas(countNumber, precioNumber, suma)
     agregarPrcarrito.innerHTML += `
     <div class="items__productos" id="itemsCarrito">
