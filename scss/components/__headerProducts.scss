@@ -78,12 +78,9 @@
 .links__productos {
     display: flex;
     font-size: 1.3rem;
-    align-items: flex-end;
-    margin-top: 4rem;
-    justify-content: space-around;
-        .item{
-            width: 65px !important;
-        }
+    width: 700px;
+    margin: auto;
+    margin-top: 3rem;
         a {
             background-color: $violetaBoton;
             padding: 1rem 2rem;
@@ -92,3 +89,27 @@
         }    
 }
 
+.background__carrito {
+    background-color: rgba(0, 0, 0, 0.781);
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 5.5rem;
+    border-radius: .8rem;
+    box-shadow:
+    0px 15px 100px 39px rgba(30, 30, 60, 0.51),
+    0px 15px 100px 1px rgba(133, 6, 145, 1);
+        h2 {
+            font-size: 3.5rem;
+            color: rgb(255, 255, 255);
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+        p{
+           margin: auto;
+        }
+        a{
+            margin: auto;
+        }
+}

@@ -5,12 +5,11 @@ let vecesCompradas = 1
 let cantidadComprada = []
 let pcCarritoValor = []
 let pcCaritoNombre = []
-
 let suma
 
 
 class productos {
-    constructor(nombre, precio, cantidad, id, nombrecorto, marca, descripcion, img) {
+    constructor(nombre, precio, cantidad, id, nombrecorto, marca, descripcion) {
         this.nombre = nombre
         this.precio = precio
         this.cantidad = cantidad
@@ -19,7 +18,7 @@ class productos {
         this.nombrecorto = nombrecorto
         this.marca = marca
         this.descripcion = descripcion
-        this.img = img
+        this.carrito = []
     }
     armadopc(){
         let resultadototalPC = this.precio
@@ -30,30 +29,36 @@ class productos {
         let nombres = this.nombre
         pcCaritoNombre.push(nombres) 
     }
-    stock(){
-        alert(`${this.nombre} Tiene un precio de ${this.precio}`)
-        let stockPrompt = parseInt(prompt("Por favor ingrese la cantidad que desea comprar"))
-        if(stockPrompt <= this.cantidad){
-            alert(`Muy bien te llevaras ${stockPrompt}`)
-            let resultado =  this.cantidad - stockPrompt
-            this.cantidad = resultado
-                let precios = stockPrompt 
-                let resultadototal = precios*this.precio
-                arrayValor.push(resultadototal) 
-                let total = arrayValor.reduce((a, b) => a + b, 0);
-                suma = total
-                sumapr()
-                let nombres = this.nombre
-                arrayNombreDuplicados.push(nombres) 
-                arrayNombresFinal = [...new Set(arrayNombreDuplicados)];
-                console.log(total)
-                console.log(arrayNombresFinal);
-                
-    }else {
-        alert("La cantidad que desea llevar no esta disponible ")
+    stock(countNumber){
+        if(countNumber <= this.cantidad){
+            this.cantidad = this.cantidad - countNumber
+            let cantidad = countNumber
+            let multiplicacion = cantidad*this.precio
+            arrayValor.push(multiplicacion)
+            let total = arrayValor.reduce((a, b) => a + b, 0)
+            suma = total
+            sumapr()
         }
     }
+  
+}
 
+// CONSTRUCTOR DE CARRITO
+class carritoTotal{
+    constructor(nombre, precio, cantidad){
+        
+        this.carrito = []
+    }
+    agregarCarrito(objeto){
+
+    }
+    removeCarrito(nombre){
+        let borrar = this.carrito.filter(objeto =>{
+            objeto.nombre === nombre
+        })
+        
+        productosArray.push(this.carrito.splice(borrar))
+    }
 }
 
 function sumapr(){
@@ -62,16 +67,9 @@ function sumapr(){
 
 let productosArray = []
 
-let slice = []
-
-productosArray.forEach(item => {
-    item.stock()
-    item.armadopc()
-});
-
 
 // Mouses
-productosArray.push (new productos("Mouse Logitech G305", 1400, 4, "mouse", "Mouse Logitech G305", "logitech", " Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos.", ''))
+productosArray.push (new productos("Mouse Logitech G305", 1400, 4, "mouse", "Mouse Logitech G305", "logitech", " Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos."))
 productosArray.push (new productos("Mouse Redragon Storm Elite M988", 1100, 2, "mouse", "Mouse Redragon Storm Elite M988", "redragon", "DESCRIPCION DE PRUEBA2"))
 productosArray.push (new productos("Mouse Logitech MX Anywhere 3", 1300, 1, "mouse", "Mouse Logitech MX Anywhere 3", "logitech"))
 
@@ -210,6 +208,10 @@ productosArray.push (new netbooksProductos("Netbook Asus", 60000, 1, "Procesador
 
 
 
+const btnCancelarcompra = document.querySelector('#btnCancelar')
+const btnAgregarcompra = document.querySelector('#btnFinalizar')
+const agregarPrcarrito = document.querySelector('#appendParacarrito')
+const cantidadProductos = document.querySelector('#cantidadProductos')
 
 // EVENTOS
 function eventos (){
@@ -224,28 +226,33 @@ const botoncerrar = document.querySelector('.btn-popup')
 const btnAñadir = document.querySelectorAll('#btnAñadir')
 const backgroundCompra = document.querySelector('#backgroundPopupcompra')
 const popUpcompra = document.querySelector('#pop-upDatos')
-const cantidadProductos = document.querySelector('#cantidadProductos')
 const contador = document.querySelector('#spinner')
 const btnCancelarcompra = document.querySelector('#btnCancelar')
-const btnAgregarcompra = document.querySelector('#btnCancelar')
-
+const btnAgregarcompra = document.querySelector('#btnFinalizar')
+const agregarPrcarrito = document.querySelector('#appendParacarrito')
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
     backgroundCarrito.classList.remove('backgroundpopup-show')
 })
 btnContinuar.addEventListener('click', (e) => {
     e.preventDefault()
+    
     backgroundCarrito.classList.add('backgroundpopup-show')
  })
       
 //boton mas informacion
 
-   
+
+
+
+
     const h4Title = document.createElement('h4')
     const parrafoPro = document.createElement('p')
     boton.forEach(e => {
+       
         e.addEventListener('click', (e) => {
             e.preventDefault()
+            
             let path = e.path[1].children[0].textContent
             let pathDescripcion = e.path[4].children[2].textContent
             console.log(path)
@@ -255,9 +262,7 @@ btnContinuar.addEventListener('click', (e) => {
             parrafoPro.textContent = pathDescripcion
             popup.prepend(parrafoPro)
             popup.prepend(h4Title)
-            console.log(e)
             popup.parentNode.classList.remove('backgroundpopup-show')
-            console.log(e)
         })
       
     })
@@ -273,8 +278,8 @@ botoncerrar.addEventListener('click', (e) => {
 btnAñadir.forEach(elm => {
     elm.addEventListener('click', (e) => {
         e.preventDefault()
-        console.log(e)
         backgroundCompra.classList.remove('backgroundpopup-show')
+        // BUSQUEDAS DE DATOS POR PATH
         let path = e.path[2].children[1].children[0].textContent
         let pathCantidad = e.path[4].children[4].textContent
         let pathPrecio = e.path[4].children[3].textContent
@@ -283,22 +288,39 @@ btnAñadir.forEach(elm => {
         let precioProducto = document.createElement('p')
         precioProducto.textContent = `$${pathPrecio}`
         let cantidadProducto = document.createElement('p')
-        cantidadProducto.textContent = `Cantidad disponible: ${pathCantidad}` 
+                // CANTIDAD DEL SPINNER ACTUAL
+                let pathCantidadspinner = productosArray.filter(nombre => nombre.nombrecorto === path)
+        cantidadProducto.textContent = `Cantidad disponible: ${pathCantidadspinner[0].cantidad}` 
+        // Tarjeta de añadir al carrito DOM
         cantidadProductos.appendChild(cantidadProducto)
-
         popUpcompra.prepend(precioProducto)
         popUpcompra.prepend(nombreProducto)
+        // DATOS PARA TOMAR NO VIEW
+        let nombreProductonv = document.createElement('p')
+        let precioProductonv = document.createElement('p')
+        let cantidadProductonv = document.createElement('p')
+        nombreProductonv.textContent = path
+        precioProductonv.textContent = pathPrecio
+        cantidadProductonv.textContent = pathCantidad
+        nombreProductonv.classList.add('no-view')
+        precioProductonv.classList.add('no-view')
+        cantidadProductonv.classList.add('no-view')
+        // PREPENT PARA DATOS NO VIEW
+        popUpcompra.prepend(nombreProductonv)
+        popUpcompra.prepend(precioProductonv)
+        popUpcompra.prepend(cantidadProductonv)
 
-        let pathCantidadspinner = e.path[4].children[4].textContent
-        
+
+        // INYECTAMOS HTML DE CONTADOR
         contador.innerHTML = `
         <div class="container">
                                 <span id="next" class="next"></span>
                                 <span id="prev" class="prev"></span>
                                 <div id="box"></div>
         `
+        // LOGICA DEL CONTADOR
         let numbers = document.querySelector('#box');
-        for(i=0;i<=pathCantidadspinner;i++){
+        for(i=0;i<=pathCantidadspinner[0].cantidad;i++){
             let span = document.createElement('span');
             span.textContent = i;
             numbers.appendChild(span);
@@ -320,8 +342,7 @@ btnAñadir.forEach(elm => {
                index=(index - 1 + num.length) % num.length;
                num[index].style.display = 'initial';
            })
-        console.log(e)
-
+        // CANCELAR LA COMPRA BOTON 
         btnCancelarcompra.addEventListener('click', (e) => {
             e.preventDefault()
             nombreProducto.remove()
@@ -331,17 +352,35 @@ btnAñadir.forEach(elm => {
             
             backgroundCompra.classList.add('backgroundpopup-show')
             })
-    
     })
-     // Boton cancelar 
-
-
+   
 })
-
-
- 
 }
+
+let carritoFinal = []
+
+btnAgregarcompra.addEventListener('click', (e) =>{
     
+    let pathNombre = e.path[2].children[0].children[2].textContent
+    let pathPrecio = e.path[2].children[0].children[1].textContent
+    let pathcount = e.path[2].children[2].children[0].innerText
+    let countNumber = parseInt(pathcount)
+    let precioNumber = parseInt(pathPrecio)
+    let prueba = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
+    prueba[0].stock(countNumber)
+    console.log(prueba)
+    sumapr()
+    // pruebas(countNumber, precioNumber, suma)
+    agregarPrcarrito.innerHTML += `
+    <div class="items__productos" id="itemsCarrito">
+    <p>${pathNombre}</p>
+    <p>$${pathPrecio}</p>
+    <p>Cantidad: ${pathcount}</p>
+    <p>Total: $${suma}</p>
+   <a href="#"><img src="/imagenes/delete-button.png" width="25px" alt=""></a>
+    </div>
+    `
+})
 
 // limpiar html
 
@@ -407,6 +446,9 @@ const updateElements = (productos)=>{
         const cantidadItem = document.createElement('p')
         cantidadItem.textContent = `${elm.cantidad}`
         cantidadItem.classList.add('no-view')
+        const nombreItem = document.createElement('p')
+        nombreItem.textContent = `${elm.nombre}`
+        nombreItem.classList.add('no-view')
 
         container.appendChild(div1 );
         div1.appendChild(span1)
@@ -414,6 +456,7 @@ const updateElements = (productos)=>{
         div1.append(descripcion)
         div1.append(precioItem)
         div1.append(cantidadItem)
+        div1.append(nombreItem)
         span2.appendChild(span3)
         span3.appendChild(img1)
         span3.appendChild(div2)

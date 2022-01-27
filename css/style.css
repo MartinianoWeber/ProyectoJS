@@ -493,18 +493,38 @@ body {
 .links__productos {
   display: flex;
   font-size: 1.3rem;
-  align-items: flex-end;
-  margin-top: 4rem;
-  justify-content: space-around;
-}
-.links__productos .item {
-  width: 65px !important;
+  width: 700px;
+  margin: auto;
+  margin-top: 3rem;
 }
 .links__productos a {
   background-color: #620871;
   padding: 1rem 2rem;
   color: #FFFFFF;
   border-radius: 2rem;
+}
+
+.background__carrito {
+  background-color: rgba(0, 0, 0, 0.781);
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  margin-top: 5.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 15px 100px 39px rgba(30, 30, 60, 0.51), 0px 15px 100px 1px #850691;
+}
+.background__carrito h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.background__carrito p {
+  margin: auto;
+}
+.background__carrito a {
+  margin: auto;
 }
 
 .productos__grid {
@@ -723,10 +743,10 @@ summary:active .producto__flecha img {
   justify-content: space-around;
   gap: 4rem;
   margin-bottom: 1.5rem;
+  margin-top: 5rem;
 }
 
-/* From cssbuttons.io by @menezes11 */
-button {
+.btn__compra {
   position: relative;
   padding: 0.8rem 1.8rem;
   outline: none;
@@ -742,16 +762,16 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.btn__compra:hover {
   box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
   transition-delay: 0.6s;
 }
 
-button span {
+.btn__compra span {
   position: absolute;
 }
 
-button span:nth-child(1) {
+.btn__compra span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -759,12 +779,12 @@ button span:nth-child(1) {
   background: linear-gradient(90deg, transparent, #ae00ff);
 }
 
-button:hover span:nth-child(1) {
+.btn__compra:hover span:nth-child(1) {
   left: 100%;
   transition: 0.7s;
 }
 
-button span:nth-child(3) {
+.btn__compra span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -772,13 +792,13 @@ button span:nth-child(3) {
   background: linear-gradient(90deg, transparent, #001eff);
 }
 
-button:hover span:nth-child(3) {
+.btn__compra:hover span:nth-child(3) {
   right: 100%;
   transition: 0.7s;
   transition-delay: 0.35s;
 }
 
-button span:nth-child(2) {
+.btn__compra span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -786,13 +806,13 @@ button span:nth-child(2) {
   background: linear-gradient(180deg, transparent, #ae00ff);
 }
 
-button:hover span:nth-child(2) {
+.btn__compra:hover span:nth-child(2) {
   top: 100%;
   transition: 0.7s;
   transition-delay: 0.17s;
 }
 
-button span:nth-child(4) {
+.btn__compra span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -800,13 +820,13 @@ button span:nth-child(4) {
   background: linear-gradient(360deg, transparent, #001eff);
 }
 
-button:hover span:nth-child(4) {
+.btn__compra:hover span:nth-child(4) {
   bottom: 100%;
   transition: 0.7s;
   transition-delay: 0.52s;
 }
 
-button:active {
+.btn__compra:active {
   background: #ae00af;
   background: linear-gradient(to top right, #ae00af, #001eff);
   color: #bfbfbf;
@@ -814,7 +834,7 @@ button:active {
   transition: 0.1s;
 }
 
-button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+.btn__compra:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
   transition: none;
   transition-delay: none;
 }
@@ -948,6 +968,17 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 
 #box span:nth-child(1) {
   display: initial;
+}
+
+.items__productos {
+  display: flex;
+  background-color: rgba(46, 44, 44, 0.603);
+  height: 60px;
+  font-size: 2rem;
+  color: white;
+  width: 700px;
+  margin: auto;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

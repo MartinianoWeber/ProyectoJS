@@ -137,13 +137,7 @@
               
                     </div>
                 </form>
-                <div class="carrito background__popup backgroundpopup-show " id="carrito">                     
-                    
-                    <div class="links__productos">
-                        <a  id="btnContinuar" href="">Seguir comprando</a>
-                        <a href="">Terminar compra</a>
-                    </div>
-                </div>
+
                 <div class="productos__cardgrid" id="productos">
                    <!-- <div class="productos"> <span class="producto__imagen"></span> <span class="producto__background"><span class="productos__contenido"> <img class="productos__backgroundB" src="/imagenes/background.png" alt=""><div class="texto__producto"><h4>Producto1</h4> <div class="linea"></div> <p>Valor: $2000</p> <a class="btnInformacion" href="">Mas informacion</a></div> <span  class="boton__añadir"><a href="">Añadir al carrito</a></span> </span></div>
 
@@ -169,13 +163,13 @@
                         <div class="cantidad__popup" id="cantidadProductos"></div>
                         <div id="spinner" class="pr"></div>
                         <div class="btn__flex">
-                            <button id="btnCancelar" >
+                            <button class="btn__compra" id="btnCancelar" >
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span> Cancelar
                             </button>
-                            <button id="btnFinalizar" >
+                            <button class="btn__compra" id="btnFinalizar" >
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -185,12 +179,25 @@
                         
                     </div>
                 </div>
-
+            </section> 
             </div>
             <div id="barra__cambio" class="barra__cambio">
                 <span class="btnSig"><img class="img-1" id="img1" src="./imagenes/flechapasar.png" alt=""></span>
                 <p id="contador1"></p>
                 <span class="btnSig"><img class="img-2" id="img2" src="./imagenes/flechapasar.png" alt=""></span> 
+            </div>
+            <div class="carrito background__popup backgroundpopup-show " id="carrito">                     
+                <div class="background__carrito">
+                    <div  class="d-flex subrayado titulo__carrito">
+                        <h2>Carrito y finalizacion de compra</h2>
+                    </div>
+                    <div id="appendParacarrito"></div>
+                    <div class="links__productos">
+                        <a  id="btnContinuar" href="">Seguir comprando</a>
+                        <a href="">Terminar compra</a>
+                    </div>
+                </div>
+              
             </div>
         </section> 
 
