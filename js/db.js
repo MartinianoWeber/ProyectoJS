@@ -8,6 +8,7 @@ let pcCaritoNombre = []
 let suma
 
 
+
 class productos {
     constructor(nombre, precio, cantidad, id, nombrecorto, marca, descripcion) {
         this.nombre = nombre
@@ -344,16 +345,36 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     console.log(prueba)
 
     // pruebas(countNumber, precioNumber, suma)
-    agregarPrcarrito.innerHTML += `
-    <div class="items__productos" id="itemsCarrito">
-    <p>${pathNombre}</p>
-    <p>$${pathPrecio}</p>
-    <p>Cantidad: ${pathcount}</p>
-    <p>Total: $${suma}</p>
-   <a href="#"><img src="/imagenes/delete-button.png" width="25px" alt=""></a>
-    </div>
-    `
+    function generarCarrito(){
+        let pruebaLS = agregarPrcarrito.innerHTML += `
+        <div class="items__productos" id="itemsCarrito">
+        <p>${pathNombre}</p>
+        <p>$${pathPrecio}</p>
+        <p>Cantidad: ${pathcount}</p>
+        <p>Total: $${suma}</p>
+       <a href="#"><img src="/imagenes/delete-button.png" width="25px" alt=""></a>
+        </div>
+        `
+        sincronizarStorage(pruebaLS) 
+        cargaCarrito(pruebaLS)
+    }
+    generarCarrito()
+   
+    
 })
+
+function cargaCarrito(pruebaLS){
+    document.addEventListener('DOMContentLoaded', () => {
+        pruebaLS = localStorage.getItem('carrito') || []  ;
+        console.log(pruebaLS);
+        agregarPrcarrito.innerHTML += `${pruebaLS}`
+    });
+}
+cargaCarrito()
+function sincronizarStorage(pruebaLS) {
+    localStorage.setItem('carrito', pruebaLS);
+   
+}
 
 // limpiar html
 
