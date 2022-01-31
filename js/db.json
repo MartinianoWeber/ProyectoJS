@@ -1,0 +1,473 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mouse Logitech G305",
+        "precio": 1400,
+        "cantidad": 4,
+        "idB": "mouse",
+        "nombrecorto": "Mouse Logitech G305",
+        "marca": "logitech",
+        "descripcion": "Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos."
+    },
+    {
+        "id": 2,
+        "nombre": "Mouse Redragon Storm Elite M988",
+        "precio": 1100,
+        "cantidad": 2,
+        "idB": "mouse",
+        "nombrecorto": "Mouse Redragon Storm Elite M988",
+        "marca": "redragon",
+        "descripcion": "DESCRIPCION DE PRUEBA2"
+        
+    },
+    {
+        "id": 3,
+        "nombre": "Mouse Logitech MX Anywhere 3",
+        "precio": 1300,
+        "cantidad":  1,
+        "idB": "mouse",
+        "nombrecorto": "Mouse Logitech MX Anywhere 3",
+        "marca": "logitech",
+        "descripcion": "DESCRIPCION DE PRUEBA3"
+        
+    },
+    {
+        "id": 4,
+        "nombre": "Teclado Razer Huntsman Tournament",
+        "precio": 5000,
+        "cantidad":  3,
+        "idB": "teclados",
+        "nombrecorto": "Teclado Razer Huntsman",
+        "marca": "razer",
+        "descripcion": "DESCRIPCION DE PRUEBA4"
+        
+    },
+    {
+        "id": 5,
+        "nombre": "Teclado HyperX Alloy Elite 2",
+        "precio": 4000,
+        "cantidad":  3,
+        "idB": "teclados",
+        "nombrecorto": "Teclado HyperX Alloy Elite 2",
+        "marca": "hiperex",
+        "descripcion": "DESCRIPCION DE PRUEBA5"
+        
+    },
+    {
+        "id": 6,
+        "nombre": "Teclado Redragon Draconic K530",
+        "precio": 3500,
+        "cantidad":  1,
+        "idB": "teclados",
+        "nombrecorto": "Teclado Redragon Draconic K530",
+        "marca": "redragon",
+        "descripcion": "DESCRIPCION DE PRUEBA6"
+        
+    },
+    {
+        "id": 7,
+        "nombre": "Auriculares inalámbricos HyperX Cloud Flight",
+        "precio": 7000,
+        "cantidad":  1,
+        "idB": "auriculares",
+        "nombrecorto": "Auriculares HyperX Cloud Flight",
+        "marca": "hiperex",
+        "descripcion": "DESCRIPCION DE PRUEBA7"
+        
+    },
+    {
+        "id": 8,
+        "nombre": "Auriculares gamer HyperX Cloud Stinger S",
+        "precio": 5000,
+        "cantidad":  2,
+        "idB": "auriculares",
+        "nombrecorto": "Auriculares HyperX Stinger S",
+        "marca": "hiperex",
+        "descripcion": "DESCRIPCION DE PRUEBA8"
+        
+    },
+    {
+        "id": 9,
+        "nombre": "Auriculares gamer Logitech G Series G433",
+        "precio": 4500,
+        "cantidad":  3,
+        "idB": "auriculares",
+        "nombrecorto": "Auriculares Logitech G G433",
+        "marca": "logitech",
+        "descripcion": "DESCRIPCION DE PRUEBA9"
+        
+    },
+    {
+        "id": 10,
+        "nombre": "Combo Actualizacion Amd Ryzen 5 3600 + A320 + 8gb",
+        "precio": 22000,
+        "cantidad":  2,
+        "idB": "combospc",
+        "nombrecorto": "Combo Ryzen 5 3600 +A320+8gb",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA10"
+        
+    },
+    {
+        "id": 11,
+        "nombre": "Combo De Actualizacion Biostar A68mhe + Amd A6 7480 + 8 Gb",
+        "precio": 20000,
+        "cantidad":  1,
+        "idB": "combospc",
+        "nombrecorto": "Combo A68mhe + A6 7480 + 8Gb",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA11"
+        
+    },
+    {
+        "id": 12,
+        "nombre": "Combo Actualizacion Amd Ryzen 5 5600G + A320 + 8gb",
+        "precio": 30000,
+        "cantidad":  3,
+        "idB": "combospc",
+        "nombrecorto": "Combo Ryzen 5 5600G+A320+8gb",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA12"
+        
+    },
+    {
+        "id": 13,
+        "nombre": "Xbox Series X 1TB",
+        "precio": 110000,
+        "cantidad":  2,
+        "idB": "microsoft",
+        "nombrecorto": "Xbox Series X 1TB",
+        "marca": "microsoft",
+        "descripcion": "DESCRIPCION DE PRUEBA13"
+        
+    },
+    {
+        "id": 14,
+        "nombre": "Xbox Series S 512GB",
+        "precio": 100000,
+        "cantidad":  2,
+        "idB": "microsoft",
+        "nombrecorto": "Xbox Series S 512GB",
+        "marca": "microsoft",
+        "descripcion": "DESCRIPCION DE PRUEBA14"
+        
+    },
+    {
+        "id": 15,
+        "nombre": "Sony PlayStation 5 825GB",
+        "precio": 90000,
+        "cantidad":  2,
+        "idB": "sony",
+        "nombrecorto": "Sony PlayStation 5 825GB",
+        "marca": "sony",
+        "descripcion": "DESCRIPCION DE PRUEBA15"
+        
+    },
+    {
+        "id": 16,
+        "nombre": "Ryzen 5600G",
+        "precio": 7000,
+        "cantidad":  1,
+        "idB": "procesadores",
+        "nombrecorto": "Ryzen 5600G",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA16"
+        
+    },
+    {
+        "id": 17,
+        "nombre": "Ryzen 7 5700G",
+        "precio": 8000,
+        "cantidad":  2,
+        "idB": "procesadores",
+        "nombrecorto": "Ryzen 7 5700G",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA17"
+        
+    },
+    {
+        "id": 18,
+        "nombre": "Ryzen 9 5950X",
+        "precio": 10000,
+        "cantidad":  5,
+        "idB": "procesadores",
+        "nombrecorto": "Ryzen 9 5950X",
+        "marca": "amd",
+        "descripcion": "DESCRIPCION DE PRUEBA18"
+        
+    },
+    {
+        "id": 19,
+        "nombre": "Gygabyte GA-A320M-H",
+        "precio": 5000,
+        "cantidad":  3,
+        "idB": "mothers",
+        "nombrecorto": "Gygabyte GA-A320M-H",
+        "marca": "gigabyte",
+        "descripcion": "DESCRIPCION DE PRUEBA19"
+        
+    },
+    {
+        "id": 20,
+        "nombre": "Asus prime B450M-A II",
+        "precio": 5500,
+        "cantidad":  2,
+        "idB": "mothers",
+        "nombrecorto": "Asus prime B450M-A II",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA20"
+        
+    },
+    {
+        "id": 21,
+        "nombre": "Asus TUF B450M-Plus II",
+        "precio": 6500,
+        "cantidad":  5,
+        "idB": "mothers",
+        "nombrecorto": "Asus TUF B450M-Plus II",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA21"
+        
+    },
+    {
+        "id": 22,
+        "nombre": "Core i3-10100F",
+        "precio": 3000,
+        "cantidad":  2,
+        "idB": "procesadores",
+        "nombrecorto": "Core i3-10100F",
+        "marca": "intel",
+        "descripcion": "DESCRIPCION DE PRUEBA22"
+        
+    },
+    {
+        "id": 23,
+        "nombre": "Core I5-10400F",
+        "precio": 5000,
+        "cantidad":  5,
+        "idB": "procesadores",
+        "nombrecorto": "Core I5-10400F",
+        "marca": "intel",
+        "descripcion": "DESCRIPCION DE PRUEBA23"
+        
+    },
+    {
+        "id": 24,
+        "nombre": "Core i9-10900K",
+        "precio": 10000,
+        "cantidad":  2,
+        "idB": "procesadores",
+        "nombrecorto": "Core i9-10900K",
+        "marca": "intel",
+        "descripcion": "DESCRIPCION DE PRUEBA24"
+        
+    },
+    {
+        "id": 25,
+        "nombre": "Asus prime B460m-a",
+        "precio": 2000,
+        "cantidad":  3,
+        "idB": "mothers",
+        "nombrecorto": "Asus prime B460m-a",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA25"
+        
+    },
+    {
+        "id": 26,
+        "nombre": "Gigabyte h410m H V3",
+        "precio": 4000,
+        "cantidad":  2,
+        "idB": "mothers",
+        "nombrecorto": "Gigabyte h410m H V3",
+        "marca": "gigabyte",
+        "descripcion": "DESCRIPCION DE PRUEBA26"
+    },
+    {
+        "id": 27,
+        "nombre": "Asus prime h510 M-e",
+        "precio": 6000,
+        "cantidad":  1,
+        "idB": "mothers",
+        "nombrecorto": "Asus prime h510 M-e",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA27"
+    },
+    {
+        "id": 28,
+        "nombre": "Memoria RAM Fury DDR4 8GB 2666mhz",
+        "precio": 600,
+        "cantidad":  1,
+        "idB": "rams",
+        "nombrecorto": "RAM Fury DDR4 8GB 2666mhz",
+        "marca": "fury",
+        "descripcion": "DESCRIPCION DE PRUEBA28"
+    },
+    {
+        "id": 29,
+        "nombre": "Memoria RAM Fury DDR4 16GB 2133mhz",
+        "precio": 1200,
+        "cantidad":  2,
+        "idB": "rams",
+        "nombrecorto": "RAM Fury DDR4 16GB 2133mhz",
+        "marca": "fury",
+        "descripcion": "DESCRIPCION DE PRUEBA29"
+    },
+    {
+        "id": 30,
+        "nombre": "x2 Memoria RAM Fury DDR4 8GB 2133mhz",
+        "precio": 1100,
+        "cantidad":  1,
+        "idB": "rams",
+        "nombrecorto": "x2 RAM Fury DDR4 8GB 2133mhz",
+        "marca": "fury",
+        "descripcion": "DESCRIPCION DE PRUEBA30"
+    },
+    {
+        "id": 31,
+        "nombre": "GTX 1050TI MSI",
+        "precio": 60000,
+        "cantidad": 2,
+        "idB": "graficas",
+        "nombrecorto": "GTX 1050TI MSI",
+        "marca": "msi",
+        "descripcion": "DESCRIPCION DE PRUEBA31"
+    },
+    {
+        "id": 32,
+        "nombre": "MSI VENTUS RTX 2060 SUPER",
+        "precio": 200000,
+        "cantidad": 1,
+        "idB": "graficas",
+        "nombrecorto": "MSI VENTUS RTX 2060 SUPER",
+        "marca": "msi",
+        "descripcion": "DESCRIPCION DE PRUEBA32"
+    },
+    {
+        "id": 33,
+        "nombre": "MSI VENTUS RTX 3090",
+        "precio": 300000,
+        "cantidad": 3,
+        "idB": "graficas",
+        "nombrecorto": "MSI VENTUS RTX 3090",
+        "marca": "msi",
+        "descripcion": "DESCRIPCION DE PRUEBA33"
+    },
+    {
+        "id": 34,
+        "nombre": "SSD Kingston de 512GB",
+        "precio": 1000,
+        "cantidad": 2,
+        "idB": "almacenamiento",
+        "nombrecorto": "SSD Kingston de 512GB",
+        "marca": "kingston",
+        "descripcion": "DESCRIPCION DE PRUEBA34"
+    },
+    {
+        "id": 35,
+        "nombre": "Disco rigido Western Digital 1TB 7200RPM",
+        "precio": 2000,
+        "cantidad": 2,
+        "idB": "almacenamiento",
+        "nombrecorto": "Disco rigido Western Digital 1TB",
+        "marca": "westernDigital",
+        "descripcion": "DESCRIPCION DE PRUEBA35"
+    },
+    {
+        "id": 36,
+        "nombre": "Disco solido Samsung 870 1tb",
+        "precio": 32000,
+        "cantidad": 1,
+        "idB": "almacenamiento",
+        "nombrecorto": "Disco solido Samsung 870 1tb",
+        "marca": "samsung",
+        "descripcion": "DESCRIPCION DE PRUEBA36"
+    },
+    {
+        "id": 37,
+        "nombre": "Gabinete gamemax h601",
+        "precio": 1200,
+        "cantidad": 2,
+        "nombrecorto": "Gabinete gamemax h601",
+        "marca": "gamemax",
+        "descripcion": "DESCRIPCION DE PRUEBA37"
+    },
+    {
+        "id": 38,
+        "nombre": "Gabinete SYX Fearless ATX",
+        "precio": 2000,
+        "cantidad": 2,
+        "nombrecorto": "Gabinete SYX Fearless ATX",
+        "marca": "syx",
+        "descripcion": "DESCRIPCION DE PRUEBA38"
+    },
+    {
+        "id": 39,
+        "nombre": "Gabinete Aerocool MECHA TG 1",
+        "precio": 3200,
+        "cantidad": 1,
+        "nombrecorto": "Gabinete Aerocool MECHA TG 1",
+        "marca": "aerocool",
+        "descripcion": "DESCRIPCION DE PRUEBA39"
+    },
+    {
+        "id": 40,
+        "nombre": "Fuente Gigabyte 750w 80 plus bronce",
+        "precio": 2200,
+        "cantidad": 2,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Gigabyte 750w 80+ bronce",
+        "marca": "gigabyte",
+        "descripcion": "DESCRIPCION DE PRUEBA40"
+    },
+    {
+        "id": 41,
+        "nombre": "Fuente Asus ROG Thor 850w 80 plus platinum",
+        "precio": 5000,
+        "cantidad": 2,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Asus 850w 80+ platinum",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA41"
+    },
+    {
+        "id": 42,
+        "nombre": "Fuente Seasonic 1000w Focus PLus Gold",
+        "precio": 5500,
+        "cantidad": 1,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Seasonic 1000w PLus Gold",
+        "marca": "seasonic",
+        "descripcion": "DESCRIPCION DE PRUEBA42"
+    },
+    {
+        "id": 43,
+        "nombre": "Netbook HP",
+        "precio": 30000,
+        "cantidad": 2,
+        "idB": "netbooks",
+        "nombrecorto": "Netbook HP",
+        "marca": "hp",
+        "descripcion": "DESCRIPCION DE PRUEBA43"
+    },
+    {
+        "id": 44,
+        "nombre": "Netbook Lenovo",
+        "precio": 40000,
+        "cantidad": 5,
+        "idB": "netbooks",
+        "nombrecorto": "Netbook Lenovo",
+        "marca": "lenovo",
+        "descripcion": "DESCRIPCION DE PRUEBA44"
+    },
+    {
+        "id": 45,
+        "nombre": "Netbook Asus",
+        "precio": 60000,
+        "cantidad": 1,
+        "idB": "netbooks",
+        "nombrecorto": "Netbook Asus",
+        "marca": "asus",
+        "descripcion": "DESCRIPCION DE PRUEBA45"
+    }
+]
