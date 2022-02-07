@@ -1,27 +1,27 @@
 
 
-//VARIABLES
-let entrada
-let trueofalse = true
-
+// QUERY SELECTORS
 const btnCancelarcompra = document.querySelector('#btnCancelar')
 const btnAgregarcompra = document.querySelector('#btnFinalizar')
 const agregarPrcarrito = document.querySelector('#appendParacarrito')
 const cantidadProductos = document.querySelector('#cantidadProductos')
-
-// EVENTOS
-function eventos (){
-// QUERY SELECTOR
+const finalizarCompra  = document.querySelector('#btnFinalizarcompra')
 const btnCarrito = document.querySelector('.productos__carritolink')
 const backgroundCarrito = document.querySelector('#carrito')
 const btnContinuar = document.querySelector('#btnContinuar')
 const popup = document.querySelector('#pop-up')
-popup.parentNode
-const boton = document.querySelectorAll('a[class = "btnInformacion"]')
-const botoncerrar = document.querySelector('.btn-popup')
-const btnAñadir = document.querySelectorAll('#btnAñadir')
+
+
 const backgroundCompra = document.querySelector('#backgroundPopupcompra')
 const popUpcompra = document.querySelector('#pop-upDatos')
+// EVENTOS
+function eventos (){
+// QUERY SELECTOR
+const botoncerrar = document.querySelector('.btn-popup')
+const btnAñadir = document.querySelectorAll('#btnAñadir')
+popup.parentNode
+const boton = document.querySelectorAll('a[class = "btnInformacion"]')
+
 const contador = document.querySelector('#spinner')
 const btnCancelarcompra = document.querySelector('#btnCancelar')
 
@@ -36,11 +36,6 @@ btnContinuar.addEventListener('click', (e) => {
  })
       
 //boton mas informacion
-
-
-
-
-
     const h4Title = document.createElement('h4')
     const parrafoPro = document.createElement('p')
     boton.forEach(e => {
@@ -82,14 +77,20 @@ btnAñadir.forEach(elm => {
         nombreProducto.textContent = `Nombre: ${path}`
         let precioProducto = document.createElement('p')
         precioProducto.textContent = `$${pathPrecio}`
-        let cantidadProducto = document.createElement('p')
-                // CANTIDAD DEL SPINNER ACTUAL
+        let cantidadProducto = document.createElement('p')   
+        // CANTIDAD DEL SPINNER ACTUAL
                 let pathCantidadspinner = productosArray.filter(nombre => nombre.nombrecorto === path)
         cantidadProducto.textContent = `Cantidad disponible: ${pathCantidadspinner[0].cantidad}` 
+        
         // Tarjeta de añadir al carrito DOM
         cantidadProductos.appendChild(cantidadProducto)
         popUpcompra.prepend(precioProducto)
         popUpcompra.prepend(nombreProducto)
+        
+        
+        
+        
+        
         // DATOS PARA TOMAR NO VIEW
         let nombreProductonv = document.createElement('p')
         let precioProductonv = document.createElement('p')
@@ -147,12 +148,23 @@ btnAñadir.forEach(elm => {
             
             backgroundCompra.classList.add('backgroundpopup-show')
             })
+        // CERRAR VENTANA AL DAR AGREGAR AL CARRITO    
+        btnAgregarcompra.addEventListener('click', (e) =>{
+            nombreProducto.remove()
+            precioProducto.remove()
+            box.innerHTML = ""
+            cantidadProducto.remove()
+            backgroundCompra.classList.add('backgroundpopup-show')
+        })  
     })
    
 })
 }
 
 
+
+
+// AGREGA PRODUCTOS AL CARRITO Y HACE LA SUMA Y EL TOTAL
 btnAgregarcompra.addEventListener('click', (e) =>{
     
     let pathNombre = e.path[2].children[0].children[2].textContent
@@ -160,62 +172,97 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     let pathcount = e.path[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
     let precioNumber = parseInt(pathPrecio)
-    let prueba = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
-    prueba[0].stock(countNumber)
-    console.log(prueba)
+    let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
+    
+    filtradoStock[0].stock(countNumber)
+    let total =  filtradoStock[0].pruiea
+ 
+    let id = Date.now()
 
-
+        
+        
         let pruebaLS = agregarPrcarrito.innerHTML += `
-        <div class="items__productos" id="itemsCarrito">
+        <div class="items__productos " id="b${id}">
         <p>${pathNombre}</p>
         <p>$${pathPrecio}</p>
         <p>Cantidad: ${pathcount}</p>
         <p>Total: $${suma}</p>
-        <label id="cheackBox" class="contenedor__cheack no-view">
-        <input id="ads" checked="checked" type="checkbox">
-        <span class="checkmark"></span>
-        </label>
+        <p class="no-view">b${id}</p>
+        <p class="no-view" > ${suma}</p>
+        <p class="no-view" > ${pathPrecio}</p>
+        <p class="no-view" > ${pathcount}</p>
+        <a class="no-view"  id="cheackBox" href="#"><img src="./imagenes/delete-button.png" width="31px" height="31px" alt=""></a>
         </div>
-        `
-        const cheackEliminar = document.querySelectorAll('#cheackBox')
-        btnEliminarcarrito(cheackEliminar)
-        sincronizarStorage(pruebaLS) 
-        cargaCarrito(pruebaLS)
+        `        
+        let totalDeCompra = document.querySelector('#totalDelacompra')
+        
+      
+        const btnEliminarpr = document.querySelectorAll('#cheackBox')
+        totalDeCompra.textContent = `$${total}`
+       
 
+        btnEliminarcarrito(btnEliminarpr)
+
+        // 
+
+        // sincronizarStorage(pruebaLS)
+        // cargaCarrito(pruebaLS)
 })
 
-function btnEliminarcarrito(cheackEliminar){
+
+
+function btnEliminarcarrito(btnEliminarpr){
     const btnEliminarcompra = document.querySelector('#btnEliminarpr')
     btnEliminarcompra.addEventListener('click', (e) =>{
     e.preventDefault()
-    cheackEliminar.forEach(elm => {
+
+    btnEliminarpr.forEach(elm => {
         elm.classList.remove('no-view')
-        console.log(elm)
+        
         elm.addEventListener('click', (e) =>{
-           let value = e.path[1].children[1]
-          
+            e.preventDefault()
+            let totalresta = parseInt(e.path[2].children[5].textContent)
+            console.log(totalresta)
+            let pathNombre = e.path[2].children[0].textContent
+            let filtro = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
+            filtro[0].restarCarrito()
         })
     })
     
     })
 }
 
-function cargaCarrito(pruebaLS){
-    document.addEventListener('DOMContentLoaded', () => {
-        pruebaLS = localStorage.getItem('carrito') || []  ;
-        agregarPrcarrito.innerHTML += `${pruebaLS}`
-        const cheackEliminar = document.querySelectorAll('#cheackBox')
-        btnEliminarcarrito(cheackEliminar)
-    });
+function finalizarCompras(){
+    finalizarCompra.addEventListener('click', (e) =>{
+        e.preventDefault()
+        
+    })
 }
-cargaCarrito()
-function sincronizarStorage(pruebaLS) {
-    localStorage.setItem('carrito', pruebaLS);
-   
-}
+finalizarCompras()
+
+// function cargaCarrito(pruebaLS){
+//     document.addEventListener('DOMContentLoaded', () => {
+//         pruebaLS = localStorage.getItem('carrito') || []  ;
+//         agregarPrcarrito.innerHTML += `${pruebaLS}`
+//         const btnEliminarpr = document.querySelectorAll('#cheackBox')
+//         btnEliminarcarrito(btnEliminarpr)
+//     });
+// }
+// cargaCarrito()
+// function sincronizarStorage(pruebaLS) {
+//     localStorage.setItem('carrito', pruebaLS);
+// }
+
+/*
+    Total ya lo tenemos actualizado 
+    conseguir el precioTotal de cada uno
+    lo reciba un array 
+    un metodo actualizable 
+    
+*/
+
 
 // limpiar html
-
 function limpiarHTML(){
     document.getElementById('productos').innerHTML = ``;
 }
@@ -302,7 +349,7 @@ const updateElements = (productos)=>{
     })
     eventos ()
 }
-function pruebita(productosArray){
+function controlesDemov(productosArray){
     const updatePage = ( elements, page, elementsPerPage)=>
     {
         const firstElement = (page * elementsPerPage) - elementsPerPage;

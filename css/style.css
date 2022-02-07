@@ -496,6 +496,7 @@ body {
   width: 700px;
   margin: auto;
   margin-top: 3rem;
+  padding-bottom: 2rem;
 }
 .links__productos a {
   background-color: #620871;
@@ -507,7 +508,7 @@ body {
 .background__carrito {
   background-color: rgba(0, 0, 0, 0.781);
   width: 80vw;
-  height: 80vh;
+  height: auto;
   margin: auto;
   margin-top: 5.5rem;
   border-radius: 0.8rem;
@@ -1027,6 +1028,12 @@ summary:active .producto__flecha img {
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+}
+
+.item__total {
+  display: flex;
+  gap: 2rem;
+  margin: auto;
 }
 
 .no-view {

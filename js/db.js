@@ -1,14 +1,16 @@
-let arrayValor = []
-let arrayNombreDuplicados = []
-let arrayNombresFinal = []
-let vecesCompradas = 1
-let cantidadComprada = []
+//VARIABLES
+let entrada
+let trueofalse = true
+let valorTotal = []
+let restaCarrito = []
 let pcCarritoValor = []
 let pcCaritoNombre = []
 let suma
+let prro
+let productosArray = []
 
 
-
+// CONSTRUCTOR 1
 class productos {
     constructor({id, nombre, precio, cantidad, idB, nombrecorto, marca, descripcion}) {
         this.id = id
@@ -19,6 +21,7 @@ class productos {
         this.precioTOTAL
         this.nombrecorto = nombrecorto
         this.marca = marca
+        this.pruiea
         this.descripcion = descripcion
     }
     armadopc(){
@@ -34,21 +37,27 @@ class productos {
         if(countNumber <= this.cantidad){
             this.cantidad = this.cantidad - countNumber
             let cantidad = countNumber
-            let multiplicacion = cantidad*this.precio
-            arrayValor.push(multiplicacion)
+            let multiplicacion = cantidad*this.precio 
+            this.precioTOTAL = multiplicacion        
+            let arrayValor = []
+            arrayValor.push(this.precioTOTAL)
             let total = arrayValor.reduce((a, b) => a + b, 0)
             suma = total
-
+            valorTotal.push( total)
+            let totalComprado = valorTotal.reduce((a, b) => a + b, 0)
+            this.pruiea = totalComprado
         }
     }
-  
+    restarCarrito(){
+        console.log(this.pruiea)
+        let arrayEliminar = []
+        arrayEliminar.push(this.precioTOTAL)
+        let resta = valorTotal.reduce((a, b) => a + b, 0)
+        let pruebitas = this.pruiea - resta
+        console.log(pruebitas)
 }
 
-
-
-
-
-let productosArray = []
+}
 
 const requestURL= "js/db.json";
 const request = new XMLHttpRequest();
@@ -65,25 +74,7 @@ request.onload = function() {
 function crearProducto(elm){
     productosArray.push(new productos(elm));
     updateElements(productosArray)
-    pruebita(productosArray);
+    controlesDemov(productosArray);
     filtradoAside (productosArray)
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

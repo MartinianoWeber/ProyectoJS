@@ -81,6 +81,7 @@
     width: 700px;
     margin: auto;
     margin-top: 3rem;
+    padding-bottom: 2rem;
         a {
             background-color: $violetaBoton;
             padding: 1rem 2rem;
@@ -92,7 +93,7 @@
 .background__carrito {
     background-color: rgba(0, 0, 0, 0.781);
     width: 80vw;
-    height: 80vh;
+    height: auto;
     margin: auto;
     margin-top: 5.5rem;
     border-radius: .8rem;
