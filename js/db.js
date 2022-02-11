@@ -67,3 +67,5 @@ function crearProducto(elm){
     filtradoAside (productosArray)
     
 }
+
+

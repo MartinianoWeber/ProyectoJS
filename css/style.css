@@ -1040,4 +1040,42 @@ summary:active .producto__flecha img {
   display: none;
 }
 
+.fixed {
+  position: relative;
+}
+
+.cartelConfirmacion {
+  background-color: rgba(22, 190, 22, 0.877);
+  width: 200px;
+  position: fixed;
+  text-align: center;
+  top: 80%;
+  right: 2%;
+  color: #ffffff;
+  margin: auto;
+  height: 80px;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+}
+.cartelConfirmacion p {
+  margin-top: 1.4rem;
+}
+
+.productoEliminado {
+  background-color: rgba(190, 22, 22, 0.877);
+  width: 200px;
+  position: fixed;
+  text-align: center;
+  top: 80%;
+  right: 2%;
+  color: #ffffff;
+  margin: auto;
+  height: 80px;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+}
+.productoEliminado p {
+  margin-top: 2.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

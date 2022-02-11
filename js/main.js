@@ -145,8 +145,9 @@ btnAñadir.forEach(elm => {
             precioProducto.remove()
             box.innerHTML = ""
             cantidadProducto.remove()
-            
+           
             backgroundCompra.classList.add('backgroundpopup-show')
+            
             })
         // CERRAR VENTANA AL DAR AGREGAR AL CARRITO    
         btnAgregarcompra.addEventListener('click', (e) =>{
@@ -155,10 +156,14 @@ btnAñadir.forEach(elm => {
             box.innerHTML = ""
             cantidadProducto.remove()
             backgroundCompra.classList.add('backgroundpopup-show')
+            $('#cajaConfirmacion').fadeIn(2000).fadeOut(4000)
+            
         })  
+        
     })
-   
+    
 })
+
 }
 
 
@@ -228,6 +233,9 @@ function eliminarPr(btnEliminarpr){
         let resta = valorTotal.push(-pathPrecio) 
         agregarPr(resta)
         pathremove.remove()
+        $('#productoEliminado').fadeIn(2000).fadeOut(4000)
+        
+
              
     })
 }
@@ -546,6 +554,7 @@ function precioMax(productos){
         return productos
     }
 }
+
 
 // ----------------------------- CODIGO A UTILIZAR A FUTURO ---------------------------
 

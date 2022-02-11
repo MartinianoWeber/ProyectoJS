@@ -73,7 +73,6 @@
                 <form id="buscador">
                     <div class="buscador__flex">
                         <div class="buscadores">
-                            <label for="marca">Marca</label>
                             <select class="" id="marca">
                                 <option value="">Seleccione marca</option>
                                 <option value="logitech">Logitech</option>
@@ -98,7 +97,6 @@
                             </select>
                         </div>
                         <div class="buscadores">
-                            <label for="minimo">Precio Min</label>
                             <select class="" id="minimo">
                                     <option value="">Seleccione precio MIN</option>
                                     <option value="1000">1000</option>
@@ -112,7 +110,6 @@
                             </select>
                         </div>
                         <div class="buscadores">
-                            <label for="maximo">Precio Max</label>
                             <select class="" id="maximo">
                                     <option value="">Seleccione precio MAX</option>
                                     <option value="20000">20,000</option>
@@ -178,12 +175,19 @@
                         </div>
                         
                     </div>
+
                 </div>
                 <div id="barra__cambio" class="barra__cambio">
                     <span class="btnSig"><img class="img-1" id="img1" src="./imagenes/flechapasar.png" alt=""></span>
                     <p id="contador1"></p>
                     <span class="btnSig"><img class="img-2" id="img2" src="./imagenes/flechapasar.png" alt=""></span> 
                 </div>
+                <div id="cajaConfirmacion" class="fixed no-view">
+                    <div class="cartelConfirmacion">
+                        <p>Producto añadido al carrito</p>
+                    </div>
+                </div>
+
             </section> 
             </div>
 
@@ -207,7 +211,13 @@
                         
                     </div>
                 </div>
-              
+               
+                
+            </div>
+            <div id="productoEliminado" class="fixed no-view">
+                <div class="productoEliminado">
+                    <p>Producto eliminado!</p>
+                </div>
             </div>
         </section> 
 
@@ -219,7 +229,10 @@
     </main>
      <script src="./js/db.js"></script>
     <script src="./js/main.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
 </body>
 <footer class="footer">
     <div class="redes-sociales">
