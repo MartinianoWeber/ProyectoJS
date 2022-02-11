@@ -173,11 +173,11 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     let countNumber = parseInt(pathcount)
     let precioNumber = parseInt(pathPrecio)
     let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
-    
-    filtradoStock[0].stock(countNumber)
+    let id = Date.now()
+    filtradoStock[0].stock(countNumber, id)
     let total =  filtradoStock[0].pruiea
  
-    let id = Date.now()
+    
 
         
         
@@ -193,22 +193,44 @@ btnAgregarcompra.addEventListener('click', (e) =>{
         <p class="no-view" > ${pathcount}</p>
         <a class="no-view"  id="cheackBox" href="#"><img src="./imagenes/delete-button.png" width="31px" height="31px" alt=""></a>
         </div>
-        `        
-        let totalDeCompra = document.querySelector('#totalDelacompra')
-        
-      
-        const btnEliminarpr = document.querySelectorAll('#cheackBox')
-        totalDeCompra.textContent = `$${total}`
-       
+        `   
 
+        const btnEliminarpr = document.querySelectorAll('#cheackBox')     
+        
+        eliminarPr(btnEliminarpr)
+
+        
+
+        agregarPr()
         btnEliminarcarrito(btnEliminarpr)
 
         // 
-
+        
         // sincronizarStorage(pruebaLS)
         // cargaCarrito(pruebaLS)
 })
-
+      
+function agregarPr(){
+    let totalComprado = valorTotal.reduce((a, b) => a + b, 0)
+    suma2 = totalComprado
+    let totalDeCompra = document.querySelector('#totalDelacompra')
+    totalDeCompra.textContent = `$${suma2}`
+    eliminarPr()
+}
+function eliminarPr(btnEliminarpr){
+    $(btnEliminarpr).click((e) =>{
+        e.preventDefault()
+        let pathNombre = e.originalEvent.path[2].children[0].textContent
+        let pathremove = e.originalEvent.path[2]
+        let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
+        let pathPrecio = parseInt(e.originalEvent.path[2].children[5].textContent)
+        console.log(pathPrecio)
+        let resta = valorTotal.push(-pathPrecio) 
+        agregarPr(resta)
+        pathremove.remove()
+             
+    })
+}
 
 
 function btnEliminarcarrito(btnEliminarpr){
@@ -218,17 +240,7 @@ function btnEliminarcarrito(btnEliminarpr){
 
     btnEliminarpr.forEach(elm => {
         elm.classList.remove('no-view')
-        
-        elm.addEventListener('click', (e) =>{
-            e.preventDefault()
-            let totalresta = parseInt(e.path[2].children[5].textContent)
-            console.log(totalresta)
-            let pathNombre = e.path[2].children[0].textContent
-            let filtro = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
-            filtro[0].restarCarrito()
-        })
     })
-    
     })
 }
 

@@ -6,7 +6,7 @@ let restaCarrito = []
 let pcCarritoValor = []
 let pcCaritoNombre = []
 let suma
-let prro
+let suma2
 let productosArray = []
 
 
@@ -21,7 +21,6 @@ class productos {
         this.precioTOTAL
         this.nombrecorto = nombrecorto
         this.marca = marca
-        this.pruiea
         this.descripcion = descripcion
     }
     armadopc(){
@@ -29,7 +28,6 @@ class productos {
         pcCarritoValor.push(resultadototalPC) 
         let totalPC = pcCarritoValor.reduce((a, b) => a + b, 0);
         suma = totalPC
-      
         let nombres = this.nombre
         pcCaritoNombre.push(nombres) 
     }
@@ -43,19 +41,10 @@ class productos {
             arrayValor.push(this.precioTOTAL)
             let total = arrayValor.reduce((a, b) => a + b, 0)
             suma = total
-            valorTotal.push( total)
-            let totalComprado = valorTotal.reduce((a, b) => a + b, 0)
-            this.pruiea = totalComprado
+            valorTotal.push(suma)
         }
     }
-    restarCarrito(){
-        console.log(this.pruiea)
-        let arrayEliminar = []
-        arrayEliminar.push(this.precioTOTAL)
-        let resta = valorTotal.reduce((a, b) => a + b, 0)
-        let pruebitas = this.pruiea - resta
-        console.log(pruebitas)
-}
+  
 
 }
 
