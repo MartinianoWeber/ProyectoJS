@@ -12,7 +12,7 @@ let productosArray = []
 
 // CONSTRUCTOR 1
 class productos {
-    constructor({id, nombre, precio, cantidad, idB, nombrecorto, marca, descripcion}) {
+    constructor({id, nombre, precio, cantidad, idB, nombrecorto, marca, descripcion, imagen}) {
         this.id = id
         this.nombre = nombre
         this.precio = precio
@@ -22,6 +22,7 @@ class productos {
         this.nombrecorto = nombrecorto
         this.marca = marca
         this.descripcion = descripcion
+        this.imagen = imagen
     }
     armadopc(){
         let resultadototalPC = this.precio

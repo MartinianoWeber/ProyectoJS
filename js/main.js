@@ -10,10 +10,11 @@ const btnCarrito = document.querySelector('.productos__carritolink')
 const backgroundCarrito = document.querySelector('#carrito')
 const btnContinuar = document.querySelector('#btnContinuar')
 const popup = document.querySelector('#pop-up')
-
-
+const contador = document.querySelector('#spinner')
+const inhabilitarBtn = document.querySelector('#btn__inhabilitar')
 const backgroundCompra = document.querySelector('#backgroundPopupcompra')
 const popUpcompra = document.querySelector('#pop-upDatos')
+const btnInhabilitarcompra = document.querySelector('#btnInhabilitarterminar')
 // EVENTOS
 function eventos (){
 // QUERY SELECTOR
@@ -22,11 +23,18 @@ const btnAñadir = document.querySelectorAll('#btnAñadir')
 popup.parentNode
 const boton = document.querySelectorAll('a[class = "btnInformacion"]')
 
-const contador = document.querySelector('#spinner')
+
 const btnCancelarcompra = document.querySelector('#btnCancelar')
 
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
+    console.log(e)
+    let validacion = parseInt(e.path[4].children[2].children[0].children[1].children[0].children[2].children[0].children[1].children[0].innerHTML)
+    if(validacion === 0){
+        btnInhabilitarcompra.classList.remove('no-view')
+    }else{
+        btnInhabilitarcompra.classList.add('no-view')
+    }
     backgroundCarrito.classList.remove('backgroundpopup-show')
 })
 btnContinuar.addEventListener('click', (e) => {
@@ -86,7 +94,14 @@ btnAñadir.forEach(elm => {
         cantidadProductos.appendChild(cantidadProducto)
         popUpcompra.prepend(precioProducto)
         popUpcompra.prepend(nombreProducto)
-        
+        console.log(pathCantidadspinner[0].cantidad)
+        if(pathCantidadspinner[0].cantidad == 0){
+            contador.classList.add("no-view")
+            inhabilitarBtn.classList.remove("no-view")
+        }else{
+            contador.classList.remove("no-view")
+            inhabilitarBtn.classList.add("no-view")
+        }
         
         
         
@@ -109,21 +124,23 @@ btnAñadir.forEach(elm => {
 
         // INYECTAMOS HTML DE CONTADOR
         contador.innerHTML = `
-        <div class="container">
+        <div class="container2">
                                 <span id="next" class="next"></span>
                                 <span id="prev" class="prev"></span>
                                 <div id="box"></div>
         `
         // LOGICA DEL CONTADOR
         let numbers = document.querySelector('#box');
-        for(i=0;i<=pathCantidadspinner[0].cantidad;i++){
+        for(i=1;i<=pathCantidadspinner[0].cantidad;i++){
+
             let span = document.createElement('span');
             span.textContent = i;
             numbers.appendChild(span);
         }
         let num = numbers.getElementsByTagName('span');
+        
         let index = 0;
-      
+  
            const nextSpinner = document.querySelector('#next')
            const prevSpinner = document.querySelector('#prev')
            nextSpinner.addEventListener('click', (e) => {
@@ -138,6 +155,8 @@ btnAñadir.forEach(elm => {
                index=(index - 1 + num.length) % num.length;
                num[index].style.display = 'initial';
            })
+
+
         // CANCELAR LA COMPRA BOTON 
         btnCancelarcompra.addEventListener('click', (e) => {
             e.preventDefault()
@@ -170,20 +189,20 @@ btnAñadir.forEach(elm => {
 
 
 // AGREGA PRODUCTOS AL CARRITO Y HACE LA SUMA Y EL TOTAL
+
 btnAgregarcompra.addEventListener('click', (e) =>{
     
     let pathNombre = e.path[2].children[0].children[2].textContent
     let pathPrecio = e.path[2].children[0].children[1].textContent
     let pathcount = e.path[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
+ 
+
     let precioNumber = parseInt(pathPrecio)
     let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
     let id = Date.now()
     filtradoStock[0].stock(countNumber, id)
-    let total =  filtradoStock[0].pruiea
- 
-    
-
+    let total =  filtradoStock[0].pruiea    
         
         
         let pruebaLS = agregarPrcarrito.innerHTML += `
@@ -199,12 +218,10 @@ btnAgregarcompra.addEventListener('click', (e) =>{
         <a class="no-view"  id="cheackBox" href="#"><img src="./imagenes/delete-button.png" width="31px" height="31px" alt=""></a>
         </div>
         `   
-
         const btnEliminarpr = document.querySelectorAll('#cheackBox')     
         
         eliminarPr(btnEliminarpr)
 
-        
 
         agregarPr()
         btnEliminarcarrito(btnEliminarpr)
@@ -219,7 +236,7 @@ function agregarPr(){
     let totalComprado = valorTotal.reduce((a, b) => a + b, 0)
     suma2 = totalComprado
     let totalDeCompra = document.querySelector('#totalDelacompra')
-    totalDeCompra.textContent = `$${suma2}`
+    totalDeCompra.innerHTML = `$<span>${suma2}</span></p>`
     eliminarPr()
 }
 function eliminarPr(btnEliminarpr){
@@ -255,7 +272,8 @@ function btnEliminarcarrito(btnEliminarpr){
 function finalizarCompras(){
     finalizarCompra.addEventListener('click', (e) =>{
         e.preventDefault()
-        
+        let validacion = parseInt(e.path[2].children[2].children[0].children[1].children[0].innerText)
+       
     })
 }
 finalizarCompras()
@@ -300,7 +318,11 @@ const updateElements = (productos)=>{
     
         const span1 = document.createElement('span')
         span1.classList.add('producto__imagen')
-    
+        span1.style.backgroundImage = `url('${elm.imagen}')`;
+
+        // const img = document.createElement('img')
+        // img.src = `${elm.imagen}`
+        
         const span2 = document.createElement('span')
         span2.classList.add('producto__background')
     
@@ -351,6 +373,7 @@ const updateElements = (productos)=>{
 
         container.appendChild(div1 );
         div1.appendChild(span1)
+        // span1.appendChild(img)
         div1.appendChild(span2)
         div1.append(descripcion)
         div1.append(precioItem)

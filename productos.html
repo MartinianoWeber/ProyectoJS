@@ -166,14 +166,19 @@
                                 <span></span>
                                 <span></span> Cancelar
                             </button>
+                          
                             <button class="btn__compra" id="btnFinalizar" >
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span> Agregar al carrito
                             </button>
+                            
                         </div>
-                        
+                        <div id="btn__inhabilitar" class="fixed">
+                            <div class="btnCompra__Inhabilitar">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -200,13 +205,14 @@
                     <div class="items__productos">
                         <div class="item__total">
                             <p>Total de la compra:</p>
-                            <p id="totalDelacompra">$0</p>
+                            <p id="totalDelacompra">$<span>0</span></p>
                         </div>
                        
                     </div>
                     <div class="links__productos">
                         <a  id="btnContinuar" href="">Seguir comprando</a>
                         <a id="btnEliminarpr"href="">Eliminar productos</a>
+                        <div id="btnInhabilitarterminar" class="fixed no-view"><div class="terminarCompra__inhabilitar "></div></div>
                         <a id="btnFinalizarcompra"href="">Terminar compra</a>
                         
                     </div>

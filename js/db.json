@@ -7,7 +7,8 @@
         "idB": "mouse",
         "nombrecorto": "Mouse Logitech G305",
         "marca": "logitech",
-        "descripcion": "Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos."
+        "descripcion": "Los mouses Logitech se adaptan a la forma de tu mano para proporcionarte horas de comodidad. Sin necesidad de mover el brazo para deslizar el cursor, tu mano se fatigará menos. Son ideales para cualquier espacio de trabajo y quienes tienen la mesa llena de diversos objetos.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_934480-MLA32516268691_102019-O.jpg"
     },
     {
         "id": 2,
@@ -17,8 +18,8 @@
         "idB": "mouse",
         "nombrecorto": "Mouse Redragon Storm Elite M988",
         "marca": "redragon",
-        "descripcion": "DESCRIPCION DE PRUEBA2"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA2",
+        "imagen": "https://i.ytimg.com/vi/U_hmeeQIWhg/maxresdefault.jpg"
     },
     {
         "id": 3,
@@ -28,7 +29,8 @@
         "idB": "mouse",
         "nombrecorto": "Mouse Logitech MX Anywhere 3",
         "marca": "logitech",
-        "descripcion": "DESCRIPCION DE PRUEBA3"
+        "descripcion": "DESCRIPCION DE PRUEBA3",
+        "imagen": "https://sm.pcmag.com/pcmag_au/review/l/logitech-m/logitech-mx-anywhere-3-wireless-mouse_qfxq.jpg"
         
     },
     {
@@ -39,8 +41,8 @@
         "idB": "teclados",
         "nombrecorto": "Teclado Razer Huntsman",
         "marca": "razer",
-        "descripcion": "DESCRIPCION DE PRUEBA4"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA4",
+        "imagen": "https://i.ytimg.com/vi/3pkxfttvhZ0/maxresdefault.jpg"
     },
     {
         "id": 5,
@@ -50,8 +52,8 @@
         "idB": "teclados",
         "nombrecorto": "Teclado HyperX Alloy Elite 2",
         "marca": "hiperex",
-        "descripcion": "DESCRIPCION DE PRUEBA5"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA5",
+        "imagen": "https://www.techgames.com.mx/wp-content/uploads/2020/07/HyperX-Alloy-Elite-2.jpg"
     },
     {
         "id": 6,
@@ -61,8 +63,8 @@
         "idB": "teclados",
         "nombrecorto": "Teclado Redragon Draconic K530",
         "marca": "redragon",
-        "descripcion": "DESCRIPCION DE PRUEBA6"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA6",
+        "imagen": "https://m.media-amazon.com/images/S/aplus-media/sc/d5545588-6007-48ec-a696-ba4cd4c70205.__CR0,0,970,600_PT0_SX970_V1___.jpg"
     },
     {
         "id": 7,
@@ -72,8 +74,8 @@
         "idB": "auriculares",
         "nombrecorto": "Auriculares HyperX Cloud Flight",
         "marca": "hiperex",
-        "descripcion": "DESCRIPCION DE PRUEBA7"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA7",
+        "imagen": "https://consejosjuegospro.com/wp-content/uploads/2021/11/El-NUEVO-auricular-inalambrico-HyperX-Cloud-Flight-ya-esta-disponible.jpg"
     },
     {
         "id": 8,
@@ -83,8 +85,8 @@
         "idB": "auriculares",
         "nombrecorto": "Auriculares HyperX Stinger S",
         "marca": "hiperex",
-        "descripcion": "DESCRIPCION DE PRUEBA8"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA8",
+        "imagen": "https://media.kingston.com/hyperx/product/hx-product-headset-stinger-black-9-sm.jpg"
     },
     {
         "id": 9,
@@ -92,10 +94,10 @@
         "precio": 4500,
         "cantidad":  3,
         "idB": "auriculares",
-        "nombrecorto": "Auriculares Logitech G G433",
+        "nombrecorto": "Auriculares Logitech G433",
         "marca": "logitech",
-        "descripcion": "DESCRIPCION DE PRUEBA9"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA9",
+        "imagen": "https://cf.shopee.co.th/file/5d6532d919961a59b6db49cc71c6cb13"
     },
     {
         "id": 10,
@@ -105,8 +107,8 @@
         "idB": "combospc",
         "nombrecorto": "Combo Ryzen 5 3600 +A320+8gb",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA10"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA10",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_843889-MLA45996352415_052021-O.jpg"
     },
     {
         "id": 11,
@@ -116,19 +118,19 @@
         "idB": "combospc",
         "nombrecorto": "Combo A68mhe + A6 7480 + 8Gb",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA11"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA11",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_619717-MLA48556421004_122021-O.jpg"
     },
     {
         "id": 12,
-        "nombre": "Combo Actualizacion Amd Ryzen 5 5600G + A320 + 8gb",
+        "nombre": "Combo Actualizacion AMD Ryzen 7 5700G + MSI B550M-A + 16Gb (2x8GB) 3200Mhz",
         "precio": 30000,
         "cantidad":  3,
         "idB": "combospc",
-        "nombrecorto": "Combo Ryzen 5 5600G+A320+8gb",
+        "nombrecorto": "Combo Ryzen  7 5700+B550+16Gb",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA12"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA12",
+        "imagen": "https://s3-sa-east-1.amazonaws.com/saasargentina/YEEuIwSQ4MITHoenkSsQ/imagen"
     },
     {
         "id": 13,
@@ -138,8 +140,8 @@
         "idB": "microsoft",
         "nombrecorto": "Xbox Series X 1TB",
         "marca": "microsoft",
-        "descripcion": "DESCRIPCION DE PRUEBA13"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA13",
+        "imagen": "https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg"
     },
     {
         "id": 14,
@@ -149,8 +151,8 @@
         "idB": "microsoft",
         "nombrecorto": "Xbox Series S 512GB",
         "marca": "microsoft",
-        "descripcion": "DESCRIPCION DE PRUEBA14"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA14",
+        "imagen": "https://enbuenestado.com.mx/wp-content/uploads/2021/09/xbox1_08.jpg"
     },
     {
         "id": 15,
@@ -160,8 +162,8 @@
         "idB": "sony",
         "nombrecorto": "Sony PlayStation 5 825GB",
         "marca": "sony",
-        "descripcion": "DESCRIPCION DE PRUEBA15"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA15",
+        "imagen": "https://i2.wp.com/homeweb.com.ar/wp-content/uploads/2021/06/Sony-PS5-Digital-16GB-825GB-SSD-03_1.1.jpg?fit=600%2C600&ssl=1"
     },
     {
         "id": 16,
@@ -171,8 +173,8 @@
         "idB": "procesadores",
         "nombrecorto": "Ryzen 5600G",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA16"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA16",
+        "imagen": "https://i0.wp.com/www.madboxpc.com/wp-content/uploads/2021/08/DSC_7163-scaled.jpg?fit=1920%2C1280&ssl=1"
     },
     {
         "id": 17,
@@ -182,8 +184,8 @@
         "idB": "procesadores",
         "nombrecorto": "Ryzen 7 5700G",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA17"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA17",
+        "imagen": "https://acf.geeknetic.es/imgw/imagenes/Tutoriales/2021/2094-amd-ryzen-7-5700g/2094-amd-ryzen-7-5700g-4.jpg?f=webp"
     },
     {
         "id": 18,
@@ -193,8 +195,8 @@
         "idB": "procesadores",
         "nombrecorto": "Ryzen 9 5950X",
         "marca": "amd",
-        "descripcion": "DESCRIPCION DE PRUEBA18"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA18",
+        "imagen": "https://acf.geeknetic.es/imgw/imagenes/Tutoriales/2020/1924-AMD-Ryzen-9-5950X/1924-AMD-Ryzen-9-5950X-8.jpg?f=webp"
     },
     {
         "id": 19,
@@ -204,8 +206,8 @@
         "idB": "mothers",
         "nombrecorto": "Gygabyte GA-A320M-H",
         "marca": "gigabyte",
-        "descripcion": "DESCRIPCION DE PRUEBA19"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA19",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_919843-MLA44217446508_122020-W.jpg"
     },
     {
         "id": 20,
@@ -215,8 +217,8 @@
         "idB": "mothers",
         "nombrecorto": "Asus prime B450M-A II",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA20"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA20",
+        "imagen": "https://pcgamercatamarca.com.ar/wp-content/uploads/2020/07/mother-asus-b450m-scaled.jpg"
     },
     {
         "id": 21,
@@ -226,8 +228,8 @@
         "idB": "mothers",
         "nombrecorto": "Asus TUF B450M-Plus II",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA21"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA21",
+        "imagen": "https://www.manual.ar/gallery/27008638.jpg"
     },
     {
         "id": 22,
@@ -237,8 +239,8 @@
         "idB": "procesadores",
         "nombrecorto": "Core i3-10100F",
         "marca": "intel",
-        "descripcion": "DESCRIPCION DE PRUEBA22"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA22",
+        "imagen": "https://www.profesionalreview.com/wp-content/uploads/2020/10/Intel-Core-i3-10100F-es-listado-para-competir-con-el-Ryzen-3-3300X-1280x720.jpg"
     },
     {
         "id": 23,
@@ -248,8 +250,8 @@
         "idB": "procesadores",
         "nombrecorto": "Core I5-10400F",
         "marca": "intel",
-        "descripcion": "DESCRIPCION DE PRUEBA23"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA23",
+        "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2021/03/procesador-intel-core-i5-10400-2249661.jpg?itok=H9R7VIDY"
     },
     {
         "id": 24,
@@ -259,8 +261,8 @@
         "idB": "procesadores",
         "nombrecorto": "Core i9-10900K",
         "marca": "intel",
-        "descripcion": "DESCRIPCION DE PRUEBA24"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA24",
+        "imagen": "https://www.muycomputer.com/wp-content/uploads/2020/07/Core-i9-10900K.jpg"
     },
     {
         "id": 25,
@@ -270,8 +272,8 @@
         "idB": "mothers",
         "nombrecorto": "Asus prime B460m-a",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA25"
-        
+        "descripcion": "DESCRIPCION DE PRUEBA25",
+        "imagen": "https://com-tech.com.ar/imagenes/imagenes-productos/D_NQ_NP_887438-MLA44008216529_112020-O.jpg"
     },
     {
         "id": 26,
@@ -281,7 +283,8 @@
         "idB": "mothers",
         "nombrecorto": "Gigabyte h410m H V3",
         "marca": "gigabyte",
-        "descripcion": "DESCRIPCION DE PRUEBA26"
+        "descripcion": "DESCRIPCION DE PRUEBA26",
+        "imagen": "https://i.ytimg.com/vi/wPSF71aVteU/mqdefault.jpg"
     },
     {
         "id": 27,
@@ -291,7 +294,8 @@
         "idB": "mothers",
         "nombrecorto": "Asus prime h510 M-e",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA27"
+        "descripcion": "DESCRIPCION DE PRUEBA27",
+        "imagen": "http://http2.mlstatic.com/D_814689-MLA48480155661_122021-O.jpg"
     },
     {
         "id": 28,
@@ -301,7 +305,8 @@
         "idB": "rams",
         "nombrecorto": "RAM Fury DDR4 8GB 2666mhz",
         "marca": "fury",
-        "descripcion": "DESCRIPCION DE PRUEBA28"
+        "descripcion": "DESCRIPCION DE PRUEBA28",
+        "imagen": "https://www.bidcom.com.ar/publicacionesML/productos/MEM00120/1200x900-MEM00120-1.jpg"
     },
     {
         "id": 29,
@@ -311,7 +316,8 @@
         "idB": "rams",
         "nombrecorto": "RAM Fury DDR4 16GB 2133mhz",
         "marca": "fury",
-        "descripcion": "DESCRIPCION DE PRUEBA29"
+        "descripcion": "DESCRIPCION DE PRUEBA29",
+        "imagen": "https://hardzone.es/app/uploads-hardzone.es/2021/09/Kingston-Fury.jpg"
     },
     {
         "id": 30,
@@ -321,7 +327,8 @@
         "idB": "rams",
         "nombrecorto": "x2 RAM Fury DDR4 8GB 2133mhz",
         "marca": "fury",
-        "descripcion": "DESCRIPCION DE PRUEBA30"
+        "descripcion": "DESCRIPCION DE PRUEBA30",
+        "imagen": "https://i.ytimg.com/vi/noSlcn_z7H8/maxresdefault.jpg"
     },
     {
         "id": 31,
@@ -331,7 +338,8 @@
         "idB": "graficas",
         "nombrecorto": "GTX 1050TI MSI",
         "marca": "msi",
-        "descripcion": "DESCRIPCION DE PRUEBA31"
+        "descripcion": "DESCRIPCION DE PRUEBA31",
+        "imagen": "https://pcgamercatamarca.com.ar/wp-content/uploads/2020/12/MSI-GEFORCE-GTX-1050-TI-4GT-OC-scaled.jpg"
     },
     {
         "id": 32,
@@ -341,7 +349,8 @@
         "idB": "graficas",
         "nombrecorto": "MSI VENTUS RTX 2060 SUPER",
         "marca": "msi",
-        "descripcion": "DESCRIPCION DE PRUEBA32"
+        "descripcion": "DESCRIPCION DE PRUEBA32",
+        "imagen": "https://i.ytimg.com/vi/sHFUo243vBQ/maxresdefault.jpg"
     },
     {
         "id": 33,
@@ -351,7 +360,8 @@
         "idB": "graficas",
         "nombrecorto": "MSI VENTUS RTX 3090",
         "marca": "msi",
-        "descripcion": "DESCRIPCION DE PRUEBA33"
+        "descripcion": "DESCRIPCION DE PRUEBA33",
+        "imagen": "https://p.globalsources.com/IMAGES/PDT/B5195440710/MSI-GeForce-RTX-3090.jpg"
     },
     {
         "id": 34,
@@ -361,7 +371,8 @@
         "idB": "almacenamiento",
         "nombrecorto": "SSD Kingston de 512GB",
         "marca": "kingston",
-        "descripcion": "DESCRIPCION DE PRUEBA34"
+        "descripcion": "DESCRIPCION DE PRUEBA34",
+        "imagen": "https://static.kemikcdn.com/2020/11/SKC600512G-1200x1200-1-1.jpg"
     },
     {
         "id": 35,
@@ -371,7 +382,8 @@
         "idB": "almacenamiento",
         "nombrecorto": "Disco rigido Western Digital 1TB",
         "marca": "westernDigital",
-        "descripcion": "DESCRIPCION DE PRUEBA35"
+        "descripcion": "DESCRIPCION DE PRUEBA35",
+        "imagen": "https://www.trendit.com.ar/Temp/App_WebSite/App_PictureFiles/Items/WD10EZEX_800.jpg"
     },
     {
         "id": 36,
@@ -381,7 +393,8 @@
         "idB": "almacenamiento",
         "nombrecorto": "Disco solido Samsung 870 1tb",
         "marca": "samsung",
-        "descripcion": "DESCRIPCION DE PRUEBA36"
+        "descripcion": "DESCRIPCION DE PRUEBA36",
+        "imagen": "https://tienda.starware.com.ar/wp-content/uploads/2021/05/disco-solido-ssd-samsung-870-evo-500gb-sata-iii-25p-2314-3771-600x480.jpg"
     },
     {
         "id": 37,
@@ -390,7 +403,8 @@
         "cantidad": 2,
         "nombrecorto": "Gabinete gamemax h601",
         "marca": "gamemax",
-        "descripcion": "DESCRIPCION DE PRUEBA37"
+        "descripcion": "DESCRIPCION DE PRUEBA37",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_737115-MLA27702309680_072018-O.jpg"
     },
     {
         "id": 38,
@@ -399,7 +413,8 @@
         "cantidad": 2,
         "nombrecorto": "Gabinete SYX Fearless ATX",
         "marca": "syx",
-        "descripcion": "DESCRIPCION DE PRUEBA38"
+        "descripcion": "DESCRIPCION DE PRUEBA38",
+        "imagen": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/467/245/products/1b0dce7f-8855-4944-a7d2-50c6cb84a0df1-4c2596f1ae611885f716147895134348-640-0.jpeg"
     },
     {
         "id": 39,
@@ -408,7 +423,8 @@
         "cantidad": 1,
         "nombrecorto": "Gabinete Aerocool MECHA TG 1",
         "marca": "aerocool",
-        "descripcion": "DESCRIPCION DE PRUEBA39"
+        "descripcion": "DESCRIPCION DE PRUEBA39",
+        "imagen": "https://publicapi.solotodo.com/products/100788/picture/?width=1000&height=520"
     },
     {
         "id": 40,
@@ -418,7 +434,8 @@
         "idB": "fuentes",
         "nombrecorto": "Fuente Gigabyte 750w 80+ bronce",
         "marca": "gigabyte",
-        "descripcion": "DESCRIPCION DE PRUEBA40"
+        "descripcion": "DESCRIPCION DE PRUEBA40",
+        "imagen": "http://d2r9epyceweg5n.cloudfront.net/stores/001/181/259/products/fuente-gigabyte-550w-p550b-80-plus-bronce1-ce108c491ec80e6fb616140117676040-640-0.jpg"
     },
     {
         "id": 41,
@@ -428,7 +445,8 @@
         "idB": "fuentes",
         "nombrecorto": "Fuente Asus 850w 80+ platinum",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA41"
+        "descripcion": "DESCRIPCION DE PRUEBA41",
+        "imagen": "https://www.pchmayoreo.com/pub/media/catalog/product/R/O/ROG-THOR-850P.jpg"
     },
     {
         "id": 42,
@@ -438,7 +456,8 @@
         "idB": "fuentes",
         "nombrecorto": "Fuente Seasonic 1000w PLus Gold",
         "marca": "seasonic",
-        "descripcion": "DESCRIPCION DE PRUEBA42"
+        "descripcion": "DESCRIPCION DE PRUEBA42",
+        "imagen": "https://www.soscomputacion.com.ar/23299/fuente-pc-seasonic-1000w-real-focus-gx-1000-80-gold-certificada-gamer-full-modular.jpg"
     },
     {
         "id": 43,
@@ -448,7 +467,8 @@
         "idB": "netbooks",
         "nombrecorto": "Netbook HP",
         "marca": "hp",
-        "descripcion": "DESCRIPCION DE PRUEBA43"
+        "descripcion": "DESCRIPCION DE PRUEBA43",
+        "imagen": "https://winphonemetro.com/files/2015/06/HP-Stream-x360-11-2.jpg"
     },
     {
         "id": 44,
@@ -458,7 +478,8 @@
         "idB": "netbooks",
         "nombrecorto": "Netbook Lenovo",
         "marca": "lenovo",
-        "descripcion": "DESCRIPCION DE PRUEBA44"
+        "descripcion": "DESCRIPCION DE PRUEBA44",
+        "imagen": "https://i.pinimg.com/originals/2f/ca/2d/2fca2d249ad7e487d2d14f53bd1f6df4.jpg"
     },
     {
         "id": 45,
@@ -468,6 +489,7 @@
         "idB": "netbooks",
         "nombrecorto": "Netbook Asus",
         "marca": "asus",
-        "descripcion": "DESCRIPCION DE PRUEBA45"
+        "descripcion": "DESCRIPCION DE PRUEBA45",
+        "imagen": "https://img.clasf.pe/2020/03/28/Laptop-Gamer-Asus-Rog-Strix-G531-Gtx-1660ti-20200328125122.4780690015.jpg"
     }
 ]

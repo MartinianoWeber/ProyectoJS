@@ -606,7 +606,6 @@ summary:active .producto__flecha img {
 }
 
 .producto__imagen {
-  background-image: url(../imagenes/netbooks2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -895,19 +894,20 @@ summary:active .producto__flecha img {
   box-sizing: border-box;
 }
 
-.container {
+.container2 {
   position: relative;
   width: 80px;
   height: 50px;
+  margin: auto;
   border-radius: 40px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   transition: 0.5s;
 }
-.container:hover {
+.container2:hover {
   width: 120px;
   border: 2px solid #d60dc5;
 }
-.container .next {
+.container2 .next {
   position: absolute;
   top: 50%;
   right: 30px;
@@ -922,7 +922,7 @@ summary:active .producto__flecha img {
   opacity: 0;
   transition: 0.5s;
 }
-.container .prev {
+.container2 .prev {
   position: absolute;
   top: 50%;
   left: 30px;
@@ -938,12 +938,12 @@ summary:active .producto__flecha img {
   transition: 0.5s;
 }
 
-.container:hover .next {
+.container2:hover .next {
   opacity: 1;
   right: 20px;
 }
 
-.container:hover .prev {
+.container2:hover .prev {
   opacity: 1;
   left: 20px;
 }
@@ -1076,6 +1076,196 @@ summary:active .producto__flecha img {
 }
 .productoEliminado p {
   margin-top: 2.5rem;
+}
+
+.btnCompra__Inhabilitar {
+  width: 100px;
+  height: 50px;
+  background-color: #ffffff00;
+  position: absolute;
+  top: -6rem;
+  right: 12%;
+  padding: 0rem 10rem;
+}
+
+.terminarCompra__inhabilitar {
+  width: 150px;
+  background-color: rgba(245, 222, 179, 0);
+  height: 40px;
+  position: absolute;
+  right: -19rem;
+}
+
+.seccion1__finalizacion {
+  background-color: black;
+  height: 750px;
+}
+
+.titulo__finalizacion {
+  display: flex;
+}
+.titulo__finalizacion h3 {
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.grid__finalizacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 5rem;
+}
+
+.card1__finalizacion {
+  background-image: url(/imagenes/backCard1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 550px;
+  height: 600px;
+}
+
+.card2__finalizacion {
+  background-image: url(/imagenes/backCard2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 550px;
+  height: 600px;
+}
+
+.card1__filtro {
+  background-color: rgba(0, 0, 0, 0.37);
+  width: 550px;
+  height: 600px;
+  margin-bottom: -58em;
+}
+
+.card2__filtro {
+  background-color: rgba(0, 0, 0, 0.37);
+  width: 550px;
+  height: 600px;
+  margin-bottom: -58em;
+}
+
+.h3__cards {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.p__cards {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.eleccion1__card1 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form__background {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  margin-bottom: -38rem;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+
+.formulario__card1 {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin: auto;
+}
+.formulario__card1 input {
+  outline: none;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.pregunta__card1 {
+  margin-top: 2rem;
+}
+
+.label__card1 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.submit__card1 {
+  margin-top: 1.2rem;
+  background-color: #620871;
+  color: white;
+}
+
+.card2__form1 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card2__form2 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.total__card2 {
+  margin-top: 2rem;
+}
+
+.formulario__card2 {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin: auto;
+}
+.formulario__card2 input {
+  outline: none;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.select__card2 {
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+}
+
+.btn__card2 {
+  display: flex;
+  justify-content: center;
+}
+.btn__card2 a {
+  color: white;
+  font-size: 1.5rem;
+  background-color: #620871;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+  border-radius: 2rem;
+}
+
+.codigo__card2 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  filter: drop-shadow(0px 2px 1px black);
 }
 
 /*# sourceMappingURL=style.css.map */

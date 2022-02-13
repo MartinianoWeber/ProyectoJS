@@ -9,16 +9,154 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Finalizaciond de compra</title>
+    <title>Finalizacion de compra</title>
 </head>
 <body>
-    <header>
-        
+    <header class="headerProductos">
+        <nav class="navbar navbar-expand-md navbar-light  navegacion d-flex ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                  <img src="./imagenes/logoGeek.png" alt="" width="auto" height="180">
+                </a>
+              </div>
+            <div class="container-fluid ">
+              <button class="navbar-toggler bg-light mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+                <div class="navbar-nav mb-1 p-2 gap-4 prueba">
+                  <a class="nav-link active text-white fs-2 p-3 me-2  rounded-pill navegacion__color"  aria-current="page" href="./productos.html">Productos</a>
+                  <a class="nav-link text-white fs-2 p-3 me-2  rounded-pill  navegacion__color nav__desaparecer" href="#">Armar mi PC</a>
+                  <a class="nav-link text-white fs-2 p-3 me-2  rounded-pill  navegacion__color" href="#">Contacto</a>
+                  <a class="nav-link text-white  me-2  rounded-pill" href="#"><img src="/imagenes/iniciar-sesion.png" width="40px" height="40px" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
+    <main>
+        <section class="seccion1__finalizacion">
+            <div class="titulo__finalizacion">
+                <h3 class="subrayado">Finalizar compra</h3>
+            </div>
+            <div class="grid__finalizacion">
+                <div class="card1__finalizacion">
+                    <div class="card1__filtro"></div>
+                    <h3 class="h3__cards">Metodo de retiro y/o envio.</h3>
+                    <p class="p__cards pregunta__card1">¿Quieres retirar o que te lo enviemos?</p>
+                    <div class="eleccion1__card1">
+                        <p class="p__cards">Retirar <span><input type="radio" name="type__envio"></span></p>
+                        <p class="p__cards">Envió <span><input type="radio" name="type__envio"></span></p>
+                    </div>
+                    <div>
+                        <div class="form__background">
+                        </div>
+                        <form class="formulario__card1">
+                            <label class="label__card1" for="provincia">Ingrese provincia</label>
+                            <input id="provincia" placeholder="Ingrese provincia" type="text">
+                            <label class="label__card1"  for="ciudad" >Ingrese ciudad</label>
+                            <input id="ciudad" placeholder="Ingrese ciudad" type="text">
+                            <label class="label__card1"  for="postal">Codigo postal</label>
+                            <input id="postal" placeholder="Codigo postal" type="text">
+                            <label class="label__card1"  for="calleNumero">Calle y numero</label>
+                            <input id="calleNumero" placeholder="Calle y numero" type="text">
+                            <label class="label__card1"  for="deptoYpiso">Depto y piso(opcional)</label>
+                            <input type="text" placeholder="Depto y piso(opcional)">
+                            <input class="submit__card1" type="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="card2__finalizacion">
+                <div class="card2__filtro"></div>
+                    <h3 class="h3__cards">Elija el metodo pago</h3>
+                    <p class="p__cards total__card2">TOTAL COMPRADO: $0</p> 
+                    <div class="p__cards card2__form1">
+                        <p>Efectivo <span><input type="radio" name="type__pago"></span></p>
+                        <p>Debito <span><input type="radio" name="type__pago"></span></p>
+                        <p>Tarjeta Credito <span><input type="radio" name="type__pago"></span></p>
+                    </div>
+                    <!-- <div class="form__background">
+                    </div> -->
+                    <!-- formulario tarjeta de credito -->
+                    <!-- <div class="formulario__card2">
+                        <label class="label__card1" for="tarjetaNum">Numero de la tarjeta</label>
+                        <input id="tarjetaNum" placeholder="Numero de la tarjeta" type="text">
+                        <label class="label__card1"  for="nombreTitular" >Nombre del titular</label>
+                        <input id="nombreTitular" placeholder="Nombre del titular" type="text">
+                        <label class="label__card1"  for="vencimiento">Vencimiento</label>
+                        <input id="vencimiento" placeholder="Vencimiento" type="number">
+                        <label class="label__card1"  for="cvv">Codigo de seguridad</label>
+                        <input id="cvv" placeholder="CVV" type="text">
+                        <label class="label__card1"  for="cvv">Cuotas</label>
+                        <select class="select__card2" name="cvv" id="cantidadCuotas">
+                            <option value="">Elija cantidad de cuotas</option>
+                            <option value="">3</option>
+                            <option value="">6</option>
+                            <option value="">9</option>
+                            <option value="">12</option>
+                        </select>
+                        <input class="submit__card1" type="submit">
+                    </div> -->
+                    <!-- formulario debito -->
+                    <!-- <div class="formulario__card2">
+                        <label class="label__card1" for="tarjetaNum">Numero de la tarjeta</label>
+                        <input id="tarjetaNum" placeholder="Numero de la tarjeta" type="text">
+                        <label class="label__card1"  for="nombreTitular" >Nombre del titular</label>
+                        <input id="nombreTitular" placeholder="Nombre del titular" type="text">
+                        <label class="label__card1"  for="vencimiento">Vencimiento</label>
+                        <input id="vencimiento" placeholder="Vencimiento" type="number">
+                        <label class="label__card1"  for="cvv">Codigo de seguridad</label>
+                        <input id="cvv" placeholder="CVV" type="text">
+                        <input class="submit__card1" type="submit">
+                    </div> -->
+                    <!-- BTNS DE RAPIPAGOS -->
+                    <p class="p__cards">Elija su metodo de pago en efectivo</p>
+                    <div class="p__cards card2__form2">
+                        <p>Rapipago<span><input  name="type__pago" type="radio"></span></p>
+                        <p>PagoFacil<span><input  name="type__pago" type="radio"></span></p>
+                    </div>
+                    <!-- <div class="btn__card2">
+                        <a  href="#">Generar boleta de pago</a>
+                    </div>
+                    <div class="codigo__card2">
+                        <p>Su codigo de pago es:</p>
+                        <p>Por favor conserve el ticket de pago, por su seguridad y la nuestra</p>
+                    </div> -->
+               </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="redes-sociales">
+          <div class="footerh4"><h4>Nuestras redes sociales</h4></div>
+          
+          <div class="redesicon">
+            <div><a href=""><img class="redes-sociales-icons" src="./imagenes/instagram.png" alt=""></a></div>
+            <div><a href=""><img class="redes-sociales-icons" src="./imagenes/twitter.png" alt=""></a></div>
+            <div><a href=""><img class="redes-sociales-icons" src="./imagenes/whatsapp.png" alt=""></a></div>
+          </div>
+          <div class="marcapersonal">
+            <h4>Creado por Martiniano Weber</h4>
+            <img class="cohetefooter" src="./imagenes/cohete.gif" alt="">
+          </div>
+        </div>
+       
+        <div class="flechayform">
+          <div>
+            <img class="flechafooter" src="./imagenes/Flecha.png" alt="">
+          </div>
+          <div class="forminput">
+            <form>
+              <input type="text" placeholder="Ingrese su correo para recibir novedades">
+            </form>
+          </div>
+        </div>
+        <div class="btn-arrepentimiento">
+          <img src="./imagenes/delete-button.png" alt="">
+          <h4>Boton de arrepentimiento</h4>
+        </div>
+      </footer>
 
-
-    <script src="./js/db.js"></script>
-    <script src="./js/main.js"></script> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 </html>
