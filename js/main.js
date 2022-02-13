@@ -28,7 +28,6 @@ const btnCancelarcompra = document.querySelector('#btnCancelar')
 
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
-    console.log(e)
     let validacion = parseInt(e.path[4].children[2].children[0].children[1].children[0].children[2].children[0].children[1].children[0].innerHTML)
     if(validacion === 0){
         btnInhabilitarcompra.classList.remove('no-view')
@@ -250,6 +249,13 @@ function eliminarPr(btnEliminarpr){
         let resta = valorTotal.push(-pathPrecio) 
         agregarPr(resta)
         pathremove.remove()
+        let validacion = parseInt(e.originalEvent.path[4].children[2].children[0].children[1].children[0].innerText)
+        // VALIDACION DE BTN de FINALIZAR COMPRA
+        if(validacion == 0){
+            btnInhabilitarcompra.classList.remove('no-view')
+        }else{
+            btnInhabilitarcompra.classList.add('no-view')
+        }
         $('#productoEliminado').fadeIn(2000).fadeOut(4000)
         
 
@@ -272,7 +278,7 @@ function btnEliminarcarrito(btnEliminarpr){
 function finalizarCompras(){
     finalizarCompra.addEventListener('click', (e) =>{
         e.preventDefault()
-        let validacion = parseInt(e.path[2].children[2].children[0].children[1].children[0].innerText)
+        
        
     })
 }
