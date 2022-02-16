@@ -1158,6 +1158,21 @@ summary:active .producto__flecha img {
 .p__cards {
   text-align: center;
   font-size: 1.5rem;
+  filter: drop-shadow(0px 2px 1px black);
+}
+
+.p__retirar {
+  width: 200px;
+  margin: auto;
+  margin-top: 15rem;
+}
+
+.form__retirar {
+  height: 300px;
+  width: 400px;
+  margin: auto;
+  margin-bottom: -38rem;
+  background-color: rgba(0, 0, 0, 0.445);
 }
 
 .eleccion1__card1 {
@@ -1205,6 +1220,9 @@ summary:active .producto__flecha img {
   margin-top: 1.2rem;
   background-color: #620871;
   color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 .card2__form1 {
@@ -1266,6 +1284,32 @@ summary:active .producto__flecha img {
   text-align: center;
   color: white;
   filter: drop-shadow(0px 2px 1px black);
+}
+
+.p__preciototal {
+  margin-top: 2rem;
+  filter: drop-shadow(0px 2px 1px black);
+}
+
+.p__direccionConfirmada {
+  font-size: 2rem;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  margin-top: 22rem;
+}
+
+.img__confirmacion {
+  width: 25px;
+  height: 25px;
+}
+
+.confimacion__background {
+  height: 200px;
+  width: 300px;
+  margin: auto;
+  margin-bottom: -38rem;
+  background-color: rgba(0, 0, 0, 0.445);
 }
 
 /*# sourceMappingURL=style.css.map */
