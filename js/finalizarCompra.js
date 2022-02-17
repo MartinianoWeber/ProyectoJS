@@ -9,6 +9,16 @@ const efectivo = document.querySelector('#efectivo')
 const debito = document.querySelector('#debito')
 const tarjetaCredito = document.querySelector('#tarjetaCredito')
 let precio = parseInt(sessionStorage.getItem('precioFinal'))
+const inputUser = document.querySelector('#inputUser')
+const inputpassword = document.querySelector('#inputpassword')
+const btnIniciosesion = document.querySelector('#btnIniciosesion')
+const backgroundSesion = document.querySelector('#sesion__background')
+const errorUser = document.querySelector('#errorUser')
+const errorPass = document.querySelector('#errorPass')
+const usersDisponibles = document.querySelector('#usersDisponibles')
+const modalUsuarios = document.querySelector('#modalUsuarios')
+const nameUsuario = document.querySelector('#nameUsuario')
+modalUsuarios
 function crearPrecio(){
     totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precio} </p>`
 }
@@ -138,13 +148,92 @@ tarjetaCredito.addEventListener('click', (e) =>{
 })
 
 
+let users = []
+class user {
+    constructor({usuario, password}){
+        this.usuario = usuario
+        this.password = password
+    }
+}
+const requestURL= "js/users.json";
+const request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function() {
+    const productosDB = request.response;
+    productosDB.map(elm =>{
+        users.push(new user(elm))
+        
+    })
+}
+console.log(users)
 
+usersDisponibles.addEventListener('click', (e) =>{
+    e.preventDefault()
+    modalUsuarios.innerHTML =""
+    users.forEach(element => {
+        modalUsuarios.innerHTML += `<p style=" font-size: 1.3rem;"> ${element.usuario} ${element.password} </p>`
+    });
+})
 
+let userArray = []
+let passArray = []
+inputUser.addEventListener('change', (e)=>{
+    let user = e.target.value
+    let es = users.filter(s => s.usuario === user)
+    if(es.length === 1){
+        userArray = []
+        userArray.push(es[0].usuario, 2)
+        errorUser.innerHTML = ""
+    }
+    if(es.length == 0){
+        userArray = []
+        errorUser.innerHTML = `
+            <div class="sesion__error"><p> Error en nombre de usuario! </p></div>
+        `   
+        userArray.push([])
+    }
 
+    // pasa.push(es[0].password)
+    inicioSesion(user)
+})
+inputpassword.addEventListener('change', (e)=>{
+    let contraseña = e.target.value
+    let filtradoPass = users.filter(s => s.password === contraseña)
+    if(filtradoPass.length === 1){
+        passArray = []
+        passArray.push(filtradoPass[0].usuario, 2)
+        errorPass.innerHTML = ""
+    }
+    if(filtradoPass.length == 0){
+        passArray = []
+        errorPass.innerHTML = `
+        <div class="sesion__error"><p> Error en la contraseña del usuario! </p></div>
+    `   
+        passArray.push([])
+    }
 
+    // pasa.push(es[0].password)
+    inicioSesion(user)
+})
 
-
-
+function inicioSesion(){
+    $('#btnIniciosesion').click((e) =>{
+        e.preventDefault()
+        console.log(userArray)
+        console.log(passArray)
+        if((userArray.length === 2) && (passArray.length === 2)){
+            backgroundSesion.classList.add('no-view')
+            
+            nameUsuario.innerHTML = `<p class="sesion__user">${userArray[0]}</p>`
+        }else {
+            backgroundSesion.classList.remove('no-view')
+        }
+        
+    })
+}
+inicioSesion()
 
 // ----------------------------- CODIGO A UTILIZAR A FUTURO ---------------------------
 

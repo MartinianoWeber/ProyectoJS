@@ -212,3 +212,99 @@
     margin-bottom: -38rem;
     background-color: rgba(0, 0, 0, 0.445);
 }
+
+.sesion__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100vw;
+    height: 100vh;
+}
+.sesion__card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #373333;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    margin-top: 8rem;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+}
+
+.sesion__input{
+    width: 300px;
+    border-radius: .8rem;
+    outline: none;
+    border: none;
+    padding: .5rem 3.2rem;
+    height: 34px;
+    
+   
+}
+
+.sesion__imagenes{
+    position: relative;
+    width: 29px;
+    right: -3rem;
+    top: -0.1rem;
+    height: 29px;
+    border-right: solid 1px gray;
+}
+
+.sesion__btnIncio{
+    background-color: $violetaBoton;
+    width: 300px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    font-size: 2rem;
+    color: $blanco;
+    border-radius: 2rem;
+        &:hover{
+            color: yellow;
+        }
+}
+.sesion__h3{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+.sesion__nombre{
+    margin-top: 2rem;
+}
+
+.sesion__resets{
+    display: flex;
+    gap: 10rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+        a{
+            color: $blanco;
+                &:hover{
+                    color: yellow;
+                }
+        }
+}
+
+.sesion__error {
+    font-size: 1.5rem;
+    background-color: black;
+    width: 300px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    border: solid 1px red;
+}
+
+.sesion__user{
+    gap: 1rem;
+    align-items: center;
+        p{
+            font-size: 21px;
+            margin: 0;
+        }
+}

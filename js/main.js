@@ -195,13 +195,14 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     let pathPrecio = e.path[2].children[0].children[1].textContent
     let pathcount = e.path[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
- 
+    console.log(pathNombre)
 
     let precioNumber = parseInt(pathPrecio)
     let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
+    console.log(filtradoStock)
     let id = Date.now()
     filtradoStock[0].stock(countNumber, id)
-    let total =  filtradoStock[0].pruiea    
+    
         
         
         let pruebaLS = agregarPrcarrito.innerHTML += `

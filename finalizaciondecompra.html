@@ -28,18 +28,14 @@
                   <a class="nav-link active text-white fs-2 p-3 me-2  rounded-pill navegacion__color"  aria-current="page" href="./productos.html">Productos</a>
                   <a class="nav-link text-white fs-2 p-3 me-2  rounded-pill  navegacion__color nav__desaparecer" href="#">Armar mi PC</a>
                   <a class="nav-link text-white fs-2 p-3 me-2  rounded-pill  navegacion__color" href="#">Contacto</a>
-                  <a class="nav-link text-white  me-2  rounded-pill" href="#"><img src="/imagenes/iniciar-sesion.png" width="40px" height="40px" alt=""></a>
+                  <a class="nav-link text-white  me-2  rounded-pill" href="#"><div class=" d-flex align-items-center sesion__user"><img src="/imagenes/iniciar-sesion.png" width="40px" height="40px" alt=""><p id="nameUsuario"></p></div></a>
                 </div>
               </div>
             </div>
           </nav>
     </header>
     <main>
-        <section>
-          <div>
-            
-          </div>
-        </section>
+
         <section class="seccion1__finalizacion">
             <div class="titulo__finalizacion">
                 <h3 class="subrayado">Finalizar compra</h3>
@@ -74,6 +70,26 @@
                </div>
             </div>
         </section>
+        <section>
+          <div id="sesion__background" class="sesion__background">
+            <div class="sesion__card">
+              <h3 class="sesion__h3">Para poder continuar debes iniciar sesion</h3>
+              <p  class="sesion__nombre">Nombre de usuario</p>
+              <span><img class="sesion__imagenes" src="/imagenes/iniciar-sesion.png" alt=""><input id="inputUser" class="sesion__input"  type="user" name=""></span>
+              <p>Contraseña</p>
+              <span><img class="sesion__imagenes" src="/imagenes/padlock.png" alt=""><input id="inputpassword" class="sesion__input"  type="password" name=""></span>
+              <a id="btnIniciosesion" class="sesion__btnIncio" href="">Iniciar sesión</a>
+              <div id="errorUser"></div>
+              <div id="errorPass"></div>
+              <div class="sesion__resets">
+                <a id="usersDisponibles" href="">Usuarios disponibles!!</a>
+              </div>
+              <div id="modalUsuarios"></div>
+            </div>
+
+          </div>
+        </section>
+        
     </main>
 
     <footer class="footer">
