@@ -86,10 +86,10 @@
     margin-top: 2rem;
 }
 .form__background {
-    height: 400px;
+    height: 450px;
     width: 400px;
     margin: auto;
-    margin-bottom: -38rem;
+    margin-bottom: -42rem;
     background-color: rgba(0, 0, 0, 0.445);
 }
 
@@ -98,14 +98,16 @@
     flex-direction: column;
     width: 25rem;
     margin: auto;
+    margin-top: -44.5rem;
         input{
             outline: none;
             text-align: center;
             font-size: 1.5rem;
             border-radius: 2rem;
-            border: none;
+            border: solid 1px rgb(255, 0, 0);
             padding: 0.5rem;
         }
+       
 }
 .pregunta__card1{
     margin-top: 2rem;
@@ -120,7 +122,7 @@
     margin-top: 1.2rem;
     background-color: $violetaBoton;
     color: white;
-    border: none;
+    border: none !important;
     padding: 1rem;
     border-radius: 2rem
 }
@@ -154,9 +156,10 @@
             text-align: center;
             font-size: 1.5rem;
             border-radius: 2rem;
-            border: none;
+            
             padding: 0.5rem;
         }
+      
 }
 
 .select__card2 {
@@ -307,4 +310,86 @@
             font-size: 21px;
             margin: 0;
         }
+}
+
+
+.errorInput{
+    border: solid 1px rgb(255, 2, 2) !important;
+}
+.okInput{
+    border: solid 1px rgb(10, 255, 2) !important;
+}
+.inputOpcional{
+    border: none !important;
+}
+
+.errormsg {
+    background-color: $negro;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    border: solid 1px red;
+}
+
+.validacionCompra{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: -14rem;
+    right: 10rem;
+    width: 400px;
+    height: 200px;
+}
+
+.session__pagoConfirmado{
+    font-size: 2rem;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 18rem;
+}
+
+.sesion__form{
+    width: 300px;
+    height: 260px;
+}
+.cuotas__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100vw;
+    height: 100vh;
+}
+.modal__cuotas{
+    position: absolute;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.582);
+    font-size: 2rem;
+    width: 800px;
+    text-align: center;
+    right: 16%;
+    width: auto;
+    padding: 2rem;
+
+}
+.btn__estimador{
+    background-color: #920b92;
+    margin-top: 1rem;
+    width: auto;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+}
+.btn__interno{
+    background-color: #920b92;
+    margin-top: 1rem;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
 }

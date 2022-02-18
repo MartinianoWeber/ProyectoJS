@@ -1,0 +1,14 @@
+[
+    {
+        "numero": "2313 2342 4123 4213",
+        "nombretitular": "Juan Pedro",
+        "vencimiento": "06/02",
+        "cvv": "765"
+    },
+    {
+        "numero": "7563 2315 213 1483",
+        "nombretitular": "Admin",
+        "vencimiento": "05/01",
+        "cvv": "666"
+    }
+]
