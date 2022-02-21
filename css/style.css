@@ -19,6 +19,10 @@ body {
   color: #FFFFFF;
 }
 
+textarea {
+  resize: none;
+}
+
 /** Utilidades **/
 .no-margin {
   margin: 0;
@@ -1669,6 +1673,99 @@ summary:active .producto__flecha img {
 .finalizar__botones a:hover {
   color: yellow;
   transition: 1s;
+}
+
+.headerContacto {
+  background-image: url(../imagenes/backgroundContacto.png);
+  width: auto;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contactoSeccion {
+  background-image: url(../imagenes/backCard1.jpg);
+  width: auto;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.contacto__background {
+  background-color: rgba(0, 0, 0, 0.541);
+  width: 700px;
+  height: 400px;
+  margin: auto;
+}
+
+.contacto__formulario {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+.contacto__form1 {
+  display: flex;
+}
+.contacto__form1 input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  width: 250px;
+  height: 40px;
+  margin: auto;
+  border-radius: 0.8rem;
+}
+
+.contacto__form2 {
+  display: flex;
+  margin-top: 2rem;
+}
+.contacto__form2 input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  width: 250px;
+  height: 40px;
+  margin: auto;
+  border-radius: 0.8rem;
+}
+
+.contacto__text {
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  outline: none;
+  border-radius: 0.8rem;
+}
+
+.form {
+  display: flex;
+  justify-content: end;
+  margin-right: 5rem;
+}
+
+.btn__form input {
+  color: white;
+  background-color: #620871;
+  width: 200px;
+  text-align: center;
+  border-radius: 2rem;
+  margin-top: 0.4rem;
+  outline: none;
+  border: none;
+  transition: 1s;
+}
+.btn__form input:hover {
+  transition: 1s;
+  color: yellow;
 }
 
 /*# sourceMappingURL=style.css.map */
