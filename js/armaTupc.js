@@ -88,11 +88,11 @@ function armadoDepc(){
     crearPiezas(arrayVacio)
     // Selector de marca
     piezasSelect.innerHTML += `<div class="mainArmado__cardselect">
-    <a id="intelSelect" href="#"><img src="/imagenes/INTELselect.jpg" alt=""></a>
+    <a id="intelSelect" href="#"><img src="./imagenes/INTELselect.jpg" alt=""></a>
     <p>Quiero armar mi pc con Intel</p>
     </div>
     <div class="mainArmado__cardselect">
-    <a id="amdSelect" href="#"><img src="/imagenes/AMDselect.jpg" alt=""></a>
+    <a id="amdSelect" href="#"><img src="./imagenes/AMDselect.jpg" alt=""></a>
     <p>Quiero armar mi pc con AMD</p>
     </div>`
     // Queryes de marcas
