@@ -109,7 +109,7 @@ function armadoDepc(){
         // Crea aside
         procesadores.innerHTML = `
         <div class="mainArmado__cardImg">
-                <img src="/imagenes/procesador.png" alt="">
+                <img src="./imagenes/procesador.png" alt="">
             </div>
             <div class="mainArmado__cardtextos">
                 <h4>Procesador</h4>
@@ -155,7 +155,7 @@ function armadoDepc(){
         // CAMBIO EN CONTENEDOR ASIDE    
         procesadores.innerHTML = ` 
         <div class="mainArmado__cardImg">
-                <img src="/imagenes/procesador.png" alt="">
+                <img src="./imagenes/procesador.png" alt="">
             </div>
             <div class="mainArmado__cardtextos">
                 <h4>Procesador</h4>
@@ -223,7 +223,7 @@ function cooler(){
      })
     // ASIDE MODIFICACION
     coolers.innerHTML = `  <div class="mainArmado__cardImg">
-    <img src="/imagenes/fan.png" alt="">
+    <img src="./imagenes/fan.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
         <h4>Cooler</h4>
@@ -263,7 +263,7 @@ function mothersdeIntel(){
     let motherInt = arrayArmapc.filter(e => e.idB === "mothersIntel")
     crearPiezas(motherInt)
     motherboards.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/motherboard.png" alt="">
+    <img src="./imagenes/motherboard.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Mother</h4>
@@ -296,7 +296,7 @@ function mothersdeamd(){
     let mothersamd= arrayArmapc.filter(e => e.idB === "mothersAmd")
     crearPiezas(mothersamd)
     motherboards.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/motherboard.png" alt="">
+    <img src="./imagenes/motherboard.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Mother</h4>
@@ -327,7 +327,7 @@ function mothersdeamd(){
 
 function ram(){
     memoriasRams.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/ram.png" alt="">
+    <img src="./imagenes/ram.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Rams</h4>
@@ -388,7 +388,7 @@ function placasdevideo(){
 
     // HTML PARA ASIDE
     placasdeVideo.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/tarjeta-grafica.png" alt="">
+    <img src="./imagenes/tarjeta-grafica.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Placa de video</h4>
@@ -417,7 +417,7 @@ function placasdevideo(){
 }
 function Discoprincipal(){
     discoPrincipal.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/discoRigido.png" alt="">
+    <img src="./imagenes/discoRigido.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Disco principal</h4>
@@ -449,7 +449,7 @@ function Discoprincipal(){
 function Discosecundario(){
     // Crear HTML para aside
     discoSecundario.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/discoRigido.png" alt="">
+    <img src="./imagenes/discoRigido.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Disco secundario</h4>
@@ -506,7 +506,7 @@ function Discosecundario(){
 }
 function gabinetes(){
     towerCase.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/cpu-tower.png" alt="">
+    <img src="./imagenes/cpu-tower.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Gabinete</h4>
@@ -537,7 +537,7 @@ function gabinetes(){
 }
 function fuente(){
     powerSupply.innerHTML = `<div class="mainArmado__cardImg">
-    <img src="/imagenes/fuente.png" alt="">
+    <img src="./imagenes/fuente.png" alt="">
     </div>
     <div class="mainArmado__cardtextos">
     <h4>Fuente</h4>
