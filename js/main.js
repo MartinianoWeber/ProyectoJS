@@ -28,7 +28,7 @@ const btnCancelarcompra = document.querySelector('#btnCancelar')
 
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
-    let validacion = parseInt(e.path[4].children[2].children[0].children[1].children[0].children[2].children[0].children[1].children[0].innerHTML)
+    let validacion = parseInt(e.composedPath()[4].children[2].children[0].children[1].children[0].children[2].children[0].children[1].children[0].innerHTML)
     if(validacion === 0){
         btnInhabilitarcompra.classList.remove('no-view')
     }else{
@@ -50,8 +50,8 @@ btnContinuar.addEventListener('click', (e) => {
         e.addEventListener('click', (e) => {
             e.preventDefault()
             
-            let path = e.path[1].children[0].textContent
-            let pathDescripcion = e.path[4].children[2].textContent
+            let path = e.composedPath()[1].children[0].textContent
+            let pathDescripcion = e.composedPath()[4].children[2].textContent
             console.log(path)
             h4Title.innerText =""
             h4Title.textContent = path 
@@ -77,9 +77,9 @@ btnAñadir.forEach(elm => {
         e.preventDefault()
         backgroundCompra.classList.remove('backgroundpopup-show')
         // BUSQUEDAS DE DATOS POR PATH
-        let path = e.path[2].children[1].children[0].textContent
-        let pathCantidad = e.path[4].children[4].textContent
-        let pathPrecio = e.path[4].children[3].textContent
+        let path = e.composedPath()[2].children[1].children[0].textContent
+        let pathCantidad = e.composedPath()[4].children[4].textContent
+        let pathPrecio = e.composedPath()[4].children[3].textContent
         let nombreProducto = document.createElement('h4')
         nombreProducto.textContent = `Nombre: ${path}`
         let precioProducto = document.createElement('p')
@@ -191,9 +191,9 @@ btnAñadir.forEach(elm => {
 
 btnAgregarcompra.addEventListener('click', (e) =>{
     
-    let pathNombre = e.path[2].children[0].children[2].textContent
-    let pathPrecio = e.path[2].children[0].children[1].textContent
-    let pathcount = e.path[2].children[2].children[0].innerText
+    let pathNombre = e.composedPath()[2].children[0].children[2].textContent
+    let pathPrecio = e.composedPath()[2].children[0].children[1].textContent
+    let pathcount = e.composedPath()[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
     console.log(pathNombre)
 
@@ -242,15 +242,15 @@ function agregarPr(){
 function eliminarPr(btnEliminarpr){
     $(btnEliminarpr).click((e) =>{
         e.preventDefault()
-        let pathNombre = e.originalEvent.path[2].children[0].textContent
-        let pathremove = e.originalEvent.path[2]
+        let pathNombre = e.originalEvent.composedPath()[2].children[0].textContent
+        let pathremove = e.originalEvent.composedPath()[2]
         let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
-        let pathPrecio = parseInt(e.originalEvent.path[2].children[5].textContent)
+        let pathPrecio = parseInt(e.originalEvent.composedPath()[2].children[5].textContent)
         console.log(pathPrecio)
         let resta = valorTotal.push(-pathPrecio) 
         agregarPr(resta)
         pathremove.remove()
-        let validacion = parseInt(e.originalEvent.path[4].children[2].children[0].children[1].children[0].innerText)
+        let validacion = parseInt(e.originalEvent.composedPath()[4].children[2].children[0].children[1].children[0].innerText)
         // VALIDACION DE BTN de FINALIZAR COMPRA
         if(validacion == 0){
             btnInhabilitarcompra.classList.remove('no-view')
@@ -278,7 +278,7 @@ function btnEliminarcarrito(btnEliminarpr){
 
 function finalizarCompras(){
     finalizarCompra.addEventListener('click', (e) =>{
-        let totalFinal = parseInt(e.path[2].children[2].children[0].children[1].children[0].innerHTML)
+        let totalFinal = parseInt(e.composedPath()[2].children[2].children[0].children[1].children[0].innerHTML)
         sessionStorage.setItem('precioFinal', totalFinal)
 
     })
@@ -308,10 +308,6 @@ const updateElements = (productos)=>{
         const span1 = document.createElement('span')
         span1.classList.add('producto__imagen')
         span1.style.backgroundImage = `url('${elm.imagen}')`;
-
-        // const img = document.createElement('img')
-        // img.src = `${elm.imagen}`
-        
         const span2 = document.createElement('span')
         span2.classList.add('producto__background')
     

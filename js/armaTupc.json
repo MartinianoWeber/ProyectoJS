@@ -1,0 +1,304 @@
+[
+        {
+        "id": 1,
+        "nombre": "Ryzen 5600G",
+        "precio": 7000,
+        "idB": "procesadoresAmd",
+        "nombrecorto": "Ryzen 5600G",
+        "marca": "amd",
+        "imagen": "https://i0.wp.com/www.madboxpc.com/wp-content/uploads/2021/08/DSC_7163-scaled.jpg?fit=1920%2C1280&ssl=1",
+        "watts": 65  
+    },
+    {
+        "id": 2,
+        "nombre": "Ryzen 7 5700G",
+        "precio": 8000,
+        "idB": "procesadoresAmd",
+        "nombrecorto": "Ryzen 7 5700G",
+        "marca": "amd",
+        "imagen": "https://acf.geeknetic.es/imgw/imagenes/Tutoriales/2021/2094-amd-ryzen-7-5700g/2094-amd-ryzen-7-5700g-4.jpg?f=webp",
+        "watts": 65 
+    },
+    {
+        "id": 3,
+        "nombre": "Ryzen 9 5950X",
+        "precio": 10000,
+        "idB": "procesadoresAmd",
+        "nombrecorto": "Ryzen 9 5950X",
+        "marca": "amd",
+        "imagen": "https://acf.geeknetic.es/imgw/imagenes/Tutoriales/2020/1924-AMD-Ryzen-9-5950X/1924-AMD-Ryzen-9-5950X-8.jpg?f=webp",
+        "watts": 105 
+    },
+    {
+        "id": 4,
+        "nombre": "Gygabyte GA-A320M-H",
+        "precio": 5000,
+        "idB": "mothersAmd",
+        "nombrecorto": "Gygabyte GA-A320M-H",
+        "marca": "gigabyte",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_919843-MLA44217446508_122020-W.jpg",
+        "watts": 35 
+    },
+    {
+        "id": 5,
+        "nombre": "Asus prime B450M-A II",
+        "precio": 5500,
+        "idB": "mothersAmd",
+        "nombrecorto": "Asus prime B450M-A II",
+        "marca": "asus",
+        "imagen": "https://pcgamercatamarca.com.ar/wp-content/uploads/2020/07/mother-asus-b450m-scaled.jpg",
+        "watts": 35 
+    },
+    {
+        "id": 6,
+        "nombre": "Asus TUF B450M-Plus II",
+        "precio": 6500,
+        "idB": "mothersAmd",
+        "nombrecorto": "Asus TUF B450M-Plus II",
+        "marca": "asus",
+        "imagen": "https://www.manual.ar/gallery/27008638.jpg",
+        "watts": 35
+    },
+    {
+        "id": 7,
+        "nombre": "Core i3-10100F",
+        "precio": 3000,
+        "idB": "procesadoresIntel",
+        "nombrecorto": "Core i3-10100F",
+        "marca": "intel",
+        "imagen": "https://www.profesionalreview.com/wp-content/uploads/2020/10/Intel-Core-i3-10100F-es-listado-para-competir-con-el-Ryzen-3-3300X-1280x720.jpg",
+        "watts": 65
+    },
+    {
+        "id": 8,
+        "nombre": "Core I5-10400F",
+        "precio": 5000,
+        "idB": "procesadoresIntel",
+        "nombrecorto": "Core I5-10400F",
+        "marca": "intel",
+        "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2021/03/procesador-intel-core-i5-10400-2249661.jpg?itok=H9R7VIDY",
+        "watts": 65
+    },
+    {
+        "id": 9,
+        "nombre": "Core i9-10900K",
+        "precio": 10000,
+        "idB": "procesadoresIntel",
+        "nombrecorto": "Core i9-10900K",
+        "marca": "intel",
+        "imagen": "https://www.muycomputer.com/wp-content/uploads/2020/07/Core-i9-10900K.jpg",
+        "watts": 125
+    },
+    {
+        "id": 10,
+        "nombre": "Asus prime B460m-a",
+        "precio": 2000,
+        "idB": "mothersIntel",
+        "nombrecorto": "Asus prime B460m-a",
+        "marca": "asus",
+        "imagen": "https://com-tech.com.ar/imagenes/imagenes-productos/D_NQ_NP_887438-MLA44008216529_112020-O.jpg",
+        "watts": 35
+    },
+    {
+        "id": 11,
+        "nombre": "Gigabyte h410m H V3",
+        "precio": 4000,
+        "idB": "mothersIntel",
+        "nombrecorto": "Gigabyte h410m H V3",
+        "marca": "gigabyte",
+        "imagen": "https://i.ytimg.com/vi/wPSF71aVteU/mqdefault.jpg",
+        "watts": 35
+    },
+    {
+        "id": 12,
+        "nombre": "Asus prime h510 M-e",
+        "precio": 6000,
+        "idB": "mothersIntel",
+        "nombrecorto": "Asus prime h510 M-e",
+        "marca": "asus",
+        "imagen": "http://http2.mlstatic.com/D_814689-MLA48480155661_122021-O.jpg",
+        "watts": 35
+    },
+    {
+        "id": 13,
+        "nombre": "Memoria RAM Fury DDR4 8GB 2666mhz",
+        "precio": 600,
+        "idB": "rams",
+        "nombrecorto": "RAM Fury DDR4 8GB 2666mhz",
+        "marca": "fury",
+        "imagen": "https://www.bidcom.com.ar/publicacionesML/productos/MEM00120/1200x900-MEM00120-1.jpg",
+        "watts": 3
+    },
+    {
+        "id": 14,
+        "nombre": "Memoria RAM Fury DDR4 16GB 2133mhz",
+        "precio": 1200,
+        "idB": "rams",
+        "nombrecorto": "RAM Fury DDR4 16GB 2133mhz",
+        "marca": "fury",
+        "imagen": "https://hardzone.es/app/uploads-hardzone.es/2021/09/Kingston-Fury.jpg",
+        "watts": 3
+    },
+    {
+        "id": 15,
+        "nombre": "x2 Memoria RAM Fury DDR4 8GB 2133mhz",
+        "precio": 1100,
+        "idB": "rams",
+        "nombrecorto": "x2 RAM Fury DDR4 8GB 2133mhz",
+        "marca": "fury",
+        "imagen": "https://i.ytimg.com/vi/noSlcn_z7H8/maxresdefault.jpg",
+        "watts": 6
+    },
+    {
+        "id": 16,
+        "nombre": "GTX 1050TI MSI",
+        "precio": 60000,
+        "idB": "graficas",
+        "nombrecorto": "GTX 1050TI MSI",
+        "marca": "msi",
+        "imagen": "https://pcgamercatamarca.com.ar/wp-content/uploads/2020/12/MSI-GEFORCE-GTX-1050-TI-4GT-OC-scaled.jpg",
+        "watts": 180
+    },
+    {
+        "id": 17,
+        "nombre": "MSI VENTUS RTX 2060 SUPER",
+        "precio": 200000,
+        "idB": "graficas",
+        "nombrecorto": "MSI VENTUS RTX 2060 SUPER",
+        "marca": "msi",
+        "imagen": "https://i.ytimg.com/vi/sHFUo243vBQ/maxresdefault.jpg",
+        "watts": 175 
+    },
+    {
+        "id": 18,
+        "nombre": "MSI VENTUS RTX 3090",
+        "precio": 300000,
+        "idB": "graficas",
+        "nombrecorto": "MSI VENTUS RTX 3090",
+        "marca": "msi",
+        "imagen": "https://p.globalsources.com/IMAGES/PDT/B5195440710/MSI-GeForce-RTX-3090.jpg",
+        "watts": 350
+    },
+    {
+        "id": 19,
+        "nombre": "SSD Kingston de 512GB",
+        "precio": 1000,
+        "idB": "almacenamiento",
+        "nombrecorto": "SSD Kingston de 512GB",
+        "marca": "kingston",
+        "imagen": "https://static.kemikcdn.com/2020/11/SKC600512G-1200x1200-1-1.jpg",
+        "watts": 3
+    },
+    {
+        "id": 20,
+        "nombre": "Disco rigido Western Digital 1TB 7200RPM",
+        "precio": 2000,
+        "idB": "almacenamiento",
+        "nombrecorto": "Disco rigido Western Digital 1TB",
+        "marca": "westernDigital",
+        "imagen": "https://www.trendit.com.ar/Temp/App_WebSite/App_PictureFiles/Items/WD10EZEX_800.jpg",
+        "watts": 30
+    },
+    {
+        "id": 21,
+        "nombre": "Disco solido Samsung 870 1tb",
+        "precio": 32000,
+        "idB": "almacenamiento",
+        "nombrecorto": "Disco solido Samsung 870 1tb",
+        "marca": "samsung",
+        "imagen": "https://tienda.starware.com.ar/wp-content/uploads/2021/05/disco-solido-ssd-samsung-870-evo-500gb-sata-iii-25p-2314-3771-600x480.jpg",
+        "watts": 3
+    },
+    {
+        "id": 22,
+        "nombre": "Gabinete gamemax h601",
+        "precio": 1200,
+        "idB": "gabinetes",
+        "nombrecorto": "Gabinete gamemax h601",
+        "marca": "gamemax",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_737115-MLA27702309680_072018-O.jpg",
+        "watts": 0
+    },
+    {
+        "id": 23,
+        "nombre": "Gabinete SYX Fearless ATX",
+        "precio": 2000,
+        "idB": "gabinetes",
+        "nombrecorto": "Gabinete SYX Fearless ATX",
+        "marca": "syx",
+        "imagen": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/467/245/products/1b0dce7f-8855-4944-a7d2-50c6cb84a0df1-4c2596f1ae611885f716147895134348-640-0.jpeg",
+        "watts": 0
+    },
+    {
+        "id": 24,
+        "nombre": "Gabinete Aerocool MECHA TG 1",
+        "precio": 3200,
+        "idB": "gabinetes",
+        "nombrecorto": "Gabinete Aerocool MECHA TG 1",
+        "marca": "aerocool",
+        "imagen": "https://publicapi.solotodo.com/products/100788/picture/?width=1000&height=520",
+        "watts": 0
+    },
+    {
+        "id": 25,
+        "nombre": "Fuente Gigabyte 750w 80 plus bronce",
+        "precio": 2200,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Gigabyte 750w 80+ bronce",
+        "marca": "gigabyte",
+        "imagen": "http://d2r9epyceweg5n.cloudfront.net/stores/001/181/259/products/fuente-gigabyte-550w-p550b-80-plus-bronce1-ce108c491ec80e6fb616140117676040-640-0.jpg",
+        "watts": 0
+    },
+    {
+        "id": 26,
+        "nombre": "Fuente Asus ROG Thor 850w 80 plus platinum",
+        "precio": 5000,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Asus 850w 80+ platinum",
+        "marca": "asus",
+        "imagen": "https://www.pchmayoreo.com/pub/media/catalog/product/R/O/ROG-THOR-850P.jpg",
+        "watts": 0
+    },
+    {
+        "id": 27,
+        "nombre": "Fuente Seasonic 1000w Focus PLus Gold",
+        "precio": 5500,
+        "idB": "fuentes",
+        "nombrecorto": "Fuente Seasonic 1000w PLus Gold",
+        "marca": "seasonic",
+        "imagen": "https://www.soscomputacion.com.ar/23299/fuente-pc-seasonic-1000w-real-focus-gx-1000-80-gold-certificada-gamer-full-modular.jpg",
+        "watts": 0
+    }, 
+    {
+        "id": 28,
+        "nombre": "Cooler FrostFlow X 120",
+        "precio": 6000,
+        "idB": "coolerIntel",
+        "nombrecorto": "FROSTFLOW X 120",
+        "marca": "FROSTFLOW",
+        "imagen": "http://d2r9epyceweg5n.cloudfront.net/stores/001/321/783/products/cooler-cpu-id-cooling-frostflow-x-120-1151-amd-am41-7942bbd9b590641b6116252327657007-640-0.jpg",
+        "watts": 0
+    },
+    {
+        "id": 29,
+        "nombre": "Cooler GAMMAXX 400",
+        "precio": 4800,
+        "idB": "coolerIntel",
+        "nombrecorto": "Cooler GAMMAXX 400",
+        "marca": "Deepcool",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_911018-MLA44197192936_112020-O.webp",
+        "watts": 0
+    },
+    {
+        "id": 30,
+        "nombre": "ASUS ROG Strix LC 240",
+        "precio": 40000,
+        "idB": "coolerIntel",
+        "nombrecorto": "ASUS ROG Strix LC 240",
+        "marca": "asus",
+        "imagen": "https://m.media-amazon.com/images/I/71PI8unI7BL._AC_SS450_.jpg",
+        "watts": 0
+    }
+]
+
+

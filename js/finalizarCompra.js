@@ -9,6 +9,7 @@ const efectivo = document.querySelector('#efectivo')
 const debito = document.querySelector('#debito')
 const tarjetaCredito = document.querySelector('#tarjetaCredito')
 let precio = parseInt(sessionStorage.getItem('precioFinal'))
+let precioPcarmada = parseInt(sessionStorage.getItem('totalFinal'))
 const inputUser = document.querySelector('#inputUser')
 const inputpassword = document.querySelector('#inputpassword')
 const btnIniciosesion = document.querySelector('#btnIniciosesion')
@@ -31,7 +32,12 @@ let tarjetasArray = []
 let precioTotalArray = []
 // PROCESO DE CREAR PRECIO
 function crearPrecio(){
-    totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precio} </p>`
+    if(precio > 0){
+        totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precio} </p>`
+    }else{
+        totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precioPcarmada} </p>`
+    }
+  
 }
 crearPrecio()
    
@@ -152,6 +158,13 @@ efectivo.addEventListener('click', (e) =>{
         <p>PagoFacil<span><input  name="type__efectivo" id="pagofacil"  type="radio"></span></p>
     </div>
     `
+    if(precio > 0){
+        totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precio} </p>`
+    }else{
+        let calculo = (precioPcarmada*0.15)
+        let precioFinal = precioPcarmada -calculo
+        totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precioFinal} </p>`
+    }
     const rapipago = document.querySelector('#rapipago')
     rapipago.addEventListener('click', (e) =>{
         appendMetodosefectivo.innerHTML = ` <div  class="btn__card2">
@@ -212,6 +225,7 @@ request2.onload = function() {
 
 // PROCESO DEBITO
 debito.addEventListener('click', (e) =>{
+    crearPrecio()
     appendCodigopago.innerHTML = ""
     appendMetodosefectivo.innerHTML = ""
     appendPago.innerHTML = `    
@@ -304,11 +318,24 @@ debito.addEventListener('click', (e) =>{
         console.log(validacionForm2)
         console.log(e)
         if(validacionForm2.length == 4){
-            appendPago.innerHTML = `    
-            <div class="form__background sesion__form"></div>
-            <p  class="session__pagoConfirmado"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="img__confirmacion" alt=""> Su pago de ${precio} fue procesado con exito! Sera redireccionado al inicio.</p>
-            
-            `
+            if(precio > 0){
+                appendPago.innerHTML = `    
+                <div class="form__background sesion__form"></div>
+                <p  class="session__pagoConfirmado"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="img__confirmacion" alt=""> Su pago de ${precio} fue procesado con exito! Sera redireccionado al inicio en 3 segundos.</p>
+                
+                
+                `
+                setTimeout( function() { window.location.href = "./index.html"; }, 3000 );
+            }else{
+                appendPago.innerHTML = `    
+                <div class="form__background sesion__form"></div>
+                <p  class="session__pagoConfirmado"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="img__confirmacion" alt=""> Su pago de ${precioPcarmada} fue procesado con exito! Sera redireccionado al inicio en 3 segundos.</p>
+                
+                
+                `
+                setTimeout( function() { window.location.href = "./index.html"; }, 3000 );
+            }
+           
         }
     })   
 })
@@ -321,6 +348,7 @@ $("#btnSalircuotas").click((e) =>{
 })
 
 tarjetaCredito.addEventListener('click', (e) =>{
+    crearPrecio()
     appendCodigopago.innerHTML = ""
     appendMetodosefectivo.innerHTML = ""
     appendPago.innerHTML = `
@@ -429,68 +457,131 @@ tarjetaCredito.addEventListener('click', (e) =>{
                
             }
             validacionForm2.unshift("cuotas Ok")
-            let iva = (precio*21)/100;
+            
             let intereses
             let resultadototal
             let preciototal
             precioTotalArray = []
-            switch(cuotas){
-                        case "3":
-                            console.log("elegio 3")
-                            intereses = (precio*6)/100;
-                            resultadototal = (precio+iva+intereses)/3
-                            preciototal = precio+iva+intereses
-                            precioTotalArray.push(preciototal)
-                            $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
-                            <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
-                          <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
-                          `)
-                            $('#btnCerrarcuotas').click((e) =>{
-                                $('#cuotasBackground').addClass('no-view')
-                            })
+            if(precio > 0){
+                let iva = (precio*21)/100;
+                switch(cuotas){
+                    case "3":
+                        console.log("elegio 3")
+                        intereses = (precio*6)/100;
+                        resultadototal = (precio+iva+intereses)/3
+                        preciototal = precio+iva+intereses
+                        precioTotalArray.push(preciototal)
+                        $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                        <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                      <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                      `)
+                        $('#btnCerrarcuotas').click((e) =>{
+                            $('#cuotasBackground').addClass('no-view')
+                        })
+                    break;
+                    case "6":
+                         intereses = (precio*8)/100;
+                         resultadototal = (precio+iva+intereses)/6
+                         preciototal = precio+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
                         break;
-                        case "6":
-                             intereses = (precio*8)/100;
-                             resultadototal = (precio+iva+intereses)/6
-                             preciototal = precio+iva+intereses
-                             precioTotalArray.push(preciototal)
-                             $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
-                             <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
-                           <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
-                           `)
-                             $('#btnCerrarcuotas').click((e) =>{
-                                 $('#cuotasBackground').addClass('no-view')
-                             })
-                            break;
-                        
-                        case "9":
-                             intereses = (precio*11)/100;
-                             resultadototal = (precio+iva+intereses)/9
-                             preciototal = precio+iva+intereses
-                             precioTotalArray.push(preciototal)
-                             $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
-                             <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
-                           <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
-                           `)
-                             $('#btnCerrarcuotas').click((e) =>{
-                                 $('#cuotasBackground').addClass('no-view')
-                             })
-                            break;
-                
-                        case "12":
-                             intereses = (precio*13)/100;
-                             resultadototal = (precio+iva+intereses)/12
-                             preciototal = precio+iva+intereses
-                             precioTotalArray.push(preciototal)
-                             $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
-                             <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
-                           <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
-                           `)
-                             $('#btnCerrarcuotas').click((e) =>{
-                                 $('#cuotasBackground').addClass('no-view')
-                             })
-                            break;
-                        }
+                    
+                    case "9":
+                         intereses = (precio*11)/100;
+                         resultadototal = (precio+iva+intereses)/9
+                         preciototal = precio+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
+                        break;
+            
+                    case "12":
+                         intereses = (precio*13)/100;
+                         resultadototal = (precio+iva+intereses)/12
+                         preciototal = precio+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
+                        break;
+                    }
+            }else{
+                let iva = (precioPcarmada*21)/100;
+                switch(cuotas){
+                    case "3":
+                        console.log("elegio 3")
+                        intereses = (precioPcarmada*6)/100;
+                        resultadototal = (precioPcarmada+iva+intereses)/3
+                        preciototal = precioPcarmada+iva+intereses
+                        precioTotalArray.push(preciototal)
+                        $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                        <p>Las cuotas quedarian en ${Math.floor(resultadototal) } y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                      <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                      `)
+                        $('#btnCerrarcuotas').click((e) =>{
+                            $('#cuotasBackground').addClass('no-view')
+                        })
+                    break;
+                    case "6":
+                         intereses = (precioPcarmada*8)/100;
+                         resultadototal = (precioPcarmada+iva+intereses)/6
+                         preciototal = precioPcarmada+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
+                        break;
+                    
+                    case "9":
+                         intereses = (precioPcarmada*11)/100;
+                         resultadototal = (precioPcarmada+iva+intereses)/9
+                         preciototal = precioPcarmada+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
+                        break;
+            
+                    case "12":
+                         intereses = (precioPcarmada*13)/100;
+                         resultadototal = (precioPcarmada+iva+intereses)/12
+                         preciototal = precioPcarmada+iva+intereses
+                         precioTotalArray.push(preciototal)
+                         $('#cuotasBackground').html(` <div id="modalCuotas" class="modal__cuotas">
+                         <p>Las cuotas quedarian en ${resultadototal} y el precio total en ${preciototal} los intereses serian de ${intereses}</p>
+                       <div> <button class="btn__interno" id="btnCerrarcuotas">Salir</button></div>
+                       `)
+                         $('#btnCerrarcuotas').click((e) =>{
+                             $('#cuotasBackground').addClass('no-view')
+                         })
+                        break;
+                    }
+            }
+           
         }else{
             
         }
@@ -502,9 +593,11 @@ tarjetaCredito.addEventListener('click', (e) =>{
         if(validacionForm2.length == 5){
             appendPago.innerHTML = `    
             <div class="form__background sesion__form"></div>
-            <p  class="session__pagoConfirmado"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="img__confirmacion" alt=""> Su pago de ${precioTotalArray} con interes por pagar en cuotas, fue procesado con exito! Sera redireccionado al inicio.</p>
+            <p  class="session__pagoConfirmado"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="img__confirmacion" alt=""> Su pago de ${precioTotalArray} con interes por pagar en cuotas, fue procesado con exito! Sera redireccionado al inicio en 3 segundos.</p>
+            
             
             `
+            setTimeout( function() { window.location.href = "./index.html"; }, 3000 );
         }
     })  
 })
