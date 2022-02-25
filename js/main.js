@@ -15,6 +15,8 @@ const inhabilitarBtn = document.querySelector('#btn__inhabilitar')
 const backgroundCompra = document.querySelector('#backgroundPopupcompra')
 const popUpcompra = document.querySelector('#pop-upDatos')
 const btnInhabilitarcompra = document.querySelector('#btnInhabilitarterminar')
+const buscadorDeproductos = document.querySelector('#buscadorDeproductos')
+const ingresarBusqueda = document.querySelector('#ingresarBusqueda')
 // EVENTOS
 function eventos (){
 // QUERY SELECTOR
@@ -52,7 +54,6 @@ btnContinuar.addEventListener('click', (e) => {
             
             let path = e.composedPath()[1].children[0].textContent
             let pathDescripcion = e.composedPath()[4].children[2].textContent
-            console.log(path)
             h4Title.innerText =""
             h4Title.textContent = path 
             h4Title.classList.add('subrayado')
@@ -93,7 +94,7 @@ btnAñadir.forEach(elm => {
         cantidadProductos.appendChild(cantidadProducto)
         popUpcompra.prepend(precioProducto)
         popUpcompra.prepend(nombreProducto)
-        console.log(pathCantidadspinner[0].cantidad)
+        pathCantidadspinner[0].cantidad
         if(pathCantidadspinner[0].cantidad == 0){
             contador.classList.add("no-view")
             inhabilitarBtn.classList.remove("no-view")
@@ -195,11 +196,8 @@ btnAgregarcompra.addEventListener('click', (e) =>{
     let pathPrecio = e.composedPath()[2].children[0].children[1].textContent
     let pathcount = e.composedPath()[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
-    console.log(pathNombre)
-
     let precioNumber = parseInt(pathPrecio)
     let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
-    console.log(filtradoStock)
     let id = Date.now()
     filtradoStock[0].stock(countNumber, id)
     
@@ -246,7 +244,6 @@ function eliminarPr(btnEliminarpr){
         let pathremove = e.originalEvent.composedPath()[2]
         let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
         let pathPrecio = parseInt(e.originalEvent.composedPath()[2].children[5].textContent)
-        console.log(pathPrecio)
         let resta = valorTotal.push(-pathPrecio) 
         agregarPr(resta)
         pathremove.remove()
@@ -564,5 +561,41 @@ function precioMax(productos){
 }
 
 
-
-
+class pruebaCons{
+    constructor({id, nombre, precio, cantidad, idB, nombrecorto, marca, descripcion, imagen}){
+        this.id = id
+        this.nombre = nombre
+        this.precio = precio
+        this.cantidad = cantidad
+        this.idB = idB
+        this.precioTOTAL
+        this.nombrecorto = nombrecorto
+        this.marca = marca
+        this.descripcion = descripcion
+        this.imagen = imagen
+    }
+}
+let arrayPrueba = []
+function busqueda(){
+    buscadorDeproductos.addEventListener('change', (e) =>{
+        e.preventDefault()
+        let prueba = e.target.value.toLowerCase()
+        ingresarBusqueda.addEventListener('click', (e) =>{
+            e.preventDefault()
+            productosArray.forEach(elm => {
+                
+                let nombres = elm.nombre.toLowerCase()
+                let busqueda = nombres.indexOf(prueba)
+                if(busqueda !== -1){
+                    arrayPrueba.push(new pruebaCons (elm))
+                    updateElements(arrayPrueba)
+                    
+                }
+                
+            })
+            arrayPrueba = []
+        })
+        
+    })
+}
+busqueda()

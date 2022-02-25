@@ -23,6 +23,7 @@
      margin-top: -8rem;
         form{
            span {
+               display: flex;
             input {
                 width: 520px;
                 padding: 2rem;
@@ -35,10 +36,14 @@
                 width: 40px;
                 height: 40px;
                 margin-left: -6rem;
+                margin-top: 1rem;
             }
            }
             
         }
+}
+.lupa__busqueda{
+    
 }
 
 .navbarproductos {

@@ -87,7 +87,6 @@ envio.addEventListener('click', (e) =>{
     
     $('#provincia').change((e) =>{
         let provincia = e.target.value
-        console.log(provincia)
         if(provincia != ""){
             
             provinciaStatus.classList.add('okInput')
@@ -113,13 +112,12 @@ envio.addEventListener('click', (e) =>{
             postalStatus.classList.add('okInput')
             validacionArray.push('postalOk')
         }else{
-           console.log( validacionArray.splice(2, 1))
+           validacionArray.splice(2, 1)
           
             
             postalStatus.classList.remove('okInput')
         }
     })
-    console.log(validacionArray)
     $('#calleNumero').change((e) =>{
         let calleNumber = e.target.value
         
@@ -135,7 +133,6 @@ envio.addEventListener('click', (e) =>{
 
     envioDireccion.addEventListener('click', (e) =>{
             e.preventDefault()
-            console.log(validacionArray)
             if(validacionArray.length === 4){
                 appendMetodo.innerHTML = `
             <div class="confimacion__background"></div>
@@ -266,7 +263,6 @@ debito.addEventListener('click', (e) =>{
         if(nombreFilter.length === 1){
             validacionForm2.push("nombre ok")
             $("#nombreTitular").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("nombre ok")
             if(busqueda != -1){
@@ -284,7 +280,6 @@ debito.addEventListener('click', (e) =>{
         if(vencimientoFilter.length === 1){
             validacionForm2.unshift("vencimiento ok")
             $("#vencimiento").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("vencimiento ok")
             if(busqueda != -1){
@@ -301,7 +296,6 @@ debito.addEventListener('click', (e) =>{
         if(cvvFilter.length === 1){
             validacionForm2.unshift("cvv ok")
             $("#cvv").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("cvv ok")
             if(busqueda != -1){
@@ -315,8 +309,6 @@ debito.addEventListener('click', (e) =>{
         }
     })
     $('#btnPagardebito').click((e) =>{
-        console.log(validacionForm2)
-        console.log(e)
         if(validacionForm2.length == 4){
             if(precio > 0){
                 appendPago.innerHTML = `    
@@ -398,7 +390,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
         if(nombreFilter.length === 1){
             validacionForm2.push("nombre ok")
             $("#nombreTitular").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("nombre ok")
             if(busqueda != -1){
@@ -416,7 +407,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
         if(vencimientoFilter.length === 1){
             validacionForm2.unshift("vencimiento ok")
             $("#vencimiento").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("vencimiento ok")
             if(busqueda != -1){
@@ -433,7 +423,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
         if(cvvFilter.length === 1){
             validacionForm2.unshift("cvv ok")
             $("#cvv").addClass('okInput')
-            console.log(validacionForm2)
         }else{
             let busqueda = validacionForm2.indexOf("cvv ok")
             if(busqueda != -1){
@@ -466,7 +455,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
                 let iva = (precio*21)/100;
                 switch(cuotas){
                     case "3":
-                        console.log("elegio 3")
                         intereses = (precio*6)/100;
                         resultadototal = (precio+iva+intereses)/3
                         preciototal = precio+iva+intereses
@@ -525,7 +513,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
                 let iva = (precioPcarmada*21)/100;
                 switch(cuotas){
                     case "3":
-                        console.log("elegio 3")
                         intereses = (precioPcarmada*6)/100;
                         resultadototal = (precioPcarmada+iva+intereses)/3
                         preciototal = precioPcarmada+iva+intereses
@@ -588,8 +575,6 @@ tarjetaCredito.addEventListener('click', (e) =>{
     })
 
     $('#btnPagarcredito').click((e) =>{
-        console.log(validacionForm2)
-        console.log(e)
         if(validacionForm2.length == 5){
             appendPago.innerHTML = `    
             <div class="form__background sesion__form"></div>

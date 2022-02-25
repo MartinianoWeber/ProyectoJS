@@ -308,7 +308,7 @@ function mothersdeamd(){
             e.preventDefault()
             let pieza3 = e.composedPath()[2].children[0].textContent
             let filtradoPieza = arrayArmapc.filter(e => e.nombrecorto === pieza3)
-            console.log(pieza3)
+           
             productos.push(filtradoPieza[0].precio)
             motherboards.innerHTML = `<div class="mainArmado__cardImg">
             <img src="${filtradoPieza[0].imagen}" alt="">
@@ -565,13 +565,11 @@ function fuente(){
             terminarCompra()
         })
     })
-    console.log(productos)
 }
 
 function precio(){
             let totalPC = productos.reduce((a, b) => a + b, 0);
             let totalWatts = watts.reduce((a, b) => a + b, 0);
-            console.log(totalPC)
             let iva = (totalPC*21)/100;
             let intereses = (totalPC*13)/100;
             let resultadototal = (totalPC+iva+intereses)/12

@@ -446,6 +446,9 @@ textarea {
   align-items: center;
   margin-top: -8rem;
 }
+.productos__form form span {
+  display: flex;
+}
 .productos__form form span input {
   width: 520px;
   padding: 2rem;
@@ -458,6 +461,7 @@ textarea {
   width: 40px;
   height: 40px;
   margin-left: -6rem;
+  margin-top: 1rem;
 }
 
 .navbarproductos {
