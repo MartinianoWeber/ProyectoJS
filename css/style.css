@@ -1106,7 +1106,7 @@ summary:active .producto__flecha img {
 
 .seccion1__finalizacion {
   background-color: black;
-  height: 750px;
+  height: auto;
 }
 
 .titulo__finalizacion {
@@ -1121,6 +1121,7 @@ summary:active .producto__flecha img {
 .grid__finalizacion {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
   margin-top: 5rem;
 }
 
@@ -1256,6 +1257,7 @@ summary:active .producto__flecha img {
   flex-direction: column;
   width: 25rem;
   margin: auto;
+  margin-top: -44rem;
 }
 .formulario__card2 input {
   outline: none;
@@ -1501,6 +1503,28 @@ summary:active .producto__flecha img {
   border: none;
   border-radius: 0.3rem;
   font-size: 1.2rem;
+}
+
+.btn__tarjetasdisponibles {
+  background-color: #3f0b92;
+  width: auto;
+  color: white;
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.divBackgroundTarjeta {
+  width: 250px;
+  position: absolute;
+  height: auto;
+  background-color: black;
+}
+
+.textoTarjeta {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .headerarmado {

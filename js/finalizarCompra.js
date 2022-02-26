@@ -179,11 +179,14 @@ efectivo.addEventListener('click', (e) =>{
         // BOTON PARA GENERAR CODIGO
         btnpago.addEventListener('click', (e) =>{
             e.preventDefault()
+            let numeroAleatorio = Date.now()
             appendCodigopago.innerHTML = `<div class="codigo__card2">
-            <p>Su codigo de pago es:</p>
+            <p>Su codigo de pago es: ${numeroAleatorio}</p>
             <p>Por favor conserve el ticket de pago, por su seguridad y la nuestra</p>
+            <p>Tiene 15 segundos para copiar el codigo antes de ser llevado al inicio</p>
         </div>
-            `        
+            ` 
+            setTimeout( function() { window.location.href = "./index.html"; }, 15000 );       
         })     
     })
       // SELECCION DE PAGO FACIL
@@ -199,12 +202,14 @@ efectivo.addEventListener('click', (e) =>{
         const btnpago = document.querySelector('#btnpago')
         btnpago.addEventListener('click', (e) =>{
             e.preventDefault()
-            
+            let numeroAleatorio = Date.now()
             appendCodigopago.innerHTML = `<div class="codigo__card2">
-            <p>Su codigo de pago es:</p>
+            <p>Su codigo de pago es: ${numeroAleatorio} </p>
             <p>Por favor conserve el ticket de pago, por su seguridad y la nuestra</p>
+            <p>Tiene 15 segundos para copiar el codigo antes de ser llevado al inicio</p>
         </div>
             `        
+            setTimeout( function() { window.location.href = "./index.html"; }, 15000 );  
         })          
     })
 })
@@ -251,8 +256,30 @@ debito.addEventListener('click', (e) =>{
     <label class="label__card1"  for="cvv">Codigo de seguridad</label>
     <input class="errorInput" id="cvv" placeholder="CVV" type="text">
     <button id="btnPagardebito"  class="submit__card1" type="submit"> Pagar </button>
+    <button class="btn__tarjetasdisponibles" id="btnTarjetas">Ver tarjetas disponibles</button>
+    <div id="tarjetasVer"></div>
 </div>
     `
+    // BTN NUMEROS DE TARJETA
+    $('#btnTarjetas').click((e) =>{
+        let modalTarjeta = document.querySelector('#tarjetasVer')
+        const divback = document.createElement('div')
+        divback.classList.add('fixed')
+        const divbackground = document.createElement('div')
+        divbackground.classList.add('divBackgroundTarjeta')
+        const texto = document.createElement('p')
+        texto.classList.add('textoTarjeta')
+        texto.textContent = `las tarjetas son:
+        numero: 2313 2342 4123 4213
+         nombretitular: Juan Pedro
+         vencimiento: 06/02
+         cvv: 765
+        `
+
+        modalTarjeta.appendChild(divbackground)
+        divbackground.appendChild(texto)
+
+     })
     // VALIDACION DE DEBITO
     $('#tarjetaNum').change((e) =>{
         let tarjeta = e.target.value
@@ -383,6 +410,8 @@ tarjetaCredito.addEventListener('click', (e) =>{
     </select>
     <button id="btnPagarcredito"  class="submit__card1" type="submit"> Pagar </button>
     <button class="btn__estimador" id="btnEstimador"> Ver calculadora de cuotas </button>
+    <button class="btn__tarjetasdisponibles" id="btnTarjetas">Ver tarjetas disponibles</button>
+    <div id="tarjetasVer"></div>
 </div>
     `
     // VALIDACION DE TARJETA
@@ -452,11 +481,29 @@ tarjetaCredito.addEventListener('click', (e) =>{
             $("#cvv").removeClass('okInput')
         }
     })
+    $('#btnTarjetas').click((e) =>{
+       let modalTarjeta = document.querySelector('#tarjetasVer')
+       const divback = document.createElement('div')
+       divback.classList.add('fixed')
+       const divbackground = document.createElement('div')
+       divbackground.classList.add('divBackgroundTarjeta')
+       const texto = document.createElement('p')
+       texto.classList.add('textoTarjeta')
+       texto.textContent = `las tarjetas son:
+       numero: 7563 2315 213 1483
+        nombretitular: Admin
+        vencimiento: 05/01
+        cvv: 666
+
+       `
+       modalTarjeta.appendChild(divbackground)
+       divbackground.appendChild(texto)
+    })
 
     // ESTIMADOR DE CUOTAS
     $("#btnEstimador").click((e) =>{
         $('#cuotasBackground').removeClass('no-view')
-    })
+    });
     // CANTIDAD DE CUOTAS
     $('#cantidadCuotas').click((e) =>{
         let cuotas = e.target.value
