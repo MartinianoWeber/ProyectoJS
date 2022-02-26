@@ -1,3 +1,4 @@
+// QUERYES SELECTORS
 const totalPrecio = document.querySelector('#precioFinal')
 const appendMetodo = document.querySelector('#appendMetodoenvio')
 const appendPago = document.querySelector('#appendMetodopago')
@@ -50,6 +51,7 @@ retiro.addEventListener('click', (e) =>{
         <a id="btnSig" href="#">Siguiente paso</a>
     </div>
     `
+    // BTN SIGUIENTE PARA VALIDAR
     const btnSig = document.querySelector('#btnSig')
     btnSig.addEventListener('click', (e) =>{
         e.preventDefault()
@@ -78,13 +80,14 @@ envio.addEventListener('click', (e) =>{
         <div id="errorMs"></div>
     </form></p>
     `
+    // QUERYES SELECTOR
     const errorMsg = document.querySelector('#errorMs')
     const envioDireccion = document.querySelector('#envioDireccion') 
     let provinciaStatus = document.querySelector('#provincia')
     let ciudadStatus = document.querySelector('#ciudad')
     let postalStatus = document.querySelector('#postal')
     let calleNumberStatus = document.querySelector('#calleNumero')
-    
+    // VALIDACION DE ENVIO
     $('#provincia').change((e) =>{
         let provincia = e.target.value
         if(provincia != ""){
@@ -130,9 +133,10 @@ envio.addEventListener('click', (e) =>{
             
         }
     })
-
+    // BOTON DE ENVIO DE DIRECCION
     envioDireccion.addEventListener('click', (e) =>{
             e.preventDefault()
+            // VALIDACIOn
             if(validacionArray.length === 4){
                 appendMetodo.innerHTML = `
             <div class="confimacion__background"></div>
@@ -155,6 +159,7 @@ efectivo.addEventListener('click', (e) =>{
         <p>PagoFacil<span><input  name="type__efectivo" id="pagofacil"  type="radio"></span></p>
     </div>
     `
+    // VALIDACION DE SESSION STORAGE SI ES DE ARMADO DE PC O PRODUCTOS
     if(precio > 0){
         totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precio} </p>`
     }else{
@@ -162,6 +167,7 @@ efectivo.addEventListener('click', (e) =>{
         let precioFinal = precioPcarmada -calculo
         totalPrecio.innerHTML = `<p class="p__cards p__preciototal">Precio total: $${precioFinal} </p>`
     }
+    // SELECCION DE RAPIPAGO
     const rapipago = document.querySelector('#rapipago')
     rapipago.addEventListener('click', (e) =>{
         appendMetodosefectivo.innerHTML = ` <div  class="btn__card2">
@@ -170,6 +176,7 @@ efectivo.addEventListener('click', (e) =>{
         `  
         appendCodigopago.innerHTML = "" 
         const btnpago = document.querySelector('#btnpago')
+        // BOTON PARA GENERAR CODIGO
         btnpago.addEventListener('click', (e) =>{
             e.preventDefault()
             appendCodigopago.innerHTML = `<div class="codigo__card2">
@@ -179,6 +186,7 @@ efectivo.addEventListener('click', (e) =>{
             `        
         })     
     })
+      // SELECCION DE PAGO FACIL
     const pagofacil = document.querySelector('#pagofacil')
     pagofacil.addEventListener('click', (e) =>{
         
@@ -186,6 +194,7 @@ efectivo.addEventListener('click', (e) =>{
         <a id="btnpago" href="#">Generar boleta de pago</a>
     </div>
         ` 
+                // BOTON PARA GENERAR CODIGO
         appendCodigopago.innerHTML = ""
         const btnpago = document.querySelector('#btnpago')
         btnpago.addEventListener('click', (e) =>{
@@ -200,6 +209,7 @@ efectivo.addEventListener('click', (e) =>{
     })
 })
 
+// CONSTRUCTOR DE TARJETAS
 class tarjetas {
     constructor({numero, nombretitular, vencimiento, cvv}){
         this.numero = numero
@@ -208,6 +218,7 @@ class tarjetas {
         this.cvv = cvv
     }
 }
+// LLAMDO DE TARJETAS EN EL JSON
 const requestURL2= "js/tarjetasDB.json";
 const request2 = new XMLHttpRequest();
 request2.open('GET', requestURL2);
@@ -223,8 +234,10 @@ request2.onload = function() {
 // PROCESO DEBITO
 debito.addEventListener('click', (e) =>{
     crearPrecio()
+    // REINICIAR HTML
     appendCodigopago.innerHTML = ""
     appendMetodosefectivo.innerHTML = ""
+    // GENERAMOS HTML DE DEBITO
     appendPago.innerHTML = `    
     <div class="form__background">
                     </div>
@@ -240,6 +253,7 @@ debito.addEventListener('click', (e) =>{
     <button id="btnPagardebito"  class="submit__card1" type="submit"> Pagar </button>
 </div>
     `
+    // VALIDACION DE DEBITO
     $('#tarjetaNum').change((e) =>{
         let tarjeta = e.target.value
         let numeroFilter = tarjetasArray.filter(elm => elm.numero === tarjeta)
@@ -308,8 +322,10 @@ debito.addEventListener('click', (e) =>{
             $("#cvv").removeClass('okInput')
         }
     })
+    // BOTON PARA PAGAR DEBITO
     $('#btnPagardebito').click((e) =>{
         if(validacionForm2.length == 4){
+            // VALIDACION DE PRECIO SI ES DE PRODUCTOS O PC ARMADA
             if(precio > 0){
                 appendPago.innerHTML = `    
                 <div class="form__background sesion__form"></div>
@@ -338,11 +354,13 @@ debito.addEventListener('click', (e) =>{
 $("#btnSalircuotas").click((e) =>{
     $('#cuotasBackground').addClass('no-view')
 })
-
+// PROCESAMOS EL TARJETA DE CREDTIO
 tarjetaCredito.addEventListener('click', (e) =>{
     crearPrecio()
+    // REINICIAR HTML
     appendCodigopago.innerHTML = ""
     appendMetodosefectivo.innerHTML = ""
+    // GENERAR FORMULARIO 
     appendPago.innerHTML = `
     <div class="form__background">
                     </div>
@@ -367,6 +385,7 @@ tarjetaCredito.addEventListener('click', (e) =>{
     <button class="btn__estimador" id="btnEstimador"> Ver calculadora de cuotas </button>
 </div>
     `
+    // VALIDACION DE TARJETA
     $('#tarjetaNum').change((e) =>{
         let tarjeta = e.target.value
         let numeroFilter = tarjetasArray.filter(elm => elm.numero === tarjeta)
@@ -433,9 +452,12 @@ tarjetaCredito.addEventListener('click', (e) =>{
             $("#cvv").removeClass('okInput')
         }
     })
+
+    // ESTIMADOR DE CUOTAS
     $("#btnEstimador").click((e) =>{
         $('#cuotasBackground').removeClass('no-view')
     })
+    // CANTIDAD DE CUOTAS
     $('#cantidadCuotas').click((e) =>{
         let cuotas = e.target.value
         if(cuotas != ""){
@@ -446,11 +468,12 @@ tarjetaCredito.addEventListener('click', (e) =>{
                
             }
             validacionForm2.unshift("cuotas Ok")
-            
+            // VARIABLES
             let intereses
             let resultadototal
             let preciototal
             precioTotalArray = []
+            // VALIDA SI VIENE DE PRODUCTOS O PC ARMADO
             if(precio > 0){
                 let iva = (precio*21)/100;
                 switch(cuotas){
@@ -573,7 +596,7 @@ tarjetaCredito.addEventListener('click', (e) =>{
             
         }
     })
-
+// BTN PARA PAGAR EN CUOTAS
     $('#btnPagarcredito').click((e) =>{
         if(validacionForm2.length == 5){
             appendPago.innerHTML = `    

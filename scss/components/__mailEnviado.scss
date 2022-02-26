@@ -1,0 +1,27 @@
+.backgroundMail{
+    background-image: url(../imagenes/wallpapperenviado.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+}
+.flex{
+    display: flex;
+}
+.contenedorBackground{
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    margin-top: 17rem;
+    border-radius: 1rem;
+}
+
+.p__mailConfirmado{
+    font-size: 3rem;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 10rem;
+}

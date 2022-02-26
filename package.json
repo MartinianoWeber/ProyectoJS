@@ -1,7 +1,6 @@
 {
   "name": "geekinformatica",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinianoWeber/ProyectoJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinianoWeber/ProyectoJS/issues"
+  },
+  "homepage": "https://github.com/MartinianoWeber/ProyectoJS#readme",
+  "description": ""
 }

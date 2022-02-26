@@ -24,27 +24,30 @@ const botoncerrar = document.querySelector('.btn-popup')
 const btnAñadir = document.querySelectorAll('#btnAñadir')
 popup.parentNode
 const boton = document.querySelectorAll('a[class = "btnInformacion"]')
-
-
 const btnCancelarcompra = document.querySelector('#btnCancelar')
 
+// APERTURA DEL CARRITO DESDE EL ICONO
 btnCarrito.addEventListener('click', (e) =>{
     e.preventDefault()
+    // VALIDACION DE SI HAY CONTENIDO O NO
+    // SI NO HAY NADA NO SE PUEDE PROSEGUIR CON LA COMPRA
     let validacion = parseInt(e.composedPath()[4].children[2].children[0].children[1].children[0].children[2].children[0].children[1].children[0].innerHTML)
     if(validacion === 0){
         btnInhabilitarcompra.classList.remove('no-view')
     }else{
         btnInhabilitarcompra.classList.add('no-view')
     }
+    // SE REMUEVE LA CLASE PARA PODER VISIBILIZAR EL CARRITo
     backgroundCarrito.classList.remove('backgroundpopup-show')
 })
+// BOTON PARA CONTINUAR CON LA COMPRA SI TE FALTO ALGO EN EL CARRo
 btnContinuar.addEventListener('click', (e) => {
     e.preventDefault()
     
     backgroundCarrito.classList.add('backgroundpopup-show')
  })
       
-//boton mas informacion
+//BOTON MAS INFORMACION DE CADA PRODUCTO
     const h4Title = document.createElement('h4')
     const parrafoPro = document.createElement('p')
     boton.forEach(e => {
@@ -64,7 +67,7 @@ btnContinuar.addEventListener('click', (e) => {
         })
       
     })
-
+// BOTON CERRAR LA VENTANA MODAL DE MAS INFORMACION 
 botoncerrar.addEventListener('click', (e) => {
     e.preventDefault()
     h4Title.remove()
@@ -81,6 +84,7 @@ btnAñadir.forEach(elm => {
         let path = e.composedPath()[2].children[1].children[0].textContent
         let pathCantidad = e.composedPath()[4].children[4].textContent
         let pathPrecio = e.composedPath()[4].children[3].textContent
+        // CREA EL HTML PARA LA VENTANA MODAL DE CONFIRMACION
         let nombreProducto = document.createElement('h4')
         nombreProducto.textContent = `Nombre: ${path}`
         let precioProducto = document.createElement('p')
@@ -95,6 +99,7 @@ btnAñadir.forEach(elm => {
         popUpcompra.prepend(precioProducto)
         popUpcompra.prepend(nombreProducto)
         pathCantidadspinner[0].cantidad
+        // VALIDA QUE SI LA CANTIDAD ES IGUAL A 0 SE REMUEVE EL CONTADOR
         if(pathCantidadspinner[0].cantidad == 0){
             contador.classList.add("no-view")
             inhabilitarBtn.classList.remove("no-view")
@@ -102,11 +107,8 @@ btnAñadir.forEach(elm => {
             contador.classList.remove("no-view")
             inhabilitarBtn.classList.add("no-view")
         }
-        
-        
-        
-        
-        // DATOS PARA TOMAR NO VIEW
+
+        // DATOS OCULTOS PARA ENCONTRAR VALORES DEL PATH
         let nombreProductonv = document.createElement('p')
         let precioProductonv = document.createElement('p')
         let cantidadProductonv = document.createElement('p')
@@ -116,11 +118,10 @@ btnAñadir.forEach(elm => {
         nombreProductonv.classList.add('no-view')
         precioProductonv.classList.add('no-view')
         cantidadProductonv.classList.add('no-view')
-        // PREPENT PARA DATOS NO VIEW
+        // PREPENT PARA DATOS NO VIEW  PARA ENCONTRAR VALORES DEL PATH
         popUpcompra.prepend(nombreProductonv)
         popUpcompra.prepend(precioProductonv)
         popUpcompra.prepend(cantidadProductonv)
-
 
         // INYECTAMOS HTML DE CONTADOR
         contador.innerHTML = `
@@ -191,18 +192,20 @@ btnAñadir.forEach(elm => {
 // AGREGA PRODUCTOS AL CARRITO Y HACE LA SUMA Y EL TOTAL
 
 btnAgregarcompra.addEventListener('click', (e) =>{
-    
+    // TOMAMOS LOS DATOS DEL PRODUCTO SELECCIONADO
     let pathNombre = e.composedPath()[2].children[0].children[2].textContent
     let pathPrecio = e.composedPath()[2].children[0].children[1].textContent
     let pathcount = e.composedPath()[2].children[2].children[0].innerText
     let countNumber = parseInt(pathcount)
     let precioNumber = parseInt(pathPrecio)
+    // FILTRAMOS EL NOMBRE
     let filtradoStock = productosArray.filter(nombre => nombre.nombrecorto === pathNombre)
     let id = Date.now()
+    // TRABAJAMOS CON LA FUNCION DE CONSTRUCTOR PARA EL STOCK
     filtradoStock[0].stock(countNumber, id)
     
         
-        
+        // INYECTAMOS HTML EN CARRITO
         let pruebaLS = agregarPrcarrito.innerHTML += `
         <div class="items__productos " id="b${id}">
         <p>${pathNombre}</p>
@@ -216,20 +219,17 @@ btnAgregarcompra.addEventListener('click', (e) =>{
         <a class="no-view"  id="cheackBox" href="#"><img src="./imagenes/delete-button.png" width="31px" height="31px" alt=""></a>
         </div>
         `   
+        // BOTONES DE ELIMINAR
         const btnEliminarpr = document.querySelectorAll('#cheackBox')     
-        
+        // FUNCION ELIMINAR PRODUCTO
         eliminarPr(btnEliminarpr)
-
-
+        // FUNCION AGREGAR PRODUCTO
         agregarPr()
+        // BOTON DE ELIMINAR CARRITO, GENERA BOTONES DE ELIMINAR
         btnEliminarcarrito(btnEliminarpr)
-
-        // 
-        
-        // sincronizarStorage(pruebaLS)
-        // cargaCarrito(pruebaLS)
 })
       
+// FUNCION AGREGAR PRODUCTO
 function agregarPr(){
     let totalComprado = valorTotal.reduce((a, b) => a + b, 0)
     suma2 = totalComprado
@@ -237,6 +237,7 @@ function agregarPr(){
     totalDeCompra.innerHTML = `$<span>${suma2}</span></p>`
     eliminarPr()
 }
+// FUNCION ELIMINAR PRODUCTO
 function eliminarPr(btnEliminarpr){
     $(btnEliminarpr).click((e) =>{
         e.preventDefault()
@@ -260,8 +261,7 @@ function eliminarPr(btnEliminarpr){
              
     })
 }
-
-
+// BOTON DE ELIMINAR CARRITO, GENERA BOTONES DE ELIMINAR
 function btnEliminarcarrito(btnEliminarpr){
     const btnEliminarcompra = document.querySelector('#btnEliminarpr')
     btnEliminarcompra.addEventListener('click', (e) =>{
@@ -272,16 +272,15 @@ function btnEliminarcarrito(btnEliminarpr){
     })
     })
 }
-
+// BOTON DE FINALIZAR COMPRA
 function finalizarCompras(){
     finalizarCompra.addEventListener('click', (e) =>{
+        // TOMA EL TOTAL DE LA COMPRA Y LO ENVIA A SESSION STORAGE
         let totalFinal = parseInt(e.composedPath()[2].children[2].children[0].children[1].children[0].innerHTML)
         sessionStorage.setItem('precioFinal', totalFinal)
 
     })
 }
-
-
 finalizarCompras()
 
 
@@ -374,6 +373,7 @@ const updateElements = (productos)=>{
     })
     eventos ()
 }
+// CONTROLES DE MOVIMIENTO 1-8
 function controlesDemov(productosArray){
     const updatePage = ( elements, page, elementsPerPage)=>
     {
@@ -407,9 +407,9 @@ function controlesDemov(productosArray){
         }
     }
 }
-
+// ASIDE DE FILTRADO 
 function filtradoAside (){
-
+// FILTRO Netbooks
     const netbooksFilter = document.querySelector('#netbooksAside')
     const netbooks = productosArray.filter(id => id.idB === "netbooks")
     netbooksFilter.textContent = `Netbooks(${netbooks.length})`
@@ -514,24 +514,27 @@ filtrado = {
     precioMin: '',
     precioMax: ''
 }
+// FILTRO DE MARCA
 const marcaFiltro = document.getElementById('marca');
 marcaFiltro.addEventListener('click', (e) => {
     filtrado.marca = e.target.value 
     filtradoMarcas()
 })
+// FILTRO DE MINIMO
 const filtrarMin = document.getElementById('minimo');
 filtrarMin.addEventListener('click', (e) => {
     filtrado.precioMin = Number(e.target.value) 
     filtradoMarcas()
     
 })
+// FILTRO DE MAXIMO
 const filtrarMax = document.getElementById('maximo');
 filtrarMax.addEventListener('click', (e) => {
     filtrado.precioMax = Number(e.target.value) 
     filtradoMarcas()
     
 })
-
+// EJECUTA LA FUNCION
 function filtradoMarcas(){
     let resultado = productosArray.filter(marca).filter(precioMin).filter(precioMax)
     updateElements(resultado)
@@ -560,8 +563,8 @@ function precioMax(productos){
     }
 }
 
-
-class pruebaCons{
+// CONSTRUCTOR PARA BUSQUEDA
+class busquedaConst{
     constructor({id, nombre, precio, cantidad, idB, nombrecorto, marca, descripcion, imagen}){
         this.id = id
         this.nombre = nombre
@@ -575,27 +578,30 @@ class pruebaCons{
         this.imagen = imagen
     }
 }
-let arrayPrueba = []
+// ARRAY PARA BUSQUEDA
+let arrayBusqueda = []
+// FUNCION PARA BUSQUEDA
 function busqueda(){
     buscadorDeproductos.addEventListener('change', (e) =>{
         e.preventDefault()
-        let prueba = e.target.value.toLowerCase()
+        let nombrePr = e.target.value.toLowerCase()
         ingresarBusqueda.addEventListener('click', (e) =>{
             e.preventDefault()
             productosArray.forEach(elm => {
                 
                 let nombres = elm.nombre.toLowerCase()
-                let busqueda = nombres.indexOf(prueba)
-                if(busqueda !== -1){
-                    arrayPrueba.push(new pruebaCons (elm))
-                    updateElements(arrayPrueba)
+                let busquedaFiltro = nombres.indexOf(nombrePr)
+                if(busquedaFiltro !== -1){
+                    arrayBusqueda.push(new busquedaConst (elm))
+                    updateElements(arrayBusqueda)
                     
                 }
                 
             })
-            arrayPrueba = []
+            arrayBusqueda = []
         })
         
     })
 }
+
 busqueda()

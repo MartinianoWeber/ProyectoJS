@@ -56,6 +56,7 @@ function formatearHtml(){
 
 
 // Funciones
+// GENERA LOS PRODUCTOS
 function crearPiezas(productos){
     piezasSelect.innerHTML = ``;
     formatearHtml(piezasSelect)
@@ -82,6 +83,7 @@ function crearPiezas(productos){
 
 }
 
+// FUNCION DE ARMAR PC
 function armadoDepc(){
     // Array Vacio para que no cargue productos
     let arrayVacio = arrayArmapc.filter(e => e.nombre === "")
@@ -258,7 +260,7 @@ function cooler(){
         })
     })       
 }
-
+// Funcion mother intel
 function mothersdeIntel(){
     let motherInt = arrayArmapc.filter(e => e.idB === "mothersIntel")
     crearPiezas(motherInt)
@@ -324,7 +326,7 @@ function mothersdeamd(){
         })
     })
 }
-
+// FUNCIN DE RAM
 function ram(){
     memoriasRams.innerHTML = `<div class="mainArmado__cardImg">
     <img src="./imagenes/ram.png" alt="">
@@ -356,6 +358,7 @@ function ram(){
         })
     })
 }
+// funcion de placas de video
 function placasdevideo(){
     // Filtrado
     let graficas = arrayArmapc.filter(e => e.idB === "graficas")
@@ -415,6 +418,7 @@ function placasdevideo(){
         })
     })
 }
+//  Disco principal
 function Discoprincipal(){
     discoPrincipal.innerHTML = `<div class="mainArmado__cardImg">
     <img src="./imagenes/discoRigido.png" alt="">
@@ -446,6 +450,7 @@ function Discoprincipal(){
         })
     })
 }
+// discp secundaria
 function Discosecundario(){
     // Crear HTML para aside
     discoSecundario.innerHTML = `<div class="mainArmado__cardImg">
@@ -504,6 +509,7 @@ function Discosecundario(){
         })
     })
 }
+// gabienetes
 function gabinetes(){
     towerCase.innerHTML = `<div class="mainArmado__cardImg">
     <img src="./imagenes/cpu-tower.png" alt="">
@@ -535,6 +541,7 @@ function gabinetes(){
         })
     })
 }
+// Fuente
 function fuente(){
     powerSupply.innerHTML = `<div class="mainArmado__cardImg">
     <img src="./imagenes/fuente.png" alt="">
@@ -566,7 +573,7 @@ function fuente(){
         })
     })
 }
-
+// GENERA EL PRECIO AUTOMATICO
 function precio(){
             let totalPC = productos.reduce((a, b) => a + b, 0);
             let totalWatts = watts.reduce((a, b) => a + b, 0);
@@ -581,7 +588,7 @@ function precio(){
             <p class="no-view">${totalPC}</p>
             `
 }
-
+// FUNCION PARA GENERAR HTML FINAL
 function terminarCompra(totalPC){
     piezasSelect.classList.add('mainArmado__selects')
         piezasSelect.classList.remove('mainArmado__selects2')

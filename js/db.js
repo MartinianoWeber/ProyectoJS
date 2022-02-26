@@ -48,7 +48,7 @@ class productos {
   
 
 }
-
+//  LLAMADO DE PRODUCTOS
 const requestURL= "js/db.json";
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -61,6 +61,7 @@ request.onload = function() {
         
     })
 }
+// FUNCION PARA LOS ELEMENTOS DEL FILTRO
 function crearProducto(elm){
     productosArray.push(new productos(elm));
     updateElements(productosArray)
